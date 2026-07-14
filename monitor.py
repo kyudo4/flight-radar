@@ -887,18 +887,6 @@ def fmt_price(p):
     return "{:,.0f} PLN".format(p).replace(",", " ") if p else "brak w treści"
 
 
-def booking_hint(deal):
-    """Krótka wskazówka zakupu dla najlepszych ofert."""
-    name = deal.get("airline_name") or "przewoźnika"
-    if set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"}:
-        return ("🎫 Error fare: kupuj szybko, ale <b>nie planuj</b> niczego "
-                "wokół (hotele) do potwierdzenia biletu przez linię. Płać "
-                "kartą z ochroną zakupu.")
-    return ("🎫 Przy business kupuj bezpośrednio u %s (strona linii) — "
-            "bezpieczniej przy zmianach i reklamacjach niż u pośrednika. "
-            "Płać kartą z ochroną zakupu." % html.escape(name))
-
-
 def fmt_deal(deal, stars, drop_note="", trend=""):
     e = html.escape
     lines = ["<b>%s</b>" % STAR[stars]]
@@ -936,8 +924,6 @@ def fmt_deal(deal, stars, drop_note="", trend=""):
         lines.append("🏷 <b>%s</b>" % t)
     if deal.get("title"):
         lines.append("📰 %s" % e(deal["title"][:160]))
-    if stars >= 5:
-        lines.append(booking_hint(deal))
     lines.append('🔗 <a href="%s">Otwórz ofertę</a> · źródło: %s'
                  % (e(deal["link"]), e(deal["source"])))
     return "\n".join(lines)
