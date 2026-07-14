@@ -121,11 +121,15 @@ def tg_api(cfg, method, payload):
 
 
 def chat_ids(cfg):
-    """Lista odbiorców: nowe pole chat_ids + zgodność ze starym chat_id."""
+    """Odbiorcy: sekret/config (chat_ids, chat_id) + samodzielnie zapisani
+    w state/recipients.json (każdy, kto kliknął Start — np. kumpel)."""
     tg = cfg["telegram"]
     ids = list(tg.get("chat_ids") or [])
     if tg.get("chat_id") and tg["chat_id"] not in ids:
         ids.append(tg["chat_id"])
+    for cid in state_file("recipients.json", {}).get("ids", []):
+        if cid not in ids:
+            ids.append(cid)
     return ids
 
 
@@ -175,8 +179,24 @@ def poll_feedback(cfg):
                                       "airline_good": {}, "too_expensive": [],
                                       "too_long": []})
     seen = state_file("seen.json", {})
+    rec = state_file("recipients.json", {"ids": []})
+    known = set(chat_ids(cfg))
     for upd in resp.get("result", []):
         tgs["offset"] = max(tgs["offset"], upd["update_id"])
+        # samodzielna rejestracja: ktokolwiek napisze do bota (np. kumpel)
+        chat = (upd.get("message") or upd.get("callback_query", {})
+                .get("message") or {}).get("chat", {})
+        cid = str(chat.get("id", "")) if chat else ""
+        if cid and cid not in known:
+            rec.setdefault("ids", []).append(cid)
+            known.add(cid)
+            save_state("recipients.json", rec)
+            tg_api(cfg, "sendMessage", {"chat_id": cid, "parse_mode": "HTML",
+                   "text": "✅ <b>Asia Flight Radar</b> podłączony. Będę pisał, "
+                           "gdy trafi się naprawdę dobra okazja business/first "
+                           "do Azji."})
+            log("Nowy odbiorca zarejestrowany: %s (%s)"
+                % (chat.get("first_name", "?"), cid))
         cq = upd.get("callback_query")
         if not cq or not cq.get("data", "").startswith("fb|"):
             continue
