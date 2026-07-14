@@ -887,7 +887,19 @@ def fmt_price(p):
     return "{:,.0f} PLN".format(p).replace(",", " ") if p else "brak w treści"
 
 
-def fmt_deal(deal, stars, drop_note=""):
+def booking_hint(deal):
+    """Krótka wskazówka zakupu dla najlepszych ofert."""
+    name = deal.get("airline_name") or "przewoźnika"
+    if set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"}:
+        return ("🎫 Error fare: kupuj szybko, ale <b>nie planuj</b> niczego "
+                "wokół (hotele) do potwierdzenia biletu przez linię. Płać "
+                "kartą z ochroną zakupu.")
+    return ("🎫 Przy business kupuj bezpośrednio u %s (strona linii) — "
+            "bezpieczniej przy zmianach i reklamacjach niż u pośrednika. "
+            "Płać kartą z ochroną zakupu." % html.escape(name))
+
+
+def fmt_deal(deal, stars, drop_note="", trend=""):
     e = html.escape
     lines = ["<b>%s</b>" % STAR[stars]]
     if drop_note:
@@ -912,6 +924,8 @@ def fmt_deal(deal, stars, drop_note=""):
         if deal.get("seat_note"):
             a += " (%s)" % e(deal["seat_note"])
         lines.append(a)
+    if trend:
+        lines.append(trend if trend[0] in "📉📈≈" else "📊 " + trend)
     if deal.get("gf_price_level") == "low":
         lines.append("📊 Google: ceny na tej trasie niższe niż zwykle")
     if deal.get("roundtrip"):
@@ -922,12 +936,123 @@ def fmt_deal(deal, stars, drop_note=""):
         lines.append("🏷 <b>%s</b>" % t)
     if deal.get("title"):
         lines.append("📰 %s" % e(deal["title"][:160]))
+    if stars >= 5:
+        lines.append(booking_hint(deal))
     lines.append('🔗 <a href="%s">Otwórz ofertę</a> · źródło: %s'
                  % (e(deal["link"]), e(deal["source"])))
     return "\n".join(lines)
 
 
 # ---------------------------------------------------------------- main run
+
+# --------------------------------------------------- trend / heartbeat / digest
+
+def update_trends(deals):
+    """Dzienny minimalny koszt na trasę (30 dni historii) -> state/trends.json."""
+    trends = state_file("trends.json", {})
+    today = datetime.now().strftime("%Y-%m-%d")
+    for d in deals:
+        if d["kind"] not in ("gf", "amadeus") or not d.get("price_pln"):
+            continue
+        key = "%s|%s" % (d["route"], d["cabin"])
+        series = trends.setdefault(key, {})
+        series[today] = min(series.get(today, 10 ** 9), d["price_pln"])
+        for old in sorted(series)[:-30]:  # zostaw ostatnie 30 dni
+            del series[old]
+    save_state("trends.json", trends)
+    return trends
+
+
+def trend_for(trends, route, cabin):
+    """Zwraca (procent_zmiany, dawna_cena, dni) porównując dziś vs ~7 dni temu."""
+    series = trends.get("%s|%s" % (route, cabin), {})
+    if len(series) < 2:
+        return None
+    days = sorted(series)
+    today_p = series[days[-1]]
+    target = (datetime.strptime(days[-1], "%Y-%m-%d") - timedelta(days=7))
+    ref = min(days, key=lambda d:
+              abs((datetime.strptime(d, "%Y-%m-%d") - target).days))
+    old_p = series[ref]
+    span = (datetime.strptime(days[-1], "%Y-%m-%d")
+            - datetime.strptime(ref, "%Y-%m-%d")).days
+    if not old_p or span < 1:
+        return None
+    return (round((today_p - old_p) / old_p * 100), old_p, span)
+
+
+def fmt_trend(t):
+    if not t:
+        return ""
+    pct, old_p, days = t
+    if abs(pct) < 3:
+        return "≈ cena stabilna (%d dni)" % days
+    arrow = "📉" if pct < 0 else "📈"
+    return "%s %+d%% w %d dni (było %s)" % (arrow, pct, days, fmt_price(old_p))
+
+
+def heartbeat(cfg, deals):
+    """Alarm na Telegram, gdy skan przestaje zwracać oferty (blokada/awaria)."""
+    hb_hours = cfg.get("heartbeat_hours", 6)
+    health = state_file("health.json", {})
+    now = datetime.now()
+    gf_ok = any(d["kind"] == "gf" for d in deals)
+    if gf_ok:
+        if health.get("warned_at"):  # powrót do działania
+            if cfg["telegram"].get("bot_token"):
+                tg_send_plain(cfg, "✅ <b>Radar znów działa</b> — oferty "
+                                   "znowu spływają.")
+            health["warned_at"] = None
+        health["last_gf_ok"] = now.isoformat(timespec="seconds")
+    else:
+        last = health.get("last_gf_ok")
+        gap_h = ((now - datetime.fromisoformat(last)).total_seconds() / 3600
+                 if last else hb_hours + 1)
+        if gap_h >= hb_hours and not health.get("warned_at"):
+            if cfg["telegram"].get("bot_token"):
+                tg_send_plain(cfg, "⚠️ <b>Radar milczy od ~%d h</b> — Google "
+                              "Flights nie zwraca ofert (możliwa blokada lub "
+                              "awaria). Sprawdź działanie, jeśli cisza się "
+                              "przedłuża." % round(gap_h))
+            health["warned_at"] = now.isoformat(timespec="seconds")
+            log("Heartbeat: wysłano alarm (przerwa %d h)" % round(gap_h))
+    save_state("health.json", health)
+
+
+def weekly_digest(cfg, archive):
+    """W niedzielę raz: najtańszy business live na każdy kierunek z ost. 24 h."""
+    dc = cfg.get("digest", {})
+    if not dc.get("enabled", True):
+        return
+    now = datetime.now()
+    if now.weekday() != dc.get("weekday", 6) or now.hour < dc.get("hour", 9):
+        return
+    health = state_file("health.json", {})
+    if health.get("last_digest") == now.strftime("%Y-%m-%d"):
+        return
+    cutoff = (now - timedelta(hours=24)).isoformat(timespec="seconds")
+    best = {}
+    for d in archive.values():
+        if d["kind"] not in ("gf", "amadeus") or d["cabin"] != "BUSINESS":
+            continue
+        if d.get("last_seen", "") < cutoff or not d.get("price_pln"):
+            continue
+        dest = d["route"].split("→")[-1].strip()
+        if dest not in best or d["price_pln"] < best[dest]["price_pln"]:
+            best[dest] = d
+    if best:
+        lines = ["📅 <b>Podsumowanie tygodnia — najtaniej business teraz:</b>"]
+        for dest, d in sorted(best.items(), key=lambda kv: kv[1]["price_pln"]):
+            lines.append("• <b>%s</b> — %s (%s)" % (
+                dest, fmt_price(d["price_pln"]), d["route"].split("→")[0].strip()))
+        lines.append("\n🔗 Wszystko: kyudo4.github.io/flight-radar")
+        if cfg["telegram"].get("bot_token"):
+            tg_send_plain(cfg, "\n".join(lines))
+        else:
+            print(re.sub(r"<[^>]+>", "", "\n".join(lines)))
+    health["last_digest"] = now.strftime("%Y-%m-%d")
+    save_state("health.json", health)
+
 
 def run(cfg):
     poll_feedback(cfg)
@@ -940,6 +1065,7 @@ def run(cfg):
     deals = rss_deals(cfg, fx) + amadeus_deals(cfg, fx) + gflights_deals(cfg)
     seen = state_file("seen.json", {})
     archive = state_file("deals.json", {})
+    trends = update_trends(deals)
     drop_ratio = cfg["notify"]["renotify_price_drop_ratio"]
     now = datetime.now().isoformat(timespec="seconds")
     sent = 0
@@ -961,8 +1087,9 @@ def run(cfg):
         if send and not verify(deal):
             log("Odrzucono martwą ofertę: %s" % deal.get("title", deal["route"]))
             send = False
+        trend = trend_for(trends, deal["route"], deal["cabin"])
         if send:
-            text = fmt_deal(deal, stars, drop_note)
+            text = fmt_deal(deal, stars, drop_note, fmt_trend(trend))
             if cfg["telegram"].get("bot_token") and chat_ids(cfg):
                 resp = tg_send_deal(cfg, text, did)
                 send = bool(resp and resp.get("ok"))
@@ -995,6 +1122,7 @@ def run(cfg):
             "first_seen": prev.get("first_seen", now), "last_seen": now,
             "notified": bool(send or prev.get("notified")),
             "min_price": min(pr) if pr else None,
+            "trend": fmt_trend(trend),
         }
 
     alt = hub_alternative(cfg, deals)
@@ -1028,6 +1156,8 @@ def run(cfg):
                       reverse=True)[:500]
         archive = {d["id"]: d for d in keep}
     save_state("deals.json", archive)
+    heartbeat(cfg, deals)
+    weekly_digest(cfg, archive)
     try:
         from dashboard import write_dashboard
         write_dashboard(archive, os.path.join(BASE, "dashboard.html"))

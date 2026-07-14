@@ -5,7 +5,7 @@
     "chat_ids": []
   },
   "travelpayouts": {
-    "token": ""
+    "token": "e8821c07bb4a1f36326ba608bbb15540"
   },
   "google_flights": {
     "enabled": true,
@@ -92,6 +92,12 @@
   "limits": {
     "max_duration_hours": 26,
     "max_stops": 2
+  },
+  "heartbeat_hours": 6,
+  "digest": {
+    "enabled": true,
+    "weekday": 6,
+    "hour": 9
   },
   "feeds": [
     {

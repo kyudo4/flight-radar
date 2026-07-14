@@ -109,6 +109,7 @@ function render() {
         ${d.roundtrip ? `<span class="badge">↔️ w obie strony</span>` : ""}
         ${d.needs_feeder ? `<span class="badge">📍 z dolotem</span>` : ""}
         ${d.notified ? `<span class="badge tg">📨 wysłano</span>` : ""}
+        ${d.trend ? `<span class="badge ${d.trend.includes("📉") ? "low" : ""}">${d.trend}</span>` : ""}
         ${d.min_price && d.price_pln && d.min_price < d.price_pln ? `<span class="badge low">min: ${fmtP(d.min_price)}</span>` : ""}
       </div>
       ${d.title ? `<div class="title">${d.title}</div>` : ""}
