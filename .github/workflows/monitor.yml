@@ -1,0 +1,36 @@
+name: flight-radar
+# Skan lotów premium co godzinę na serwerach GitHuba (darmowe dla repo publicznych).
+on:
+  schedule:
+    - cron: "17 * * * *"      # co godzinę o :17
+  workflow_dispatch:           # ręczne uruchomienie z zakładki Actions
+concurrency:
+  group: scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # commit stanu + dashboardu z powrotem do repo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalacja zależności
+        run: pip install -r requirements.txt
+      - name: Skan
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_IDS: ${{ secrets.TG_CHAT_IDS }}
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+        run: python monitor.py run
+      - name: Publikacja dashboardu + stanu
+        run: |
+          cp dashboard.html index.html
+          git config user.name "flight-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A index.html state
+          git diff --cached --quiet || git commit -m "auto: $(date -u +%FT%TZ)"
+          git pull --rebase --autostash || true
+          git push

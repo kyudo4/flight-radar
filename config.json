@@ -1,0 +1,147 @@
+{
+  "telegram": {
+    "bot_token": "",
+    "chat_id": "",
+    "chat_ids": []
+  },
+  "travelpayouts": {
+    "token": ""
+  },
+  "google_flights": {
+    "enabled": true,
+    "max_queries_per_run": 28,
+    "first_class_queries": 2,
+    "min_delay_s": 2
+  },
+  "amadeus": {
+    "api_key": "",
+    "api_secret": "",
+    "base_url": "https://test.api.amadeus.com",
+    "max_calls_per_run": 24
+  },
+  "trip": {
+    "one_way": true,
+    "strict_rss_dates": true,
+    "depart_from": "2026-09-01",
+    "depart_to": "2026-09-14",
+    "cabin_priority": [
+      "BUSINESS",
+      "FIRST"
+    ]
+  },
+  "origins": [
+    "GDN",
+    "WAW",
+    "POZ",
+    "OSL",
+    "ARN",
+    "CPH",
+    "VIE",
+    "BUD",
+    "MXP"
+  ],
+  "destinations": {
+    "priority": [
+      "BKK"
+    ],
+    "secondary": [
+      "SIN",
+      "KUL",
+      "HKG",
+      "HAN",
+      "SGN",
+      "HND",
+      "NRT",
+      "ICN"
+    ]
+  },
+  "hub_alternative": {
+    "enabled": true,
+    "hubs": [
+      "SIN",
+      "KUL",
+      "SGN"
+    ],
+    "live_feeder": true,
+    "feeder_estimate_pln": 450
+  },
+  "budget_pln": {
+    "business_5star": 4500,
+    "business_4star": 6000,
+    "business_3star": 7500,
+    "business_2star": 9000,
+    "first_5star": 8000,
+    "first_4star": 12000
+  },
+  "priority_airlines": {
+    "QR": "Qatar Airways",
+    "EY": "Etihad Airways",
+    "EK": "Emirates",
+    "WY": "Oman Air",
+    "TK": "Turkish Airlines",
+    "BR": "EVA Air",
+    "SQ": "Singapore Airlines",
+    "CX": "Cathay Pacific",
+    "NH": "ANA",
+    "JL": "Japan Airlines"
+  },
+  "notify": {
+    "min_stars": 4,
+    "renotify_price_drop_ratio": 0.93
+  },
+  "limits": {
+    "max_duration_hours": 26,
+    "max_stops": 2
+  },
+  "feeds": [
+    {
+      "name": "Fly4Free.pl",
+      "url": "https://www.fly4free.pl/feed/"
+    },
+    {
+      "name": "LoyaltyLobby",
+      "url": "https://loyaltylobby.com/feed/"
+    },
+    {
+      "name": "One Mile at a Time",
+      "url": "https://onemileatatime.com/feed/"
+    },
+    {
+      "name": "Secret Flying",
+      "url": "https://news.google.com/rss/search?q=site:secretflying.com+business+OR+first+when:14d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Fly4Free.com",
+      "url": "https://news.google.com/rss/search?q=site:fly4free.com+business+class+when:14d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "View From The Wing",
+      "url": "https://news.google.com/rss/search?q=site:viewfromthewing.com+fare+deal+when:14d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Travel Dealz",
+      "url": "https://travel-dealz.com/feed/"
+    },
+    {
+      "name": "FlyerTalk Premium Deals",
+      "url": "https://news.google.com/rss/search?q=site:flyertalk.com+%22premium+fare%22+OR+%22business+class%22+when:14d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Wakacyjni Piraci",
+      "url": "https://www.wakacyjnipiraci.pl/feed"
+    },
+    {
+      "name": "Reddit r/flightdeals",
+      "url": "https://www.reddit.com/r/flightdeals/search.rss?q=business+class&restrict_sr=on&sort=new"
+    }
+  ],
+  "fx_fallback": {
+    "EUR": 4.34,
+    "USD": 3.8,
+    "GBP": 5.09,
+    "CHF": 4.65,
+    "SEK": 0.39,
+    "NOK": 0.37,
+    "DKK": 0.58
+  }
+}
