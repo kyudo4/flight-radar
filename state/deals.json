@@ -1950,9 +1950,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7116
+  "min_price": 7116,
+  "trend": ""
  },
  "3f6e53cfffd8c4d712bf82a0297ae1a05b82efdd": {
   "id": "3f6e53cfffd8c4d712bf82a0297ae1a05b82efdd",
@@ -1973,9 +1974,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7738
+  "min_price": 7738,
+  "trend": ""
  },
  "97070facbe461445f3978d737091b1c7df452294": {
   "id": "97070facbe461445f3978d737091b1c7df452294",
@@ -2019,9 +2021,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7104
+  "min_price": 7104,
+  "trend": ""
  },
  "ac3649320599eb2a06d8293cd68a2c8b4126f488": {
   "id": "ac3649320599eb2a06d8293cd68a2c8b4126f488",
@@ -2042,9 +2045,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8029
+  "min_price": 8029,
+  "trend": ""
  },
  "8255bbf12c169c992410210d57c509dc6de54330": {
   "id": "8255bbf12c169c992410210d57c509dc6de54330",
@@ -2065,9 +2069,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 6068
+  "min_price": 6068,
+  "trend": ""
  },
  "7502776c85950565d21304fca6ba3673c06cffaf": {
   "id": "7502776c85950565d21304fca6ba3673c06cffaf",
@@ -2088,9 +2093,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7430
+  "min_price": 7430,
+  "trend": ""
  },
  "e416b8a485f145c32d45db915f646ac0a5953ad7": {
   "id": "e416b8a485f145c32d45db915f646ac0a5953ad7",
@@ -2098,7 +2104,7 @@
   "route": "ARN → BKK",
   "cabin": "BUSINESS",
   "airline": "Royal Jordanian",
-  "price_pln": 5997,
+  "price_pln": 5999,
   "stars": 4,
   "tags": [],
   "title": "",
@@ -2111,9 +2117,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 5997
+  "min_price": 5997,
+  "trend": ""
  },
  "a5fccd213d30d78281f74e47d5e1d88471df935a": {
   "id": "a5fccd213d30d78281f74e47d5e1d88471df935a",
@@ -2121,7 +2128,7 @@
   "route": "ARN → BKK",
   "cabin": "BUSINESS",
   "airline": "Turkish Airlines",
-  "price_pln": 7030,
+  "price_pln": 7032,
   "stars": 3,
   "tags": [],
   "title": "",
@@ -2134,9 +2141,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7030
+  "min_price": 7030,
+  "trend": ""
  },
  "18b77300e2837403b23a9a127dc5b701fbe645b2": {
   "id": "18b77300e2837403b23a9a127dc5b701fbe645b2",
@@ -2144,7 +2152,7 @@
   "route": "CPH → BKK",
   "cabin": "BUSINESS",
   "airline": "THAI",
-  "price_pln": 5894,
+  "price_pln": 5895,
   "stars": 4,
   "tags": [],
   "title": "",
@@ -2157,9 +2165,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 5894
+  "min_price": 5894,
+  "trend": ""
  },
  "6406da8d1693019d69a475d6a360ea27cc01a0ac": {
   "id": "6406da8d1693019d69a475d6a360ea27cc01a0ac",
@@ -2167,7 +2176,7 @@
   "route": "CPH → BKK",
   "cabin": "BUSINESS",
   "airline": "Scandinavian Airlines, Etihad",
-  "price_pln": 7752,
+  "price_pln": 7754,
   "stars": 3,
   "tags": [],
   "title": "",
@@ -2180,9 +2189,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7752
+  "min_price": 7752,
+  "trend": ""
  },
  "6ab0d0878648721533dc50d522618b585b19edbf": {
   "id": "6ab0d0878648721533dc50d522618b585b19edbf",
@@ -2203,9 +2213,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6419
+  "min_price": 6419,
+  "trend": ""
  },
  "349537ba636ad02207d65279f008a1c74325754d": {
   "id": "349537ba636ad02207d65279f008a1c74325754d",
@@ -2226,9 +2237,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6061
+  "min_price": 6061,
+  "trend": ""
  },
  "19185524d7057aa0eee08abc04932d68c2c9ecf5": {
   "id": "19185524d7057aa0eee08abc04932d68c2c9ecf5",
@@ -2249,9 +2261,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8130
+  "min_price": 8130,
+  "trend": ""
  },
  "a64f7eaf812d0bb5118f676f3cab742f69681dd7": {
   "id": "a64f7eaf812d0bb5118f676f3cab742f69681dd7",
@@ -2272,9 +2285,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6490
+  "min_price": 6490,
+  "trend": ""
  },
  "17bc02e57ac4419a9870781182873f9b0b97da71": {
   "id": "17bc02e57ac4419a9870781182873f9b0b97da71",
@@ -2295,9 +2309,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7738
+  "min_price": 7738,
+  "trend": ""
  },
  "ad6857417510ade63cfe683441bcb0f20c2671b3": {
   "id": "ad6857417510ade63cfe683441bcb0f20c2671b3",
@@ -2318,9 +2333,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6591
+  "min_price": 6591,
+  "trend": ""
  },
  "a3a147280d33121806bbdb9355f537458cb203bf": {
   "id": "a3a147280d33121806bbdb9355f537458cb203bf",
@@ -2341,9 +2357,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8107
+  "min_price": 8107,
+  "trend": ""
  },
  "8c21aecfd0b5c90094c01c092303e1244018d1b4": {
   "id": "8c21aecfd0b5c90094c01c092303e1244018d1b4",
@@ -2364,9 +2381,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 6068
+  "min_price": 6068,
+  "trend": ""
  },
  "7daf981b27ae0a8bff46c4c5f2504f032d264bae": {
   "id": "7daf981b27ae0a8bff46c4c5f2504f032d264bae",
@@ -2387,9 +2405,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7430
+  "min_price": 7430,
+  "trend": ""
  },
  "947bd34c1bf146d4831184f97494ec49f9b37883": {
   "id": "947bd34c1bf146d4831184f97494ec49f9b37883",
@@ -2397,7 +2416,7 @@
   "route": "ARN → BKK",
   "cabin": "BUSINESS",
   "airline": "Royal Jordanian",
-  "price_pln": 5997,
+  "price_pln": 5999,
   "stars": 4,
   "tags": [],
   "title": "",
@@ -2410,9 +2429,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 5997
+  "min_price": 5997,
+  "trend": ""
  },
  "479a4014547df5dd8fc91475981195e2475a8b7b": {
   "id": "479a4014547df5dd8fc91475981195e2475a8b7b",
@@ -2420,7 +2440,7 @@
   "route": "ARN → BKK",
   "cabin": "BUSINESS",
   "airline": "Turkish Airlines",
-  "price_pln": 7030,
+  "price_pln": 7032,
   "stars": 3,
   "tags": [],
   "title": "",
@@ -2433,9 +2453,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7030
+  "min_price": 7030,
+  "trend": ""
  },
  "27618fbaaedd0608eaed396e0a32c43e810ade15": {
   "id": "27618fbaaedd0608eaed396e0a32c43e810ade15",
@@ -2456,9 +2477,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 5033
+  "min_price": 5033,
+  "trend": ""
  },
  "e1652c0b4d6e751498a232ed13c905ea4fc5c2da": {
   "id": "e1652c0b4d6e751498a232ed13c905ea4fc5c2da",
@@ -2466,7 +2488,7 @@
   "route": "VIE → BKK",
   "cabin": "BUSINESS",
   "airline": "Etihad",
-  "price_pln": 6419,
+  "price_pln": 6421,
   "stars": 5,
   "tags": [],
   "title": "",
@@ -2479,9 +2501,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6419
+  "min_price": 6419,
+  "trend": ""
  },
  "7e72cddd0798f9852632c26a741a3f70a8102139": {
   "id": "7e72cddd0798f9852632c26a741a3f70a8102139",
@@ -2489,7 +2512,7 @@
   "route": "BUD → BKK",
   "cabin": "BUSINESS",
   "airline": "Austrian, Royal Jordanian",
-  "price_pln": 6061,
+  "price_pln": 6073,
   "stars": 4,
   "tags": [],
   "title": "",
@@ -2502,9 +2525,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6061
+  "min_price": 6061,
+  "trend": ""
  },
  "26df3285438f259c6eef8aca3550879ff96456ae": {
   "id": "26df3285438f259c6eef8aca3550879ff96456ae",
@@ -2512,7 +2536,7 @@
   "route": "BUD → BKK",
   "cabin": "BUSINESS",
   "airline": "Turkish Airlines, THAI",
-  "price_pln": 8130,
+  "price_pln": 8175,
   "stars": 3,
   "tags": [],
   "title": "",
@@ -2525,9 +2549,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8130
+  "min_price": 8130,
+  "trend": ""
  },
  "f27ddefeffbaa2d19a987a0c587ab623c21bcf6a": {
   "id": "f27ddefeffbaa2d19a987a0c587ab623c21bcf6a",
@@ -2548,9 +2573,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": true,
-  "min_price": 6490
+  "min_price": 6490,
+  "trend": ""
  },
  "f6f104bb85774590f67d78868936e72381e929b7": {
   "id": "f6f104bb85774590f67d78868936e72381e929b7",
@@ -2558,7 +2584,7 @@
   "route": "GDN → NRT",
   "cabin": "BUSINESS",
   "airline": "LOT, Korean Air",
-  "price_pln": 9584,
+  "price_pln": 9583,
   "stars": 1,
   "tags": [],
   "title": "",
@@ -2571,9 +2597,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 9584
+  "min_price": 9583,
+  "trend": ""
  },
  "a8894e982dfe6aab9b011cc2fc6b4950b2b09af7": {
   "id": "a8894e982dfe6aab9b011cc2fc6b4950b2b09af7",
@@ -2581,7 +2608,7 @@
   "route": "GDN → NRT",
   "cabin": "BUSINESS",
   "airline": "LOT, Asiana Airlines",
-  "price_pln": 9852,
+  "price_pln": 9851,
   "stars": 2,
   "tags": [],
   "title": "",
@@ -2594,9 +2621,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 9852
+  "min_price": 9851,
+  "trend": ""
  },
  "71177defd39da1dfb26837863d158766bb4ad39e": {
   "id": "71177defd39da1dfb26837863d158766bb4ad39e",
@@ -2604,7 +2632,7 @@
   "route": "WAW → NRT",
   "cabin": "BUSINESS",
   "airline": "Qatar Airways, SriLankan",
-  "price_pln": 7062,
+  "price_pln": 7061,
   "stars": 3,
   "tags": [],
   "title": "",
@@ -2617,9 +2645,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 7062
+  "min_price": 7061,
+  "trend": ""
  },
  "74ff445225290f60dbb44f2deab58e6d16adb445": {
   "id": "74ff445225290f60dbb44f2deab58e6d16adb445",
@@ -2640,9 +2669,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 10308
+  "min_price": 10308,
+  "trend": ""
  },
  "b9ebf55183faca14474cf046c023df4153dfd48f": {
   "id": "b9ebf55183faca14474cf046c023df4153dfd48f",
@@ -2663,9 +2693,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8048
+  "min_price": 8048,
+  "trend": ""
  },
  "603040d72c331d3e5ba395e197c95f281b931249": {
   "id": "603040d72c331d3e5ba395e197c95f281b931249",
@@ -2686,9 +2717,10 @@
   "roundtrip": false,
   "needs_feeder": false,
   "first_seen": "2026-07-14T22:25:28",
-  "last_seen": "2026-07-14T22:35:32",
+  "last_seen": "2026-07-14T23:00:40",
   "notified": false,
-  "min_price": 8621
+  "min_price": 8621,
+  "trend": ""
  },
  "9ec9009debee3fbd90b2604243d2bf1a2de80b5b": {
   "id": "9ec9009debee3fbd90b2604243d2bf1a2de80b5b",
@@ -2735,5 +2767,53 @@
   "last_seen": "2026-07-14T22:35:32",
   "notified": false,
   "min_price": 13863
+ },
+ "f22fafc3845b251b33574904ca4e0d7558637caf": {
+  "id": "f22fafc3845b251b33574904ca4e0d7558637caf",
+  "kind": "gf",
+  "route": "MXP → BKK",
+  "cabin": "FIRST",
+  "airline": "Qatar Airways",
+  "price_pln": 14239,
+  "stars": 3,
+  "tags": [],
+  "title": "",
+  "link": "https://www.google.com/travel/flights?tfs=GhoSCjIwMjYtMDktMDRqBRIDTVhQcgUSA0JLS0IBAUgEmAEC&hl=en&curr=PLN&tfu=EgQIABABIgA",
+  "source": "Google Flights (cena na żywo)",
+  "duration_h": 15.7,
+  "stops": 1,
+  "date": "2026-09-04",
+  "gf_low": true,
+  "roundtrip": false,
+  "needs_feeder": false,
+  "first_seen": "2026-07-14T23:00:40",
+  "last_seen": "2026-07-14T23:00:40",
+  "notified": false,
+  "min_price": 14239,
+  "trend": ""
+ },
+ "c3e544e637de6257d8bf3c1f18f2919463371977": {
+  "id": "c3e544e637de6257d8bf3c1f18f2919463371977",
+  "kind": "gf",
+  "route": "GDN → BKK",
+  "cabin": "FIRST",
+  "airline": "LOT, Qatar Airways",
+  "price_pln": 15657,
+  "stars": 3,
+  "tags": [],
+  "title": "",
+  "link": "https://www.google.com/travel/flights?tfs=GhoSCjIwMjYtMDktMDRqBRIDR0ROcgUSA0JLS0IBAUgEmAEC&hl=en&curr=PLN&tfu=EgQIABABIgA",
+  "source": "Google Flights (cena na żywo)",
+  "duration_h": 17.1,
+  "stops": 2,
+  "date": "2026-09-04",
+  "gf_low": true,
+  "roundtrip": false,
+  "needs_feeder": false,
+  "first_seen": "2026-07-14T23:00:40",
+  "last_seen": "2026-07-14T23:00:40",
+  "notified": false,
+  "min_price": 15657,
+  "trend": ""
  }
 }
