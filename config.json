@@ -87,7 +87,7 @@
   },
   "notify": {
     "min_stars": 4,
-    "renotify_price_drop_ratio": 0.93
+    "renotify_price_drop_ratio": 0.95
   },
   "limits": {
     "max_duration_hours": 26,
