@@ -48,9 +48,16 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
        font-weight:600; text-decoration:none; padding:7px 14px; border-radius:8px; font-size:13px; }
 .empty { color:var(--dim); text-align:center; padding:40px 0; }
 .stars { letter-spacing:2px; }
+.theme-btn { position:fixed; top:14px; right:14px; z-index:50; width:40px; height:40px;
+        border-radius:50%; border:1px solid var(--border); background:var(--card);
+        color:var(--txt); font-size:19px; line-height:1; cursor:pointer;
+        display:flex; align-items:center; justify-content:center;
+        box-shadow:0 2px 8px rgba(0,0,0,.25); transition:transform .15s; }
+.theme-btn:hover { transform:scale(1.08); }
 </style>
 </head>
 <body>
+<button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
 <h1>✈️ Flight Radar</h1>
 <div class="sub">Business/First do Azji · wygenerowano __GENERATED__</div>
@@ -64,7 +71,6 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
   <select id="fSort"><option value="stars">Sortuj: najlepsze</option>
     <option value="price">Sortuj: cena</option><option value="new">Sortuj: najnowsze</option></select>
   <div class="tgl" id="fTg">📨 tylko wysłane</div>
-  <div class="tgl" id="fTheme">🌓 Motyw</div>
 </div>
 <div id="list"></div>
 </div>
@@ -72,16 +78,16 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 const DEALS = __DATA__;
 const $ = id => document.getElementById(id);
 let onlyTg = false;
-// motyw (zapamiętany w przeglądarce)
-try { if (localStorage.getItem("fr-theme") === "light")
-        document.documentElement.setAttribute("data-theme", "light"); } catch (e) {}
-$("fTheme").onclick = () => {
-  const light = document.documentElement.getAttribute("data-theme") === "light";
-  if (light) { document.documentElement.removeAttribute("data-theme");
-               try { localStorage.setItem("fr-theme", "dark"); } catch (e) {} }
-  else { document.documentElement.setAttribute("data-theme", "light");
-         try { localStorage.setItem("fr-theme", "light"); } catch (e) {} }
-};
+// motyw (zapamiętany w przeglądarce) — przycisk-słoneczko w rogu
+function applyTheme(light) {
+  if (light) document.documentElement.setAttribute("data-theme", "light");
+  else document.documentElement.removeAttribute("data-theme");
+  $("themeBtn").textContent = light ? "🌙" : "☀️";
+  try { localStorage.setItem("fr-theme", light ? "light" : "dark"); } catch (e) {}
+}
+try { applyTheme(localStorage.getItem("fr-theme") === "light"); } catch (e) {}
+$("themeBtn").onclick = () =>
+  applyTheme(document.documentElement.getAttribute("data-theme") !== "light");
 const dests = [...new Set(DEALS.map(d => d.route.split("→").pop().trim()))].sort();
 const srcs = [...new Set(DEALS.map(d => d.source))].sort();
 dests.forEach(x => $("fDest").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
