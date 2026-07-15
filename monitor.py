@@ -781,38 +781,41 @@ def score(deal, cfg, lp):
     if lp["max_price_pln"] and p and p > lp["max_price_pln"]:
         return min(2, _base_stars(p, deal["cabin"], b))
 
-    stars = _base_stars(p, deal["cabin"], b)  # kotwica: sama cena
+    base = _base_stars(p, deal["cabin"], b)  # kotwica: sama cena
     stops = deal.get("stops")
 
-    # kary jakościowe za trasę
+    # kary jakościowe za trasę (liczymy osobno, odejmiemy na końcu)
+    penalty = 0
     if deal["kind"] in ("amadeus", "gf"):
         if (stops or 0) > cfg["limits"]["max_stops"]:
-            stars -= 2
+            penalty += 2
         elif stops == 2:
-            stars -= 1  # 2 przesiadki na locie premium — gorsze doświadczenie
+            penalty += 1  # 2 przesiadki na locie premium — gorsze doświadczenie
         if deal.get("duration_h") and deal["duration_h"] > lp["max_duration_h"]:
-            stars -= 1
+            penalty += 1
     elif not deal["origin_match"]:
-        stars -= 1
+        penalty += 1
 
     # 5★ ("KUPUJ NATYCHMIAST") = tylko WYJĄTKOWA okazja. Powiadomienia idą
-    # jedynie na 5★, więc próg jest celowo wysoki (spec: lepiej 1 wartościowy
-    # alert tygodniowo niż 50 przeciętnych). 5★ dostają tylko:
+    # jedynie na 5★. Zasada twarda: POWYŻEJ budżetu (business_4star / first_4star)
+    # NIC nie dostaje 5★ — jedynie prawdziwy error/mistake fare (błąd ceny może
+    # być dowolnie wysoki). 5★ przyznajemy gdy:
+    #   • error/mistake fare (dowolna cena), lub
     #   • cena ≤ business_5star (naprawdę niska), lub
-    #   • cena wyraźnie poniżej mediany rynkowej trasy, lub
-    #   • error fare / mistake fare.
-    # Wszystko inne (w budżecie, ładna linia) = maks. 4★ → tylko dashboard.
-    exceptional = bool(set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"})
-    if deal.get("median") and p and p < 0.75 * deal["median"] \
-            and deal.get("hist_len", 0) >= 10:
-        exceptional = True
+    #   • cena W BUDŻECIE i wyraźnie poniżej mediany rynkowej trasy.
+    budget4 = b["business_4star"] if deal["cabin"] == "BUSINESS" else b["first_4star"]
+    error_fare = bool(set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"})
+    below_market = bool(deal.get("median") and p and p < 0.75 * deal["median"]
+                        and deal.get("hist_len", 0) >= 10)
 
-    allow_5 = exceptional or _base_stars(p, deal["cabin"], b) >= 5
-    if not allow_5:
-        stars = min(stars, 4)
-    if exceptional:
-        stars = max(stars, 5)
+    if error_fare:
+        raw = 5  # błąd ceny to okazja niezależnie od kwoty
+    elif base >= 5 or (below_market and p is not None and p <= budget4):
+        raw = 5  # naprawdę niska cena albo poniżej rynku i w budżecie
+    else:
+        raw = min(base, 4)  # powyżej budżetu / zwykła cena — nigdy 5★
 
+    stars = raw - penalty
     if p is None:
         stars = min(stars, 3)
     return max(1, min(5, stars))

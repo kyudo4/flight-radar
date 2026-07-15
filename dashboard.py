@@ -12,9 +12,13 @@ TEMPLATE = """<!DOCTYPE html>
 <title>✈️ Flight Radar — oferty</title>
 <style>
 :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --txt:#e6edf3;
-        --dim:#8b949e; --accent:#58a6ff; --gold:#e3b341; --green:#3fb950; }
+        --dim:#8b949e; --accent:#58a6ff; --gold:#e3b341; --green:#3fb950;
+        --btntext:#0d1117; }
+:root[data-theme="light"] { --bg:#f6f8fa; --card:#ffffff; --border:#d0d7de;
+        --txt:#1f2328; --dim:#656d76; --accent:#0969da; --gold:#9a6700;
+        --green:#1a7f37; --btntext:#ffffff; }
 * { box-sizing:border-box; margin:0; padding:0; }
-body { background:var(--bg); color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding:16px; }
+body { background:var(--bg); color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding:16px; transition:background .2s,color .2s; }
 .wrap { max-width:980px; margin:0 auto; }
 h1 { font-size:22px; margin-bottom:4px; }
 .sub { color:var(--dim); font-size:13px; margin-bottom:16px; }
@@ -40,7 +44,7 @@ select, .tgl { background:var(--card); color:var(--txt); border:1px solid var(--
 .badge.tg { border-color:var(--accent); color:var(--accent); }
 .badge.low { border-color:var(--green); color:var(--green); }
 .title { margin-top:8px; font-size:13px; color:var(--dim); font-style:italic; }
-a.go { display:inline-block; margin-top:10px; background:var(--accent); color:#0d1117;
+a.go { display:inline-block; margin-top:10px; background:var(--accent); color:var(--btntext);
        font-weight:600; text-decoration:none; padding:7px 14px; border-radius:8px; font-size:13px; }
 .empty { color:var(--dim); text-align:center; padding:40px 0; }
 .stars { letter-spacing:2px; }
@@ -60,6 +64,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:#0
   <select id="fSort"><option value="stars">Sortuj: najlepsze</option>
     <option value="price">Sortuj: cena</option><option value="new">Sortuj: najnowsze</option></select>
   <div class="tgl" id="fTg">📨 tylko wysłane</div>
+  <div class="tgl" id="fTheme">🌓 Motyw</div>
 </div>
 <div id="list"></div>
 </div>
@@ -67,6 +72,16 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:#0
 const DEALS = __DATA__;
 const $ = id => document.getElementById(id);
 let onlyTg = false;
+// motyw (zapamiętany w przeglądarce)
+try { if (localStorage.getItem("fr-theme") === "light")
+        document.documentElement.setAttribute("data-theme", "light"); } catch (e) {}
+$("fTheme").onclick = () => {
+  const light = document.documentElement.getAttribute("data-theme") === "light";
+  if (light) { document.documentElement.removeAttribute("data-theme");
+               try { localStorage.setItem("fr-theme", "dark"); } catch (e) {} }
+  else { document.documentElement.setAttribute("data-theme", "light");
+         try { localStorage.setItem("fr-theme", "light"); } catch (e) {} }
+};
 const dests = [...new Set(DEALS.map(d => d.route.split("→").pop().trim()))].sort();
 const srcs = [...new Set(DEALS.map(d => d.source))].sort();
 dests.forEach(x => $("fDest").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
@@ -114,7 +129,17 @@ function render() {
       </div>
       ${d.title ? `<div class="title">${d.title}</div>` : ""}
       <a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz ofertę →</a>
-    </div>`).join("") || `<div class="empty">Brak ofert dla tych filtrów</div>`;
+    </div>`).join("") || emptyMsg(de, sr, ms);
+}
+function emptyMsg(de, sr, ms) {
+  // ile ofert byłoby po zdjęciu filtra gwiazdek (częsty powód "pustki":
+  // domyślnie od ⭐⭐⭐⭐, a droższe kierunki mają niższe oceny)
+  const relaxed = DEALS.filter(d => (!de || d.route.includes(de))
+    && (!sr || d.source === sr) && (!onlyTg || d.notified));
+  if (relaxed.length && ms > 0)
+    return `<div class="empty">Brak ofert ${"⭐".repeat(ms)}+ dla tych filtrów.<br>
+      Jest ${relaxed.length} niżej ocenionych — ustaw filtr na „Wszystkie gwiazdki".</div>`;
+  return `<div class="empty">Brak ofert dla tych filtrów</div>`;
 }
 ["fStars", "fDest", "fSrc", "fSort"].forEach(id => $(id).onchange = render);
 $("fTg").onclick = () => { onlyTg = !onlyTg; $("fTg").classList.toggle("on", onlyTg); render(); };
