@@ -48,6 +48,17 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
        font-weight:600; text-decoration:none; padding:7px 14px; border-radius:8px; font-size:13px; }
 .empty { color:var(--dim); text-align:center; padding:40px 0; }
 .stars { letter-spacing:2px; }
+.opts { margin-top:10px; }
+.opts summary { cursor:pointer; color:var(--accent); font-size:13px; font-weight:600;
+        padding:7px 0; list-style:none; user-select:none; }
+.opts summary::-webkit-details-marker { display:none; }
+.opts summary::before { content:"▸ "; }
+.opts[open] summary::before { content:"▾ "; }
+.opt { display:flex; justify-content:space-between; gap:10px; align-items:center;
+        padding:9px 11px; margin-top:6px; background:var(--bg); border:1px solid var(--border);
+        border-radius:8px; text-decoration:none; color:var(--txt); font-size:13px; }
+.opt:hover { border-color:var(--accent); }
+.opt .p { color:var(--gold); font-weight:700; white-space:nowrap; }
 .theme-btn { position:fixed; top:14px; right:14px; z-index:50; width:40px; height:40px;
         border-radius:50%; border:1px solid var(--border); background:var(--card);
         color:var(--txt); font-size:19px; line-height:1; cursor:pointer;
@@ -124,10 +135,16 @@ function render() {
   });
   rows = Object.values(groups).map(g => {
     const rep = g.reduce((m, d) => (d.price_pln || 9e9) < (m.price_pln || 9e9) ? d : m);
-    const ps = g.map(d => d.price_pln).filter(Boolean);
-    const ds = [...new Set(g.map(d => d.date).filter(Boolean))];
-    return Object.assign({}, rep, { _count: ds.length || g.length,
-      _max: ps.length ? Math.max(...ps) : null });
+    // jedna pozycja na datę (najtańsza z danej daty), posortowane po cenie
+    const byDate = {};
+    g.forEach(d => { const k = d.date || d.id;
+      if (!byDate[k] || (d.price_pln || 9e9) < (byDate[k].price_pln || 9e9)) byDate[k] = d; });
+    const opts = Object.values(byDate)
+      .sort((a, b) => (a.price_pln || 9e9) - (b.price_pln || 9e9))
+      .map(d => ({ date: d.date, price: d.price_pln, link: d.link, stops: d.stops }));
+    const ps = opts.map(o => o.price).filter(Boolean);
+    return Object.assign({}, rep, { _count: opts.length,
+      _max: ps.length ? Math.max(...ps) : null, _opts: opts });
   });
   const sort = $("fSort").value;
   rows.sort((a, b) => sort === "price" ? (a.price_pln || 9e9) - (b.price_pln || 9e9)
@@ -170,7 +187,15 @@ function render() {
         ${d.min_price && d.price_pln && d.min_price < d.price_pln ? `<span class="badge low">min: ${fmtP(d.min_price)}</span>` : ""}
       </div>
       ${d.title ? `<div class="title">${d.title}</div>` : ""}
-      <a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz ofertę →</a>
+      ${d._count > 1 ? `
+      <a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz najtańszą →</a>
+      <details class="opts">
+        <summary>🗓 ${d._count} dostępnych dat — wybierz</summary>
+        ${d._opts.map(o => `<a class="opt" href="${o.link}" target="_blank" rel="noopener">
+          <span>🗓 ${o.date || "?"}${o.stops != null ? " · " + (o.stops === 0 ? "bez przes." : o.stops + " przes.") : ""}</span>
+          <span class="p">${fmtP(o.price)} →</span></a>`).join("")}
+      </details>`
+      : `<a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz ofertę →</a>`}
     </div>`).join("") || emptyMsg(de, sr, ms);
 }
 function emptyMsg(de, sr, ms) {
