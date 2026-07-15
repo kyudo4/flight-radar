@@ -9,9 +9,10 @@
   },
   "google_flights": {
     "enabled": true,
-    "max_queries_per_run": 28,
+    "max_queries_per_run": 30,
     "first_class_queries": 2,
-    "min_delay_s": 2
+    "min_delay_s": 2,
+    "secondary_per_run": 3
   },
   "amadeus": {
     "api_key": "",

@@ -532,23 +532,30 @@ def parse_iso_duration(s):
 
 
 def plan_queries(cfg, max_queries):
-    """Rotacyjny plan zapytań: BKK z każdego portu + rotujący kierunek dodatkowy."""
+    """Zrównoważony plan zapytań: BKK (priorytet) ze wszystkich portów +
+    3 rotujące kierunki dodatkowe z większości portów. Każdy kierunek
+    dodatkowy trafia do skanu co ~3 h, a nie raz na 8 h jak wcześniej."""
     d_from = datetime.strptime(cfg["trip"]["depart_from"], "%Y-%m-%d")
     d_to = datetime.strptime(cfg["trip"]["depart_to"], "%Y-%m-%d")
     ndays = (d_to - d_from).days + 1
     tick = int(time.time() // 3600)  # zmienia się co godzinę
-    dates = [(d_from + timedelta(days=(tick + i * 5) % ndays)).strftime("%Y-%m-%d")
-             for i in range(2)]
-    sec = cfg["destinations"]["secondary"]
-    rot_dest = sec[tick % len(sec)] if sec else None
+    origins = cfg["origins"]
+
+    def rot_date(off):
+        return (d_from + timedelta(days=(tick * 3 + off) % ndays)).strftime("%Y-%m-%d")
+
     queries = []
-    for date in dates:
-        for origin in cfg["origins"]:
-            for dest in cfg["destinations"]["priority"]:
-                queries.append((origin, dest, date))
-    if rot_dest:
-        for origin in cfg["origins"][:4]:
-            queries.append((origin, rot_dest, dates[0]))
+    # priorytet BKK — wszystkie porty, 1 rotująca data na godzinę
+    for origin in origins:
+        for dest in cfg["destinations"]["priority"]:
+            queries.append((origin, dest, rot_date(0)))
+    # kierunki dodatkowe — 3 rotujące co godzinę, z większości portów
+    sec = cfg["destinations"]["secondary"]
+    sec_per_run = cfg.get("google_flights", {}).get("secondary_per_run", 3)
+    for i in range(min(sec_per_run, len(sec))):
+        dest = sec[(tick * sec_per_run + i) % len(sec)]
+        for origin in origins[:7]:
+            queries.append((origin, dest, rot_date(i + 1)))
     return queries[:max_queries]
 
 
