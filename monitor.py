@@ -788,24 +788,23 @@ def score(deal, cfg, lp):
     elif not deal["origin_match"]:
         stars -= 1
 
-    # wyjątkowa WARTOŚĆ — może wynieść nawet do 5★ mimo wyższej ceny
+    # 5★ ("KUPUJ NATYCHMIAST") = tylko WYJĄTKOWA okazja. Powiadomienia idą
+    # jedynie na 5★, więc próg jest celowo wysoki (spec: lepiej 1 wartościowy
+    # alert tygodniowo niż 50 przeciętnych). 5★ dostają tylko:
+    #   • cena ≤ business_5star (naprawdę niska), lub
+    #   • cena wyraźnie poniżej mediany rynkowej trasy, lub
+    #   • error fare / mistake fare.
+    # Wszystko inne (w budżecie, ładna linia) = maks. 4★ → tylko dashboard.
     exceptional = bool(set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"})
     if deal.get("median") and p and p < 0.75 * deal["median"] \
             and deal.get("hist_len", 0) >= 10:
         exceptional = True
 
-    # miękki bonus +1 — tylko gdy cena już jest dobra (baza ≥ 4, w budżecie).
-    # Liczy się jakość trasy (bezpośredni lot) na równi z linią/„taniej".
-    pref = (stops == 0
-            or deal["airline"] in cfg["priority_airlines"]
-            or deal["airline"] in lp["boost_airlines"]
-            or deal.get("gf_price_level") == "low"
-            or bool(deal.get("tags")))
-
+    allow_5 = exceptional or _base_stars(p, deal["cabin"], b) >= 5
+    if not allow_5:
+        stars = min(stars, 4)
     if exceptional:
-        stars = max(stars, 4) + 1
-    elif pref and stars >= 4:
-        stars += 1
+        stars = max(stars, 5)
 
     if p is None:
         stars = min(stars, 3)
