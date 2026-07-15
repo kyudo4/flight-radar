@@ -99,7 +99,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <div id="list"></div>
 </div>
 <script>
-const DEALS = __DATA__;
+const DEALS = (__DATA__).filter(d => !d.duration_h || d.duration_h <= 24);
 const $ = id => document.getElementById(id);
 let onlyTg = false;
 // motyw (zapamiętany w przeglądarce) — przycisk-słoneczko w rogu

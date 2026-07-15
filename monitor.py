@@ -672,8 +672,13 @@ def gflights_deals(cfg):
     import random
     prices = state_file("prices.json", {})
     prio = set(cfg["priority_airlines"])
+    maxdur = cfg["limits"]["max_duration_hours"]
     deals = []
     blocked = False
+
+    def within_time(flights):
+        return [f for f in flights
+                if not f["duration_h"] or f["duration_h"] <= maxdur]
 
     def gf_deal(f, origin, dest, date, cabin, level, hist):
         return {
@@ -711,6 +716,7 @@ def gflights_deals(cfg):
         except Exception as e:
             log("Google Flights %s-%s %s: %s" % (origin, dest, date, e))
             continue
+        flights = within_time(flights)  # twardy limit czasu lotu
         key = "GF:%s-%s" % (origin, dest)
         hist = prices.setdefault(key, [])
         if flights:
@@ -737,6 +743,7 @@ def gflights_deals(cfg):
         except Exception as e:
             log("Google Flights first %s-%s: %s" % (origin, dest, e))
             continue
+        flights = within_time(flights)  # twardy limit czasu lotu
         key = "GF1:%s-%s" % (origin, dest)
         hist = prices.setdefault(key, [])
         if flights:
@@ -1179,7 +1186,10 @@ def run(cfg):
     seen = {k: v for k, v in seen.items() if v.get("when", "9999") > cutoff}
     save_state("seen.json", seen)
 
-    # archiwum + strona z ofertami
+    # archiwum + strona z ofertami — usuń oferty przekraczające limit czasu
+    maxdur = cfg["limits"]["max_duration_hours"]
+    archive = {k: v for k, v in archive.items()
+               if not v.get("duration_h") or v["duration_h"] <= maxdur}
     if len(archive) > 500:
         keep = sorted(archive.values(), key=lambda d: d.get("last_seen", ""),
                       reverse=True)[:500]

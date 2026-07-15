@@ -96,7 +96,7 @@
     }
   },
   "limits": {
-    "max_duration_hours": 26,
+    "max_duration_hours": 24,
     "max_stops": 2
   },
   "heartbeat_hours": 6,
