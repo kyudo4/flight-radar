@@ -112,12 +112,21 @@ function applyTheme(light) {
 try { applyTheme(localStorage.getItem("fr-theme") === "light"); } catch (e) {}
 $("themeBtn").onclick = () =>
   applyTheme(document.documentElement.getAttribute("data-theme") !== "light");
+const CITY = { GDN:"Gdańsk", WAW:"Warszawa", POZ:"Poznań", KRK:"Kraków",
+  OSL:"Oslo", ARN:"Sztokholm", CPH:"Kopenhaga", VIE:"Wiedeń", BUD:"Budapeszt",
+  MXP:"Mediolan", BKK:"Bangkok", SIN:"Singapur", KUL:"Kuala Lumpur",
+  HKG:"Hongkong", HAN:"Hanoi", SGN:"Ho Chi Minh", HND:"Tokio-Haneda",
+  NRT:"Tokio-Narita", TYO:"Tokio", ICN:"Seul", DPS:"Bali" };
+const cityName = c => CITY[c] || c;
+const routeLabel = r => r.split("→").map(s => cityName(s.trim())).join(" → ");
 const origin = d => d.route.split("→")[0].trim();
-const dests = [...new Set(DEALS.map(d => d.route.split("→").pop().trim()))].sort();
-const origins = [...new Set(DEALS.map(origin).filter(Boolean))].sort();
+const dests = [...new Set(DEALS.map(d => d.route.split("→").pop().trim()))]
+  .sort((a, b) => cityName(a).localeCompare(cityName(b), "pl"));
+const origins = [...new Set(DEALS.map(origin).filter(Boolean))]
+  .sort((a, b) => cityName(a).localeCompare(cityName(b), "pl"));
 const srcs = [...new Set(DEALS.map(d => d.source))].sort();
-origins.forEach(x => $("fOrigin").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
-dests.forEach(x => $("fDest").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
+origins.forEach(x => $("fOrigin").insertAdjacentHTML("beforeend", `<option value="${x}">${cityName(x)}</option>`));
+dests.forEach(x => $("fDest").insertAdjacentHTML("beforeend", `<option value="${x}">${cityName(x)}</option>`));
 srcs.forEach(x => $("fSrc").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
 const fmtP = p => p ? p.toLocaleString("pl-PL") + " PLN" : "cena w art.";
 const fmtT = iso => iso ? iso.replace("T", " ").slice(5, 16) : "";
@@ -155,12 +164,12 @@ function render() {
   $("stats").innerHTML = `
     <div class="stat"><b>${DEALS.length}</b><span>ofert w bazie</span></div>
     <div class="stat"><b>${DEALS.filter(d => d.stars >= 4).length}</b><span>wartych uwagi</span></div>
-    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + best.route + ")" : ""}</span></div>`;
+    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + routeLabel(best.route) + ")" : ""}</span></div>`;
   $("list").innerHTML = rows.map(d => `
     <div class="card s${d.stars}">
       <div class="row1">
         <div><span class="stars">${"⭐".repeat(d.stars)}</span>
-          <span class="route"> ${d.route}</span></div>
+          <span class="route"> ${routeLabel(d.route)}</span></div>
         <div class="price">${fmtP(d.price_pln)}</div>
       </div>
       <div class="meta">
