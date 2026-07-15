@@ -952,6 +952,29 @@ def fmt_deal(deal, stars, drop_note="", trend=""):
 
 # --------------------------------------------------- trend / heartbeat / digest
 
+def should_notify(deal, cfg):
+    """Reguły cenowe powiadomień (niezależne od gwiazdek):
+      1) z Poznania (POZ) dokądkolwiek w Azji poniżej `poznan_max`
+      2) skądkolwiek do BKK poniżej `bkk_max`
+      3) do innych miast Azji (nie-BKK) skądkolwiek poniżej `other_max`
+    Error/mistake fare z blogów przechodzi zawsze (to okazja z definicji)."""
+    p = deal.get("price_pln")
+    if not p:
+        return False
+    if set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"}:
+        return True
+    r = cfg["notify"]["rules"]
+    origin = deal.get("origin", "")
+    dest = deal.get("dest", "")
+    if origin == "POZ" and p < r["poznan_max"]:
+        return True
+    if dest == "BKK" and p < r["bkk_max"]:
+        return True
+    if dest and dest != "BKK" and p < r["other_max"]:
+        return True
+    return False
+
+
 def update_trends(deals):
     """Dzienny minimalny koszt na trasę (30 dni historii) -> state/trends.json."""
     trends = state_file("trends.json", {})
@@ -1081,14 +1104,15 @@ def run(cfg):
         old = seen.get(did)
         drop_note = ""
         send = False
+        notify = should_notify(deal, cfg)
         if old:
-            if deal["price_pln"] and old.get("price_pln") \
+            if notify and deal["price_pln"] and old.get("price_pln") \
                     and deal["price_pln"] < old["price_pln"] * drop_ratio:
                 drop_note = "Cena spadła: %s → %s" % (
                     fmt_price(old["price_pln"]), fmt_price(deal["price_pln"]))
-                send = stars >= cfg["notify"]["min_stars"]
+                send = True
         else:
-            send = stars >= cfg["notify"]["min_stars"]
+            send = notify
         if send and not verify(deal):
             log("Odrzucono martwą ofertę: %s" % deal.get("title", deal["route"]))
             send = False

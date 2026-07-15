@@ -88,7 +88,12 @@
   },
   "notify": {
     "min_stars": 5,
-    "renotify_price_drop_ratio": 0.95
+    "renotify_price_drop_ratio": 0.95,
+    "rules": {
+      "poznan_max": 7000,
+      "bkk_max": 6000,
+      "other_max": 5000
+    }
   },
   "limits": {
     "max_duration_hours": 26,
