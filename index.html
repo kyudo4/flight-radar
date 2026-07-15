@@ -54,7 +54,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
 <h1>✈️ Flight Radar</h1>
-<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 09:55</div>
+<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 10:08</div>
 <div class="stats" id="stats"></div>
 <div class="filters">
   <select id="fStars"><option value="0">Wszystkie gwiazdki</option>
@@ -98,6 +98,19 @@ function render() {
   let rows = DEALS.filter(d => d.stars >= ms
     && (!or || origin(d) === or) && (!de || d.route.split("→").pop().trim() === de)
     && (!sr || d.source === sr) && (!onlyTg || d.notified));
+  // grupowanie powtórek: ta sama trasa+linia+klasa+ocena (różne daty) → 1 karta
+  const groups = {};
+  rows.forEach(d => {
+    const k = d.route + "|" + d.airline + "|" + d.cabin + "|" + d.stars;
+    (groups[k] = groups[k] || []).push(d);
+  });
+  rows = Object.values(groups).map(g => {
+    const rep = g.reduce((m, d) => (d.price_pln || 9e9) < (m.price_pln || 9e9) ? d : m);
+    const ps = g.map(d => d.price_pln).filter(Boolean);
+    const ds = [...new Set(g.map(d => d.date).filter(Boolean))];
+    return Object.assign({}, rep, { _count: ds.length || g.length,
+      _max: ps.length ? Math.max(...ps) : null });
+  });
   const sort = $("fSort").value;
   rows.sort((a, b) => sort === "price" ? (a.price_pln || 9e9) - (b.price_pln || 9e9)
     : sort === "new" ? (b.last_seen || "").localeCompare(a.last_seen || "")
@@ -117,13 +130,14 @@ function render() {
       </div>
       <div class="meta">
         ${d.airline ? "✈️ " + d.airline + " · " : ""}${d.cabin === "FIRST" ? "First" : "Business"}
-        ${d.date ? " · 🗓 " + d.date : ""}
+        ${d.date ? " · 🗓 " + d.date + (d._count > 1 ? " (najtańsza)" : "") : ""}
         ${d.stops != null ? " · " + (d.stops === 0 ? "bez przesiadek" : d.stops + " przes.") : ""}
         ${d.duration_h ? " · " + Math.floor(d.duration_h) + "h " + Math.round(d.duration_h % 1 * 60) + "m" : ""}
         · znaleziono ${fmtT(d.first_seen)}
       </div>
       <div class="badges">
         <span class="badge">${d.source}</span>
+        ${d._count > 1 ? `<span class="badge">🗓 ${d._count} dat${d._max && d._max > d.price_pln ? " · do " + fmtP(d._max) : ""}</span>` : ""}
         ${d.tags.map(t => `<span class="badge hot">🏷 ${t}</span>`).join("")}
         ${d.gf_low ? `<span class="badge low">📊 taniej niż zwykle</span>` : ""}
         ${d.roundtrip ? `<span class="badge">↔️ w obie strony</span>` : ""}
