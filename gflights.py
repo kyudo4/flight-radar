@@ -115,14 +115,28 @@ def fetch_gf(origin, dest, date, seat="business", timeout=35):
     return result.current_price, flights
 
 
+def _best_value(flights):
+    """Najlepsza oferta = najtańsza, a przy zbliżonej cenie (do +2%) NAJKRÓTSZA.
+    Bez tego łapaliśmy przypadkową trasę z kilku o tej samej cenie — Google
+    Flights domyślnie pokazuje najkrótszą, i tak samo musimy robić my."""
+    minp = min(f["price_pln"] for f in flights)
+    window = max(minp * 1.02, minp + 60)
+    near = [f for f in flights if f["price_pln"] <= window]
+    return min(near, key=lambda f: (f["duration_h"] if f["duration_h"] else 999,
+                                    f["stops"] if f["stops"] is not None else 9,
+                                    f["price_pln"]))
+
+
 def cheapest_picks(flights, priority_codes):
-    """Najtańszy lot ogółem + najtańszy lot linii priorytetowej (gdy inny)."""
+    """Najlepsza wartość ogółem + najlepsza linii priorytetowej (gdy inna)."""
     if not flights:
         return []
-    best = min(flights, key=lambda f: f["price_pln"])
+    best = _best_value(flights)
     picks = [best]
     prio = [f for f in flights
             if f["airline"] in priority_codes and f is not best]
     if prio:
-        picks.append(min(prio, key=lambda f: f["price_pln"]))
+        p = _best_value(prio)
+        if p is not best:
+            picks.append(p)
     return picks
