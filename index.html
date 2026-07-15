@@ -48,13 +48,24 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
         display:flex; align-items:center; justify-content:center;
         box-shadow:0 2px 8px rgba(0,0,0,.25); transition:transform .15s; }
 .theme-btn:hover { transform:scale(1.08); }
+@media (max-width: 560px) {
+  body { padding: 12px; }
+  h1 { font-size: 20px; }
+  .sub { padding-right: 44px; }           /* nie pod przyciskiem motywu */
+  .stats { gap: 8px; }
+  .stat { flex: 1 1 44%; }
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .filters select, .filters .tgl { width: 100%; }
+  .price { font-size: 18px; }
+  .card { padding: 12px 13px; }
+}
 </style>
 </head>
 <body>
 <button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
 <h1>✈️ Flight Radar</h1>
-<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 10:08</div>
+<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 10:10</div>
 <div class="stats" id="stats"></div>
 <div class="filters">
   <select id="fStars"><option value="0">Wszystkie gwiazdki</option>
