@@ -763,44 +763,48 @@ def hub_alternative(cfg, deals):
 # ---------------------------------------------------------------- scoring
 
 def score(deal, cfg, lp):
+    """Ocena zakotwiczona na CENIE. Bonusy (linia, 'taniej niż zwykle')
+    to sygnały miękkie — mogą podnieść o 1★, ale NIE robią 5★ z oferty
+    droższej niż budżet 4★. 5★ = albo świetna cena, albo wyjątkowa wartość
+    (error fare / wyraźnie poniżej mediany rynkowej)."""
     b = cfg["budget_pln"]
     p = deal["price_pln"]
     if deal["airline"] in lp["blocked_airlines"]:
         return 0
     if lp["max_price_pln"] and p and p > lp["max_price_pln"]:
         return min(2, _base_stars(p, deal["cabin"], b))
-    stars = _base_stars(p, deal["cabin"], b)
-    if deal["airline"] in cfg["priority_airlines"]:
-        stars += 1
-    if deal["airline"] in lp["boost_airlines"]:
-        stars += 1
-    if deal.get("tags"):
-        stars += 1
+
+    stars = _base_stars(p, deal["cabin"], b)  # kotwica: sama cena
+
+    # kary jakościowe
     if deal["kind"] in ("amadeus", "gf"):
-        if deal.get("median") and p and p < 0.75 * deal["median"] \
-                and deal.get("hist_len", 0) >= 10:
-            stars += 1  # wyraźnie poniżej mediany historycznej
-        if deal.get("gf_price_level") == "low":
-            stars += 1  # ocena Google: ceny niższe niż zwykle
         if (deal.get("stops") or 0) > cfg["limits"]["max_stops"]:
             stars -= 2
         if deal.get("duration_h") and deal["duration_h"] > lp["max_duration_h"]:
             stars -= 1
-        # powyżej budżetu (z 10% tolerancją) 4-5 gwiazdek tylko dla cen
-        # wyraźnie poniżej mediany rynkowej lub error fare
-        limit = b["business_4star"] if deal["cabin"] == "BUSINESS" \
-            else b["first_4star"]
-        if p and p > limit * 1.1:
-            below_med = (deal.get("median") and p < 0.75 * deal["median"]
-                         and deal.get("hist_len", 0) >= 10)
-            if not below_med and not set(deal.get("tags", [])) \
-                    & {"Error Fare", "Mistake Fare"}:
-                stars = min(stars, 3)
-    else:
-        if not deal["origin_match"]:
-            stars -= 1
-        if p is None:
-            stars = min(stars, 3)
+    elif not deal["origin_match"]:
+        stars -= 1
+
+    # wyjątkowa WARTOŚĆ — może wynieść nawet do 5★ mimo wyższej ceny
+    exceptional = bool(set(deal.get("tags", [])) & {"Error Fare", "Mistake Fare"})
+    if deal.get("median") and p and p < 0.75 * deal["median"] \
+            and deal.get("hist_len", 0) >= 10:
+        exceptional = True
+
+    # preferencje — miękki bonus +1, ale tylko gdy cena już jest dobra
+    # (baza ≥ 4, czyli w budżecie); nie tworzą 5★ z przeciętnej ceny
+    pref = (deal["airline"] in cfg["priority_airlines"]
+            or deal["airline"] in lp["boost_airlines"]
+            or deal.get("gf_price_level") == "low"
+            or bool(deal.get("tags")))
+
+    if exceptional:
+        stars = max(stars, 4) + 1
+    elif pref and stars >= 4:
+        stars += 1
+
+    if p is None:
+        stars = min(stars, 3)
     return max(1, min(5, stars))
 
 
