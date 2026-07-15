@@ -673,12 +673,21 @@ def gflights_deals(cfg):
     prices = state_file("prices.json", {})
     prio = set(cfg["priority_airlines"])
     maxdur = cfg["limits"]["max_duration_hours"]
+    excluded = [c.lower() for c in cfg.get("exclude_carriers", [])]
     deals = []
     blocked = False
 
     def within_time(flights):
-        return [f for f in flights
-                if not f["duration_h"] or f["duration_h"] <= maxdur]
+        """Odrzuca loty > limitu czasu ORAZ tanie linie (business != lie-flat)."""
+        out = []
+        for f in flights:
+            if f["duration_h"] and f["duration_h"] > maxdur:
+                continue
+            name = (f["airline_name"] or "").lower()
+            if any(x in name for x in excluded):
+                continue
+            out.append(f)
+        return out
 
     def gf_deal(f, origin, dest, date, cabin, level, hist):
         return {
@@ -1186,10 +1195,12 @@ def run(cfg):
     seen = {k: v for k, v in seen.items() if v.get("when", "9999") > cutoff}
     save_state("seen.json", seen)
 
-    # archiwum + strona z ofertami — usuń oferty przekraczające limit czasu
+    # archiwum + strona z ofertami — usuń oferty >limitu czasu i tanie linie
     maxdur = cfg["limits"]["max_duration_hours"]
+    excl = [c.lower() for c in cfg.get("exclude_carriers", [])]
     archive = {k: v for k, v in archive.items()
-               if not v.get("duration_h") or v["duration_h"] <= maxdur}
+               if (not v.get("duration_h") or v["duration_h"] <= maxdur)
+               and not any(x in (v.get("airline") or "").lower() for x in excl)}
     if len(archive) > 500:
         keep = sorted(archive.values(), key=lambda d: d.get("last_seen", ""),
                       reverse=True)[:500]

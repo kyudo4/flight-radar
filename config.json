@@ -156,5 +156,25 @@
     "SEK": 0.39,
     "NOK": 0.37,
     "DKK": 0.58
-  }
+  },
+  "exclude_carriers": [
+    "IndiGo",
+    "AirAsia",
+    "Scoot",
+    "Jetstar",
+    "Cebu",
+    "VietJet",
+    "SpiceJet",
+    "Pegasus",
+    "flydubai",
+    "Wizz",
+    "Ryanair",
+    "easyJet",
+    "Norwegian",
+    "Go First",
+    "Akasa",
+    "Nok",
+    "Lion Air",
+    "Salam Air"
+  ]
 }
