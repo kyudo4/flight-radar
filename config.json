@@ -89,7 +89,7 @@
   },
   "notify": {
     "min_stars": 5,
-    "renotify_price_drop_ratio": 0.95,
+    "renotify_price_drop_ratio": 0.9,
     "rules": {
       "poznan_max": 7000,
       "bkk_max": 6000,
@@ -176,5 +176,8 @@
     "Nok",
     "Lion Air",
     "Salam Air"
+  ],
+  "direct_only_origins": [
+    "IST"
   ]
 }

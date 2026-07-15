@@ -139,7 +139,7 @@ function render() {
   // grupowanie powtórek: ta sama trasa+linia+klasa+ocena (różne daty) → 1 karta
   const groups = {};
   rows.forEach(d => {
-    const k = d.route + "|" + d.airline + "|" + d.cabin + "|" + d.stars;
+    const k = d.route + "|" + d.airline + "|" + d.cabin;
     (groups[k] = groups[k] || []).push(d);
   });
   rows = Object.values(groups).map(g => {

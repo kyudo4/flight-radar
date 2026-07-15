@@ -674,17 +674,21 @@ def gflights_deals(cfg):
     prio = set(cfg["priority_airlines"])
     maxdur = cfg["limits"]["max_duration_hours"]
     excluded = [c.lower() for c in cfg.get("exclude_carriers", [])]
+    direct_only = set(cfg.get("direct_only_origins", []))
     deals = []
     blocked = False
 
-    def within_time(flights):
-        """Odrzuca loty > limitu czasu ORAZ tanie linie (business != lie-flat)."""
+    def within_time(flights, origin=None):
+        """Odrzuca loty > limitu czasu, tanie linie (business != lie-flat),
+        a z wybranych lotnisk (np. IST) tylko bezpośrednie."""
         out = []
         for f in flights:
             if f["duration_h"] and f["duration_h"] > maxdur:
                 continue
             name = (f["airline_name"] or "").lower()
             if any(x in name for x in excluded):
+                continue
+            if origin in direct_only and f["stops"] != 0:
                 continue
             out.append(f)
         return out
@@ -725,7 +729,7 @@ def gflights_deals(cfg):
         except Exception as e:
             log("Google Flights %s-%s %s: %s" % (origin, dest, date, e))
             continue
-        flights = within_time(flights)  # twardy limit czasu lotu
+        flights = within_time(flights, origin)  # twardy limit czasu lotu
         key = "GF:%s-%s" % (origin, dest)
         hist = prices.setdefault(key, [])
         if flights:
@@ -752,7 +756,7 @@ def gflights_deals(cfg):
         except Exception as e:
             log("Google Flights first %s-%s: %s" % (origin, dest, e))
             continue
-        flights = within_time(flights)  # twardy limit czasu lotu
+        flights = within_time(flights, origin)  # twardy limit czasu lotu
         key = "GF1:%s-%s" % (origin, dest)
         hist = prices.setdefault(key, [])
         if flights:
@@ -1114,6 +1118,16 @@ def run(cfg):
     now = datetime.now().isoformat(timespec="seconds")
     sent = 0
 
+    # najniższa znana cena na trasie (z bazy) — powiadamiamy tylko o NOWEJ
+    # niższej cenie, nie o droższym locie na tej samej trasie w inny dzień
+    route_min = {}
+    for d in archive.values():
+        if d.get("price_pln"):
+            rk = d["route"] + "|" + d["cabin"]
+            route_min[rk] = min(route_min.get(rk, 10 ** 9), d["price_pln"])
+    # od najtańszych — na trasie zaalarmuje tylko realnie najtańsza z przebiegu
+    deals.sort(key=lambda d: d["price_pln"] if d.get("price_pln") else 10 ** 9)
+
     for deal in deals:
         did = deal_id(deal)
         stars = score(deal, cfg, lp)
@@ -1121,14 +1135,22 @@ def run(cfg):
         drop_note = ""
         send = False
         notify = should_notify(deal, cfg)
+        p = deal["price_pln"]
+        rk = deal["route"] + "|" + deal["cabin"]
+        prev_min = route_min.get(rk)
+        is_new_low = bool(p) and (prev_min is None or p < prev_min)
         if old:
-            if notify and deal["price_pln"] and old.get("price_pln") \
-                    and deal["price_pln"] < old["price_pln"] * drop_ratio:
+            # ten sam lot (ta sama data) — ponowny alert tylko przy spadku o próg
+            if notify and p and old.get("price_pln") \
+                    and p < old["price_pln"] * drop_ratio:
                 drop_note = "Cena spadła: %s → %s" % (
-                    fmt_price(old["price_pln"]), fmt_price(deal["price_pln"]))
+                    fmt_price(old["price_pln"]), fmt_price(p))
                 send = True
         else:
-            send = notify
+            # nowy lot/data — alarm tylko jeśli to NOWA najniższa cena na trasie
+            send = notify and is_new_low
+        if p:
+            route_min[rk] = min(prev_min if prev_min is not None else 10 ** 9, p)
         if send and not verify(deal):
             log("Odrzucono martwą ofertę: %s" % deal.get("title", deal["route"]))
             send = False
