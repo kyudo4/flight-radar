@@ -64,8 +64,8 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <div class="stats" id="stats"></div>
 <div class="filters">
   <select id="fStars"><option value="0">Wszystkie gwiazdki</option>
-    <option value="5">tylko ⭐⭐⭐⭐⭐</option><option value="4" selected>od ⭐⭐⭐⭐</option>
-    <option value="3">od ⭐⭐⭐</option></select>
+    <option value="5">tylko ⭐⭐⭐⭐⭐</option><option value="4">od ⭐⭐⭐⭐</option>
+    <option value="3" selected>od ⭐⭐⭐</option></select>
   <select id="fDest"><option value="">Wszystkie kierunki</option></select>
   <select id="fSrc"><option value="">Wszystkie źródła</option></select>
   <select id="fSort"><option value="stars">Sortuj: najlepsze</option>
