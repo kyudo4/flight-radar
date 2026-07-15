@@ -775,11 +775,14 @@ def score(deal, cfg, lp):
         return min(2, _base_stars(p, deal["cabin"], b))
 
     stars = _base_stars(p, deal["cabin"], b)  # kotwica: sama cena
+    stops = deal.get("stops")
 
-    # kary jakościowe
+    # kary jakościowe za trasę
     if deal["kind"] in ("amadeus", "gf"):
-        if (deal.get("stops") or 0) > cfg["limits"]["max_stops"]:
+        if (stops or 0) > cfg["limits"]["max_stops"]:
             stars -= 2
+        elif stops == 2:
+            stars -= 1  # 2 przesiadki na locie premium — gorsze doświadczenie
         if deal.get("duration_h") and deal["duration_h"] > lp["max_duration_h"]:
             stars -= 1
     elif not deal["origin_match"]:
@@ -791,9 +794,10 @@ def score(deal, cfg, lp):
             and deal.get("hist_len", 0) >= 10:
         exceptional = True
 
-    # preferencje — miękki bonus +1, ale tylko gdy cena już jest dobra
-    # (baza ≥ 4, czyli w budżecie); nie tworzą 5★ z przeciętnej ceny
-    pref = (deal["airline"] in cfg["priority_airlines"]
+    # miękki bonus +1 — tylko gdy cena już jest dobra (baza ≥ 4, w budżecie).
+    # Liczy się jakość trasy (bezpośredni lot) na równi z linią/„taniej".
+    pref = (stops == 0
+            or deal["airline"] in cfg["priority_airlines"]
             or deal["airline"] in lp["boost_airlines"]
             or deal.get("gf_price_level") == "low"
             or bool(deal.get("tags")))
