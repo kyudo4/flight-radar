@@ -719,30 +719,32 @@ def gflights_deals(cfg):
         for f in gflights.cheapest_picks(flights, prio):
             deals.append(gf_deal(f, origin, dest, date, "BUSINESS", level, hist))
 
-    # First class: rotacyjne sondy (spec: "każda wyjątkowa okazja")
+    # First class: rotacyjne sondy (spec: "każda wyjątkowa okazja").
+    # Rotujemy zarówno lotnisko wylotu, jak i kierunek (BKK + dodatkowe),
+    # żeby First był sprawdzany na całej Azji, nie tylko do Bangkoku.
     tick = int(time.time() // 3600)
     d_from = datetime.strptime(cfg["trip"]["depart_from"], "%Y-%m-%d")
     ndays = (datetime.strptime(cfg["trip"]["depart_to"], "%Y-%m-%d")
              - d_from).days + 1
     f_date = (d_from + timedelta(days=tick % ndays)).strftime("%Y-%m-%d")
+    first_dests = cfg["destinations"]["priority"] + cfg["destinations"]["secondary"]
     for i in range(0 if blocked else gf_cfg.get("first_class_queries", 2)):
         origin = cfg["origins"][(tick + i) % len(cfg["origins"])]
+        dest = first_dests[(tick + i) % len(first_dests)]
         time.sleep(gf_cfg.get("min_delay_s", 2) + random.uniform(0, 3))
         try:
-            level, flights = gflights.fetch_gf(origin, "BKK", f_date,
-                                               seat="first")
+            level, flights = gflights.fetch_gf(origin, dest, f_date, seat="first")
         except Exception as e:
-            log("Google Flights first %s-BKK: %s" % (origin, e))
+            log("Google Flights first %s-%s: %s" % (origin, dest, e))
             continue
-        key = "GF1:%s-BKK" % origin
+        key = "GF1:%s-%s" % (origin, dest)
         hist = prices.setdefault(key, [])
         if flights:
             hist.append(min(f["price_pln"] for f in flights))
             del hist[:-60]
         prio_f = [f for f in flights if f["airline"] in prio] or flights
         for f in gflights.cheapest_picks(prio_f, prio)[:1]:
-            deals.append(gf_deal(f, origin, "BKK", f_date, "FIRST",
-                                 level, hist))
+            deals.append(gf_deal(f, origin, dest, f_date, "FIRST", level, hist))
 
     save_state("prices.json", prices)
     log("Google Flights: %d ofert z %d zapytań" % (len(deals), len(queries)))

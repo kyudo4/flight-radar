@@ -135,10 +135,15 @@ function render() {
     : b.stars - a.stars || (a.price_pln || 9e9) - (b.price_pln || 9e9));
   const live = DEALS.filter(d => d.kind !== "rss" && d.price_pln);
   const best = live.length ? live.reduce((m, d) => d.price_pln < m.price_pln ? d : m) : null;
+  // mediana cen business do BKK (punkt odniesienia "ile normalnie kosztuje")
+  const bkk = live.filter(d => d.cabin === "BUSINESS"
+    && d.route.split("→").pop().trim() === "BKK").map(d => d.price_pln).sort((a, b) => a - b);
+  const medBkk = bkk.length ? bkk[Math.floor(bkk.length / 2)] : null;
   $("stats").innerHTML = `
     <div class="stat"><b>${DEALS.length}</b><span>ofert w bazie</span></div>
     <div class="stat"><b>${DEALS.filter(d => d.stars >= 4).length}</b><span>wartych uwagi</span></div>
-    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + best.route + ")" : ""}</span></div>`;
+    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + best.route + ")" : ""}</span></div>
+    <div class="stat"><b>${medBkk ? fmtP(medBkk) : "—"}</b><span>mediana business → BKK</span></div>`;
   $("list").innerHTML = rows.map(d => `
     <div class="card s${d.stars}">
       <div class="row1">
