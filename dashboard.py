@@ -114,7 +114,7 @@ $("themeBtn").onclick = () =>
   applyTheme(document.documentElement.getAttribute("data-theme") !== "light");
 const CITY = { GDN:"Gdańsk", WAW:"Warszawa", POZ:"Poznań", KRK:"Kraków",
   OSL:"Oslo", ARN:"Sztokholm", CPH:"Kopenhaga", VIE:"Wiedeń", BUD:"Budapeszt",
-  MXP:"Mediolan", BKK:"Bangkok", SIN:"Singapur", KUL:"Kuala Lumpur",
+  MXP:"Mediolan", IST:"Stambuł", BKK:"Bangkok", SIN:"Singapur", KUL:"Kuala Lumpur",
   HKG:"Hongkong", HAN:"Hanoi", SGN:"Ho Chi Minh", HND:"Tokio-Haneda",
   NRT:"Tokio-Narita", TYO:"Tokio", ICN:"Seul", DPS:"Bali" };
 const cityName = c => CITY[c] || c;
