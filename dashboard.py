@@ -9,7 +9,7 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>✈️ Flight Radar — oferty</title>
+<title>✈️ Asia Flight Radar — oferty</title>
 <style>
 :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --txt:#e6edf3;
         --dim:#8b949e; --accent:#58a6ff; --gold:#e3b341; --green:#3fb950;
@@ -82,7 +82,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <body>
 <button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
-<h1>✈️ Flight Radar</h1>
+<h1>✈️ Asia Flight Radar</h1>
 <div class="sub">Business/First do Azji · wygenerowano __GENERATED__</div>
 <div class="stats" id="stats"></div>
 <div class="filters">
@@ -152,15 +152,10 @@ function render() {
     : b.stars - a.stars || (a.price_pln || 9e9) - (b.price_pln || 9e9));
   const live = DEALS.filter(d => d.kind !== "rss" && d.price_pln);
   const best = live.length ? live.reduce((m, d) => d.price_pln < m.price_pln ? d : m) : null;
-  // mediana cen business do BKK (punkt odniesienia "ile normalnie kosztuje")
-  const bkk = live.filter(d => d.cabin === "BUSINESS"
-    && d.route.split("→").pop().trim() === "BKK").map(d => d.price_pln).sort((a, b) => a - b);
-  const medBkk = bkk.length ? bkk[Math.floor(bkk.length / 2)] : null;
   $("stats").innerHTML = `
     <div class="stat"><b>${DEALS.length}</b><span>ofert w bazie</span></div>
     <div class="stat"><b>${DEALS.filter(d => d.stars >= 4).length}</b><span>wartych uwagi</span></div>
-    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + best.route + ")" : ""}</span></div>
-    <div class="stat"><b>${medBkk ? fmtP(medBkk) : "—"}</b><span>mediana business → BKK</span></div>`;
+    <div class="stat"><b>${best ? fmtP(best.price_pln) : "—"}</b><span>najtaniej live ${best ? "(" + best.route + ")" : ""}</span></div>`;
   $("list").innerHTML = rows.map(d => `
     <div class="card s${d.stars}">
       <div class="row1">
