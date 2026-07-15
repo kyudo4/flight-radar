@@ -54,12 +54,13 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
 <h1>✈️ Flight Radar</h1>
-<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 09:48</div>
+<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 09:55</div>
 <div class="stats" id="stats"></div>
 <div class="filters">
   <select id="fStars"><option value="0">Wszystkie gwiazdki</option>
     <option value="5">tylko ⭐⭐⭐⭐⭐</option><option value="4" selected>od ⭐⭐⭐⭐</option>
     <option value="3">od ⭐⭐⭐</option></select>
+  <select id="fOrigin"><option value="">Wszystkie lotniska</option></select>
   <select id="fDest"><option value="">Wszystkie kierunki</option></select>
   <select id="fSrc"><option value="">Wszystkie źródła</option></select>
   <select id="fSort"><option value="stars">Sortuj: najlepsze</option>
@@ -82,17 +83,21 @@ function applyTheme(light) {
 try { applyTheme(localStorage.getItem("fr-theme") === "light"); } catch (e) {}
 $("themeBtn").onclick = () =>
   applyTheme(document.documentElement.getAttribute("data-theme") !== "light");
+const origin = d => d.route.split("→")[0].trim();
 const dests = [...new Set(DEALS.map(d => d.route.split("→").pop().trim()))].sort();
+const origins = [...new Set(DEALS.map(origin).filter(Boolean))].sort();
 const srcs = [...new Set(DEALS.map(d => d.source))].sort();
+origins.forEach(x => $("fOrigin").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
 dests.forEach(x => $("fDest").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
 srcs.forEach(x => $("fSrc").insertAdjacentHTML("beforeend", `<option>${x}</option>`));
 const fmtP = p => p ? p.toLocaleString("pl-PL") + " PLN" : "cena w art.";
 const fmtT = iso => iso ? iso.replace("T", " ").slice(5, 16) : "";
 function render() {
-  const ms = +$("fStars").value, de = $("fDest").value, sr = $("fSrc").value;
+  const ms = +$("fStars").value, de = $("fDest").value, sr = $("fSrc").value,
+        or = $("fOrigin").value;
   let rows = DEALS.filter(d => d.stars >= ms
-    && (!de || d.route.includes(de)) && (!sr || d.source === sr)
-    && (!onlyTg || d.notified));
+    && (!or || origin(d) === or) && (!de || d.route.split("→").pop().trim() === de)
+    && (!sr || d.source === sr) && (!onlyTg || d.notified));
   const sort = $("fSort").value;
   rows.sort((a, b) => sort === "price" ? (a.price_pln || 9e9) - (b.price_pln || 9e9)
     : sort === "new" ? (b.last_seen || "").localeCompare(a.last_seen || "")
@@ -134,14 +139,16 @@ function render() {
 function emptyMsg(de, sr, ms) {
   // ile ofert byłoby po zdjęciu filtra gwiazdek (częsty powód "pustki":
   // domyślnie od ⭐⭐⭐⭐, a droższe kierunki mają niższe oceny)
-  const relaxed = DEALS.filter(d => (!de || d.route.includes(de))
+  const or = $("fOrigin").value;
+  const relaxed = DEALS.filter(d => (!or || origin(d) === or)
+    && (!de || d.route.split("→").pop().trim() === de)
     && (!sr || d.source === sr) && (!onlyTg || d.notified));
   if (relaxed.length && ms > 0)
     return `<div class="empty">Brak ofert ${"⭐".repeat(ms)}+ dla tych filtrów.<br>
       Jest ${relaxed.length} niżej ocenionych — ustaw filtr na „Wszystkie gwiazdki".</div>`;
   return `<div class="empty">Brak ofert dla tych filtrów</div>`;
 }
-["fStars", "fDest", "fSrc", "fSort"].forEach(id => $(id).onchange = render);
+["fStars", "fOrigin", "fDest", "fSrc", "fSort"].forEach(id => $(id).onchange = render);
 $("fTg").onclick = () => { onlyTg = !onlyTg; $("fTg").classList.toggle("on", onlyTg); render(); };
 render();
 </script>
