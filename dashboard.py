@@ -64,6 +64,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
   .filters select, .filters .tgl { width: 100%; }
   .price { font-size: 18px; }
   .card { padding: 12px 13px; }
+  .theme-btn { position: absolute; }  /* zostaje na górze, nie jedzie ze scrollem */
 }
 </style>
 </head>

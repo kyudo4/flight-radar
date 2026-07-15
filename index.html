@@ -58,6 +58,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
   .filters select, .filters .tgl { width: 100%; }
   .price { font-size: 18px; }
   .card { padding: 12px 13px; }
+  .theme-btn { position: absolute; }  /* zostaje na górze, nie jedzie ze scrollem */
 }
 </style>
 </head>
@@ -65,7 +66,7 @@ a.go { display:inline-block; margin-top:10px; background:var(--accent); color:va
 <button id="themeBtn" class="theme-btn" title="Przełącz motyw">☀️</button>
 <div class="wrap">
 <h1>✈️ Flight Radar</h1>
-<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 10:10</div>
+<div class="sub">Business/First do Azji · wygenerowano 2026-07-15 10:12</div>
 <div class="stats" id="stats"></div>
 <div class="filters">
   <select id="fStars"><option value="0">Wszystkie gwiazdki</option>
