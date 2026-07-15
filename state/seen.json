@@ -2078,5 +2078,37 @@
   "route": "VIE → ICN",
   "duration_h": 16.0,
   "when": "2026-07-15T07:30:47"
+ },
+ "32e41dd9d7ccad07af948c97cc488c81aeceb362": {
+  "price_pln": 3494,
+  "stars": 5,
+  "airline": "Turkmenistan",
+  "route": "MXP → BKK",
+  "duration_h": 15.6,
+  "when": "2026-07-15T11:11:52"
+ },
+ "76adcbdc92149b382b3717b3ba093efc6d2a3830": {
+  "price_pln": 5029,
+  "stars": 4,
+  "airline": "Etihad",
+  "route": "CPH → BKK",
+  "duration_h": 20.0,
+  "when": "2026-07-15T11:11:52"
+ },
+ "324ad1a59dca4dc42db5316e3c46ce9ea615110e": {
+  "price_pln": 5887,
+  "stars": 4,
+  "airline": "SWISS",
+  "route": "POZ → HKG",
+  "duration_h": 24.6,
+  "when": "2026-07-15T11:11:52"
+ },
+ "33211027f085d63b60b35852e2e0d65cff8d86af": {
+  "price_pln": 5990,
+  "stars": 3,
+  "airline": "Royal Jordanian",
+  "route": "ARN → BKK",
+  "duration_h": 42.3,
+  "when": "2026-07-15T11:11:52"
  }
 }
