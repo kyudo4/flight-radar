@@ -440,28 +440,28 @@
   "when": "2026-07-14T18:13:26"
  },
  "01ae7c9afdea5472b17ac93e3665a2d600a8a758": {
-  "price_pln": 7739,
+  "price_pln": 7729,
   "stars": 1,
   "airline": "EY",
   "route": "GDN → BKK",
   "duration_h": 18.6,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "81c7c57128ba4b8f7a5e9b0df6ceb25141c63cea": {
-  "price_pln": 7033,
+  "price_pln": 7030,
   "stars": 3,
   "airline": "LX",
   "route": "WAW → BKK",
   "duration_h": 14.0,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "99e9f5f950ccd8f9f9461d48752ca3b5475f3ea8": {
-  "price_pln": 7706,
+  "price_pln": 7705,
   "stars": 2,
   "airline": "QR",
   "route": "WAW → BKK",
   "duration_h": 15.8,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "3380fa99ac6c191d93709287e001402b4f1a0ee3": {
   "price_pln": 8281,
@@ -472,68 +472,68 @@
   "when": "2026-07-15T15:57:26"
  },
  "3fd8c2a104a5e9b30f30f7d6d0aaef369f3796cb": {
-  "price_pln": 6059,
+  "price_pln": 6088,
   "stars": 4,
   "airline": "TG",
   "route": "OSL → BKK",
   "duration_h": 11.5,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "058fe73256ad9e162f34b400467702a46361c73f": {
-  "price_pln": 7418,
+  "price_pln": 7454,
   "stars": 3,
   "airline": "TK",
   "route": "OSL → BKK",
   "duration_h": 17.8,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "ebe3b12d6a50b369e90a141049e7d6b2489be3ec": {
-  "price_pln": 6268,
+  "price_pln": 6274,
   "stars": 3,
   "airline": "TG",
   "route": "ARN → BKK",
   "duration_h": 11.0,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "7b3654ae4839c904d757208d2b330c13341475aa": {
-  "price_pln": 7038,
+  "price_pln": 7047,
   "stars": 3,
   "airline": "TK",
   "route": "ARN → BKK",
   "duration_h": 17.7,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "1ae149e637d31791335a6e94ca850d91378944e9": {
-  "price_pln": 5031,
+  "price_pln": 5049,
   "stars": 4,
   "airline": "EY",
   "route": "CPH → BKK",
   "duration_h": 14.6,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "a0c285d63cf8e80b3cd112c8fc22bea9c4baf0e5": {
-  "price_pln": 6415,
+  "price_pln": 6440,
   "stars": 3,
   "airline": "EY",
   "route": "VIE → BKK",
   "duration_h": 13.8,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "ff6cf8652129d9ede3f7f42dce65db7809cd53ef": {
-  "price_pln": 8182,
+  "price_pln": 8118,
   "stars": 2,
   "airline": "TK",
   "route": "BUD → BKK",
   "duration_h": 15.7,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "9a057d6ed3e408335574b011cc6754effc04e128": {
-  "price_pln": 6486,
+  "price_pln": 6511,
   "stars": 3,
   "airline": "EY",
   "route": "MXP → BKK",
   "duration_h": 14.2,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "29a1ad8b2adb3f6cb774b883211a5c3919c2d080": {
   "price_pln": 8163,
@@ -3208,12 +3208,12 @@
   "when": "2026-07-15T14:16:32"
  },
  "dc691d74e1fc9119b16ce3224e31eb4bfaf4d896": {
-  "price_pln": 6262,
+  "price_pln": 6277,
   "stars": 3,
   "airline": "TG",
   "route": "IST → BKK",
   "duration_h": 9.2,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "bda149eda24411a8e0876de467fae3cb2699c9e6": {
   "price_pln": 7899,
@@ -3344,12 +3344,12 @@
   "when": "2026-07-15T15:57:26"
  },
  "5321a2b977c70d05f7200504243d2b8c5c20dae8": {
-  "price_pln": 9396,
+  "price_pln": 9419,
   "stars": 1,
   "airline": "TK",
   "route": "IST → BKK",
   "duration_h": 9.3,
-  "when": "2026-07-15T15:57:26"
+  "when": "2026-07-17T09:25:46"
  },
  "7b7a20e61bb2890b2c531dd86be2c8ee45323e8b": {
   "price_pln": 9668,
@@ -3992,20 +3992,20 @@
   "when": "2026-07-16T14:28:48"
  },
  "4b6f9e6a3a7ae3faa6f185da8ed7818314ac207f": {
-  "price_pln": 7179,
+  "price_pln": 7192,
   "stars": 3,
   "airline": "TG",
   "route": "CPH → HAN",
   "duration_h": 14.2,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "e35cfbf8db365cb1f3f170b7d48ed52e17287f6d": {
-  "price_pln": 7337,
+  "price_pln": 7354,
   "stars": 3,
   "airline": "TG",
   "route": "OSL → HAN",
   "duration_h": 14.8,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "56170992583b498911dfc27e00442601603b0eb2": {
   "price_pln": 7371,
@@ -4040,12 +4040,12 @@
   "when": "2026-07-15T19:41:13"
  },
  "2d0826cd1b943fe028645cb16ed6f21ee3744e33": {
-  "price_pln": 7543,
+  "price_pln": 7541,
   "stars": 2,
   "airline": "TG",
   "route": "ARN → HAN",
   "duration_h": 14.8,
-  "when": "2026-07-15T19:41:13"
+  "when": "2026-07-17T09:25:46"
  },
  "0e7c41ad506d49eb1db39fb78ee513bb20909046": {
   "price_pln": 7671,
@@ -4085,7 +4085,7 @@
   "airline": "TG",
   "route": "GDN → HAN",
   "duration_h": 18.3,
-  "when": "2026-07-15T19:41:13"
+  "when": "2026-07-17T09:25:46"
  },
  "31d977e3fcfc03d72dc68d8e6ba2e3311f0cd7eb": {
   "price_pln": 8021,
@@ -4136,12 +4136,12 @@
   "when": "2026-07-16T23:15:31"
  },
  "065f3655a7e319c4cf02b645eb6fa6f9b0adb596": {
-  "price_pln": 8518,
+  "price_pln": 8655,
   "stars": 1,
   "airline": "CX",
   "route": "OSL → HAN",
-  "duration_h": 20.2,
-  "when": "2026-07-16T14:28:48"
+  "duration_h": 19.0,
+  "when": "2026-07-17T09:25:46"
  },
  "af7793ada2242d58364058e4bf4fb3a030069c79": {
   "price_pln": 8616,
@@ -4173,7 +4173,7 @@
   "airline": "LO",
   "route": "POZ → HAN",
   "duration_h": 23.8,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "e213d510516f86356492479aec7c8357777c39a0": {
   "price_pln": 9208,
@@ -4192,12 +4192,12 @@
   "when": "2026-07-16T23:15:31"
  },
  "881c2f555b287ab91fde7d9f67b7e6a06f65d160": {
-  "price_pln": 9422,
+  "price_pln": 9443,
   "stars": 1,
   "airline": "CX",
   "route": "CPH → HAN",
   "duration_h": 18.8,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "b8fb0638f6c54cf0c83bd1337dd801b721107883": {
   "price_pln": 10102,
@@ -4205,7 +4205,7 @@
   "airline": "EY",
   "route": "GDN → HAN",
   "duration_h": 17.2,
-  "when": "2026-07-15T19:41:13"
+  "when": "2026-07-17T09:25:46"
  },
  "29704778f80e97b4a5a1a98a48e4080970a646f4": {
   "price_pln": 10199,
@@ -4213,7 +4213,7 @@
   "airline": "EY",
   "route": "POZ → HAN",
   "duration_h": 17.9,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "071174c70722f68cc1b1b9843a61c1441c0a5d00": {
   "price_pln": 10579,
@@ -5752,12 +5752,12 @@
   "when": "2026-07-16T11:57:53"
  },
  "cca4fb97a37609b26b2759a73c6325a946bb2b38": {
-  "price_pln": 7337,
+  "price_pln": 7349,
   "stars": 3,
   "airline": "TG",
   "route": "OSL → SGN",
   "duration_h": 14.3,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "4edc3ee69e65ec689ac3ef03ede6e3bdbbdfe83b": {
   "price_pln": 8004,
@@ -5776,12 +5776,12 @@
   "when": "2026-07-16T14:28:48"
  },
  "24306834824efc4ce5ab02c6c36a0dc4501b5bda": {
-  "price_pln": 8284,
+  "price_pln": 8275,
   "stars": 1,
   "airline": "EY",
   "route": "WAW → SGN",
   "duration_h": 20.4,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "3dbb054ba0712699713f6d85ecb3553d9671d56c": {
   "price_pln": 8973,
@@ -5789,15 +5789,15 @@
   "airline": "LO",
   "route": "POZ → SGN",
   "duration_h": 23.2,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "a3580923577576eaae185aa4265b5a42fc855ed7": {
-  "price_pln": 9373,
-  "stars": 1,
+  "price_pln": 8109,
+  "stars": 2,
   "airline": "CI",
   "route": "VIE → HAN",
   "duration_h": 18.2,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "58174a5c452da30c205fe28554ff0adb56a51319": {
   "price_pln": 9484,
@@ -5813,23 +5813,23 @@
   "airline": "EY",
   "route": "POZ → SGN",
   "duration_h": 22.4,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "c2161c58b0f499fc0ca27b0efb2d3db8fe29b15b": {
-  "price_pln": 9685,
+  "price_pln": 9688,
   "stars": 1,
   "airline": "TK",
   "route": "VIE → HAN",
   "duration_h": 20.5,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "65db436c86dc5443802c49ee06be6b089103b3ef": {
-  "price_pln": 9784,
+  "price_pln": 9804,
   "stars": 1,
   "airline": "TK",
   "route": "OSL → SGN",
   "duration_h": 16.3,
-  "when": "2026-07-16T14:28:48"
+  "when": "2026-07-17T09:25:46"
  },
  "3e7f3a41bc0b8c46728636e749528c4816455176": {
   "price_pln": 19315,
@@ -6886,5 +6886,165 @@
   "route": "GDN → BKK",
   "duration_h": 17.1,
   "when": "2026-07-17T06:32:30"
+ },
+ "d27106293eaa2b0fd3e9d20d1bd5fa92e888594d": {
+  "price_pln": 6496,
+  "stars": 2,
+  "airline": "EY",
+  "route": "CPH → SGN",
+  "duration_h": 20.9,
+  "when": "2026-07-17T09:25:46"
+ },
+ "982cd7fb93208e2be7c9ed00a219795d89a6dd32": {
+  "price_pln": 7541,
+  "stars": 2,
+  "airline": "TG",
+  "route": "ARN → SGN",
+  "duration_h": 14.2,
+  "when": "2026-07-17T09:25:46"
+ },
+ "5a5668aa17fcae0526f58e8baf6f656b57b0ded9": {
+  "price_pln": 7906,
+  "stars": 1,
+  "airline": "CX",
+  "route": "ARN → HAN",
+  "duration_h": 20.8,
+  "when": "2026-07-17T09:25:46"
+ },
+ "2dc56bc247882bf44fa705581717f6d799a767ee": {
+  "price_pln": 7942,
+  "stars": 1,
+  "airline": "EY",
+  "route": "VIE → SGN",
+  "duration_h": 20.2,
+  "when": "2026-07-17T09:25:46"
+ },
+ "343e7a71e144c78190f306a2ea192156c8524dd3": {
+  "price_pln": 7977,
+  "stars": 1,
+  "airline": "CX",
+  "route": "ARN → SGN",
+  "duration_h": 20.9,
+  "when": "2026-07-17T09:25:46"
+ },
+ "af774d3f17f2423de177a696fbd3facb5a83b8e5": {
+  "price_pln": 8220,
+  "stars": 1,
+  "airline": "CX",
+  "route": "WAW → HAN",
+  "duration_h": 19.2,
+  "when": "2026-07-17T09:25:46"
+ },
+ "411e40e49b5fe82be76b7c3954806a9e622971de": {
+  "price_pln": 8982,
+  "stars": 1,
+  "airline": "LO",
+  "route": "GDN → SGN",
+  "duration_h": 23.2,
+  "when": "2026-07-17T09:25:46"
+ },
+ "e6feffb0b8555ae087279ff0c73ff320ced14199": {
+  "price_pln": 9181,
+  "stars": 1,
+  "airline": "TG",
+  "route": "CPH → HND",
+  "duration_h": 23.8,
+  "when": "2026-07-17T09:25:46"
+ },
+ "2ccc0511fb7e21d005d01e4a57e155ab51f5a92f": {
+  "price_pln": 9327,
+  "stars": 1,
+  "airline": "QR",
+  "route": "WAW → HND",
+  "duration_h": 21.8,
+  "when": "2026-07-17T09:25:46"
+ },
+ "78324aabbe205e65081001897b013bb4568642a3": {
+  "price_pln": 11403,
+  "stars": 1,
+  "airline": "AF",
+  "route": "OSL → HND",
+  "duration_h": 19.4,
+  "when": "2026-07-17T09:25:46"
+ },
+ "34a99b1cdd16485b3802cf4e0de7c0c60fe0b700": {
+  "price_pln": 12058,
+  "stars": 1,
+  "airline": "NH",
+  "route": "GDN → HND",
+  "duration_h": 19.9,
+  "when": "2026-07-17T09:25:46"
+ },
+ "8443b761ea02ec6ab18e9293e442b005ee1be249": {
+  "price_pln": 12372,
+  "stars": 1,
+  "airline": "NH",
+  "route": "OSL → HND",
+  "duration_h": 17.1,
+  "when": "2026-07-17T09:25:46"
+ },
+ "3308ae9d692f38a86351e1229fb4f338fd9076b0": {
+  "price_pln": 12409,
+  "stars": 1,
+  "airline": "",
+  "route": "ARN → HND",
+  "duration_h": 19.7,
+  "when": "2026-07-17T09:25:46"
+ },
+ "7acc2b64230841c55d33b4c2a6d7da1b0d664fab": {
+  "price_pln": 12939,
+  "stars": 1,
+  "airline": "QR",
+  "route": "GDN → SGN",
+  "duration_h": 22.6,
+  "when": "2026-07-17T09:25:46"
+ },
+ "5011a553c2824697e245fab9ddd5ccd70a586239": {
+  "price_pln": 13245,
+  "stars": 1,
+  "airline": "NH",
+  "route": "ARN → HND",
+  "duration_h": 16.7,
+  "when": "2026-07-17T09:25:46"
+ },
+ "132582238da328293b6bd89818671bd77ab089d5": {
+  "price_pln": 14196,
+  "stars": 1,
+  "airline": "NH",
+  "route": "CPH → HND",
+  "duration_h": 18.5,
+  "when": "2026-07-17T09:25:46"
+ },
+ "5df21a33a367de19078e160a175c29837cbb9fbb": {
+  "price_pln": 14513,
+  "stars": 1,
+  "airline": "KL",
+  "route": "POZ → HND",
+  "duration_h": 19.9,
+  "when": "2026-07-17T09:25:46"
+ },
+ "601858a3fcad39244a85436382b0388a2938ae5b": {
+  "price_pln": 19088,
+  "stars": 1,
+  "airline": "EK",
+  "route": "ARN → HAN",
+  "duration_h": 23.1,
+  "when": "2026-07-17T09:25:46"
+ },
+ "ac71bf50fa3e1ff5a83f6f5c918d812045ecd334": {
+  "price_pln": 20270,
+  "stars": 2,
+  "airline": "EK",
+  "route": "OSL → HKG",
+  "duration_h": 18.8,
+  "when": "2026-07-17T09:25:46"
+ },
+ "37e73e8e6678b36b5954275c327d78d17faf34a0": {
+  "price_pln": 20925,
+  "stars": 1,
+  "airline": "NH",
+  "route": "POZ → HND",
+  "duration_h": 18.8,
+  "when": "2026-07-17T09:25:46"
  }
 }
