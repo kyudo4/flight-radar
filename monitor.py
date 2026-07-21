@@ -707,6 +707,7 @@ def gflights_deals(cfg):
             "stops": f["stops"],
             "via": "",
             "duration_h": f["duration_h"],
+            "departure": f.get("departure", ""),
             "gf_price_level": level,
             "origin_match": True,
             "tags": [],
@@ -917,8 +918,13 @@ STAR = {5: "⭐⭐⭐⭐⭐ KUPUJ NATYCHMIAST", 4: "⭐⭐⭐⭐ Bardzo dobra",
 
 
 def deal_id(deal):
-    key = "%s|%s|%s|%s" % (deal["route"], deal["airline"],
-                           deal["cabin"], deal.get("title") or deal.get("date", ""))
+    # Ta sama linia może mieć kilka różnych lotów tego samego dnia. Godzina
+    # wylotu i czas podróży są częścią wariantu, aby jeden nie nadpisywał
+    # drugiego w bazie.
+    key = "%s|%s|%s|%s|%s|%s|%s" % (
+        deal["route"], deal["airline"], deal["cabin"],
+        deal.get("title") or deal.get("date", ""), deal.get("departure", ""),
+        deal.get("duration_h", ""), deal.get("stops", ""))
     return hashlib.sha1(key.encode()).hexdigest()
 
 
@@ -1182,6 +1188,7 @@ def run(cfg):
             "tags": deal.get("tags", []), "title": deal.get("title", ""),
             "link": deal.get("link", ""), "source": deal.get("source", ""),
             "duration_h": deal.get("duration_h"), "stops": deal.get("stops"),
+            "departure": deal.get("departure", ""),
             "date": deal.get("date", ""),
             "gf_low": deal.get("gf_price_level") == "low",
             "roundtrip": deal.get("roundtrip", False),

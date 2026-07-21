@@ -144,13 +144,14 @@ function render() {
   });
   rows = Object.values(groups).map(g => {
     const rep = g.reduce((m, d) => (d.price_pln || 9e9) < (m.price_pln || 9e9) ? d : m);
-    // jedna pozycja na datę (najtańsza z danej daty), posortowane po cenie
-    const byDate = {};
-    g.forEach(d => { const k = d.date || d.id;
-      if (!byDate[k] || (d.price_pln || 9e9) < (byDate[k].price_pln || 9e9)) byDate[k] = d; });
-    const opts = Object.values(byDate)
-      .sort((a, b) => (a.price_pln || 9e9) - (b.price_pln || 9e9))
-      .map(d => ({ date: d.date, price: d.price_pln, link: d.link, stops: d.stops }));
+    // Zachowaj wszystkie warianty: tego samego dnia mogą istnieć różne
+    // godziny i czasy podróży tej samej linii.
+    const opts = g.slice()
+      .sort((a, b) => (a.price_pln || 9e9) - (b.price_pln || 9e9)
+        || (a.duration_h || 999) - (b.duration_h || 999))
+      .map(d => ({ date: d.date, price: d.price_pln, link: d.link,
+                   stops: d.stops, duration_h: d.duration_h,
+                   departure: d.departure }));
     const ps = opts.map(o => o.price).filter(Boolean);
     return Object.assign({}, rep, { _count: opts.length,
       _max: ps.length ? Math.max(...ps) : null, _opts: opts });
@@ -181,7 +182,7 @@ function render() {
       </div>
       <div class="badges">
         <span class="badge">${d.source}</span>
-        ${d._count > 1 ? `<span class="badge">🗓 ${d._count} dat${d._max && d._max > d.price_pln ? " · do " + fmtP(d._max) : ""}</span>` : ""}
+        ${d._count > 1 ? `<span class="badge">🗓 ${d._count} wariantów${d._max && d._max > d.price_pln ? " · do " + fmtP(d._max) : ""}</span>` : ""}
         ${d.tags.map(t => `<span class="badge hot">🏷 ${t}</span>`).join("")}
         ${d.gf_low ? `<span class="badge low">📊 taniej niż zwykle</span>` : ""}
         ${d.roundtrip ? `<span class="badge">↔️ w obie strony</span>` : ""}
@@ -194,9 +195,9 @@ function render() {
       ${d._count > 1 ? `
       <a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz najtańszą →</a>
       <details class="opts">
-        <summary>🗓 ${d._count} dostępnych dat — wybierz</summary>
+        <summary>🗓 ${d._count} dostępnych wariantów — wybierz</summary>
         ${d._opts.map(o => `<a class="opt" href="${o.link}" target="_blank" rel="noopener">
-          <span>🗓 ${o.date || "?"}${o.stops != null ? " · " + (o.stops === 0 ? "bez przes." : o.stops + " przes.") : ""}</span>
+          <span>🗓 ${o.date || "?"}${o.departure ? " · " + o.departure : ""}${o.stops != null ? " · " + (o.stops === 0 ? "bez przes." : o.stops + " przes.") : ""}${o.duration_h ? " · " + Math.floor(o.duration_h) + "h " + Math.round(o.duration_h % 1 * 60) + "m" : ""}</span>
           <span class="p">${fmtP(o.price)} →</span></a>`).join("")}
       </details>`
       : `<a class="go" href="${d.link}" target="_blank" rel="noopener">Otwórz ofertę →</a>`}

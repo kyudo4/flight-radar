@@ -127,16 +127,28 @@ def _best_value(flights):
                                     f["price_pln"]))
 
 
-def cheapest_picks(flights, priority_codes):
-    """Najlepsza wartość ogółem + najlepsza linii priorytetowej (gdy inna)."""
+def cheapest_picks(flights, priority_codes, max_options=3):
+    """Najlepsze warianty różnych przewoźników.
+
+    Google Flights potrafi pokazać tańszą linię po poprzednim skanie. Dlatego
+    nie zapisujemy już tylko jednej oferty ogółem i jednej priorytetowej:
+    dla każdej linii wybieramy najrozsądniejszy wariant, zapisujemy kilka
+    najtańszych linii oraz dodatkowo linię priorytetową, jeśli jej brakuje.
+    """
     if not flights:
         return []
-    best = _best_value(flights)
-    picks = [best]
-    prio = [f for f in flights
-            if f["airline"] in priority_codes and f is not best]
-    if prio:
-        p = _best_value(prio)
-        if p is not best:
-            picks.append(p)
+    by_airline = {}
+    for flight in flights:
+        key = flight["airline_name"] or flight["airline"] or "unknown"
+        by_airline.setdefault(key, []).append(flight)
+    candidates = [_best_value(group) for group in by_airline.values()]
+    candidates.sort(key=lambda f: (f["price_pln"], f["duration_h"] or 999,
+                                   f["stops"] if f["stops"] is not None else 9))
+    picks = candidates[:max_options]
+    priorities = [f for f in candidates if f["airline"] in priority_codes]
+    if priorities:
+        best_priority = min(priorities, key=lambda f: (f["price_pln"],
+                                                       f["duration_h"] or 999))
+        if best_priority not in picks:
+            picks.append(best_priority)
     return picks
