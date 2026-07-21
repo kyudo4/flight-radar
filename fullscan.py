@@ -73,6 +73,7 @@ for o, de in pairs:
             archive[did] = {
                 "id": did, "kind": "gf", "route": deal["route"], "cabin": "BUSINESS",
                 "airline": f["airline_name"], "price_pln": f["price_pln"], "stars": stars,
+                "airline_code": f["airline"],
                 "tags": [], "title": "", "link": f["link"],
                 "source": deal["source"], "duration_h": f["duration_h"],
                 "stops": f["stops"], "departure": f.get("departure", ""), "date": date,

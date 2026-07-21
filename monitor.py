@@ -928,6 +928,29 @@ def deal_id(deal):
     return hashlib.sha1(key.encode()).hexdigest()
 
 
+def carrier_key(deal):
+    """Stabilny kod przewoźnika dla porównywania dat tej samej linii.
+
+    Starsze wpisy archiwum mają wyłącznie pełną nazwę linii, a świeże oferty
+    z Google Flights mają kod IATA. Normalizujemy oba formaty, aby np. nowy
+    Turkish Airlines nie był traktowany jako zupełnie nowy przewoźnik.
+    """
+    raw = (deal.get("airline_code") or deal.get("airline")
+           or deal.get("airline_name") or "").strip()
+    if len(raw) == 2 and raw.isalpha():
+        return raw.upper()
+    try:
+        import gflights
+        return gflights.airline_code(raw) or raw.lower()
+    except Exception:
+        return raw.lower()
+
+
+def route_carrier_key(deal):
+    return "%s|%s|%s" % (deal.get("route", ""), carrier_key(deal),
+                          deal.get("cabin", ""))
+
+
 def fmt_price(p):
     return "{:,.0f} PLN".format(p).replace(",", " ") if p else "brak w treści"
 
@@ -1124,14 +1147,16 @@ def run(cfg):
     now = datetime.now().isoformat(timespec="seconds")
     sent = 0
 
-    # najniższa znana cena na trasie (z bazy) — powiadamiamy tylko o NOWEJ
-    # niższej cenie, nie o droższym locie na tej samej trasie w inny dzień
-    route_min = {}
+    # Najniższa znana cena trasy danej linii i klasy. Droższa data tej samej
+    # linii nie jest nową okazją; nowa linia na trasie może być nią nadal.
+    route_carrier_min = {}
     for d in archive.values():
         if d.get("price_pln"):
-            rk = d["route"] + "|" + d["cabin"]
-            route_min[rk] = min(route_min.get(rk, 10 ** 9), d["price_pln"])
-    # od najtańszych — na trasie zaalarmuje tylko realnie najtańsza z przebiegu
+            rk = route_carrier_key(d)
+            route_carrier_min[rk] = min(
+                route_carrier_min.get(rk, 10 ** 9), d["price_pln"])
+    # Od najtańszych: w jednym przebiegu zostaje tylko najlepsza cena każdej
+    # linii na danej trasie.
     deals.sort(key=lambda d: d["price_pln"] if d.get("price_pln") else 10 ** 9)
 
     for deal in deals:
@@ -1142,8 +1167,8 @@ def run(cfg):
         send = False
         notify = should_notify(deal, cfg)
         p = deal["price_pln"]
-        rk = deal["route"] + "|" + deal["cabin"]
-        prev_min = route_min.get(rk)
+        rk = route_carrier_key(deal)
+        prev_min = route_carrier_min.get(rk)
         is_new_low = bool(p) and (prev_min is None or p < prev_min)
         if old:
             # ten sam lot (ta sama data) — ponowny alert tylko przy spadku o próg
@@ -1153,10 +1178,13 @@ def run(cfg):
                     fmt_price(old["price_pln"]), fmt_price(p))
                 send = True
         else:
-            # nowy lot/data — alarm tylko jeśli to NOWA najniższa cena na trasie
+            # Nowa data tej samej linii tylko gdy jest tańsza. Linia, której
+            # wcześniej nie było na trasie, dostaje pierwszy alert, jeśli
+            # przechodzi zwykłe progi cenowe should_notify().
             send = notify and is_new_low
         if p:
-            route_min[rk] = min(prev_min if prev_min is not None else 10 ** 9, p)
+            route_carrier_min[rk] = min(
+                prev_min if prev_min is not None else 10 ** 9, p)
         if send and not verify(deal):
             log("Odrzucono martwą ofertę: %s" % deal.get("title", deal["route"]))
             send = False
@@ -1184,6 +1212,7 @@ def run(cfg):
             "id": did, "kind": deal["kind"], "route": deal["route"],
             "cabin": deal["cabin"],
             "airline": deal.get("airline_name") or deal.get("airline", ""),
+            "airline_code": deal.get("airline", ""),
             "price_pln": deal["price_pln"], "stars": stars,
             "tags": deal.get("tags", []), "title": deal.get("title", ""),
             "link": deal.get("link", ""), "source": deal.get("source", ""),

@@ -136,19 +136,22 @@ function render() {
   let rows = DEALS.filter(d => d.stars >= ms
     && (!or || origin(d) === or) && (!de || d.route.split("→").pop().trim() === de)
     && (!sr || d.source === sr) && (!onlyTg || d.notified));
-  // grupowanie powtórek: ta sama trasa+linia+klasa+ocena (różne daty) → 1 karta
+  // Jedna karta dla trasy, linii i klasy. Zostawiamy wyłącznie najtańszą datę
+  // tej samej linii; droższy dzień nie jest osobną okazją.
   const groups = {};
   rows.forEach(d => {
     const k = d.route + "|" + d.airline + "|" + d.cabin;
     (groups[k] = groups[k] || []).push(d);
   });
   rows = Object.values(groups).map(g => {
-    const rep = g.reduce((m, d) => (d.price_pln || 9e9) < (m.price_pln || 9e9) ? d : m);
-    // Zachowaj wszystkie warianty: tego samego dnia mogą istnieć różne
-    // godziny i czasy podróży tej samej linii.
-    const opts = g.slice()
+    const sorted = g.slice()
       .sort((a, b) => (a.price_pln || 9e9) - (b.price_pln || 9e9)
-        || (a.duration_h || 999) - (b.duration_h || 999))
+        || (a.duration_h || 999) - (b.duration_h || 999)
+        || (a.date || "").localeCompare(b.date || ""));
+    const rep = sorted[0];
+    // Zachowaj warianty z najlepszej daty (np. inne godziny wylotu), ale nie
+    // późniejsze/droższe daty dokładnie tej samej linii i trasy.
+    const opts = sorted.filter(d => d.date === rep.date)
       .map(d => ({ date: d.date, price: d.price_pln, link: d.link,
                    stops: d.stops, duration_h: d.duration_h,
                    departure: d.departure }));
