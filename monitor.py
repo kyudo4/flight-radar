@@ -951,6 +951,11 @@ def route_carrier_key(deal):
                           deal.get("cabin", ""))
 
 
+def low_price(value):
+    """Obsługuje zarówno stary zapis liczbowy, jak i nowy zapis ze znacznikiem."""
+    return value.get("price") if isinstance(value, dict) else value
+
+
 def fmt_price(p):
     return "{:,.0f} PLN".format(p).replace(",", " ") if p else "brak w treści"
 
@@ -1142,6 +1147,10 @@ def run(cfg):
     deals = rss_deals(cfg, fx) + amadeus_deals(cfg, fx) + gflights_deals(cfg)
     seen = state_file("seen.json", {})
     archive = state_file("deals.json", {})
+    # Trwałe minima nie są ograniczane do 500 kart widocznych na stronie.
+    # Dzięki temu stara, lepsza cena nadal blokuje droższy alert za tę samą
+    # trasę, linię i klasę na inny dzień.
+    route_lows = state_file("route_lows.json", {})
     trends = update_trends(deals)
     drop_ratio = cfg["notify"]["renotify_price_drop_ratio"]
     now = datetime.now().isoformat(timespec="seconds")
@@ -1155,6 +1164,20 @@ def run(cfg):
             rk = route_carrier_key(d)
             route_carrier_min[rk] = min(
                 route_carrier_min.get(rk, 10 ** 9), d["price_pln"])
+    # seen.json przechowuje poprzednie powiadomienia dłużej niż karta może
+    # pozostać w archiwum. Brak cabin dotyczy tylko dawnych wpisów; monitor
+    # zapisywał praktycznie wyłącznie Business, więc to bezpieczna migracja.
+    for d in seen.values():
+        if d.get("price_pln") and d.get("route") and d.get("airline"):
+            legacy = dict(d)
+            legacy.setdefault("cabin", "BUSINESS")
+            rk = route_carrier_key(legacy)
+            route_carrier_min[rk] = min(
+                route_carrier_min.get(rk, 10 ** 9), d["price_pln"])
+    for rk, entry in route_lows.items():
+        p = low_price(entry)
+        if p:
+            route_carrier_min[rk] = min(route_carrier_min.get(rk, 10 ** 9), p)
     # Od najtańszych: w jednym przebiegu zostaje tylko najlepsza cena każdej
     # linii na danej trasie.
     deals.sort(key=lambda d: d["price_pln"] if d.get("price_pln") else 10 ** 9)
@@ -1185,6 +1208,9 @@ def run(cfg):
         if p:
             route_carrier_min[rk] = min(
                 prev_min if prev_min is not None else 10 ** 9, p)
+            old_low = low_price(route_lows.get(rk))
+            route_lows[rk] = {"price": min(old_low, p) if old_low else p,
+                              "updated_at": now}
         if send and not verify(deal):
             log("Odrzucono martwą ofertę: %s" % deal.get("title", deal["route"]))
             send = False
@@ -1204,6 +1230,7 @@ def run(cfg):
                 sent += 1
         seen[did] = {"price_pln": deal["price_pln"], "stars": stars,
                      "airline": deal["airline"], "route": deal["route"],
+                     "cabin": deal["cabin"],
                      "duration_h": deal.get("duration_h"),
                      "when": now}
         prev = archive.get(did, {})
@@ -1252,6 +1279,7 @@ def run(cfg):
     cutoff = (datetime.now() - timedelta(days=60)).isoformat()
     seen = {k: v for k, v in seen.items() if v.get("when", "9999") > cutoff}
     save_state("seen.json", seen)
+    save_state("route_lows.json", route_lows)
 
     # archiwum + strona z ofertami — usuń oferty >limitu czasu i tanie linie
     maxdur = cfg["limits"]["max_duration_hours"]
