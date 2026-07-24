@@ -1,7 +1,7 @@
 {
  "CPH → BKK|TG|BUSINESS": {
   "price": 5876,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → BKK|TG|BUSINESS": {
   "price": 6097,
@@ -13,7 +13,7 @@
  },
  "IST → BKK|TG|BUSINESS": {
   "price": 6265,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "ARN → SIN|TK|BUSINESS": {
   "price": 6378,
@@ -21,11 +21,11 @@
  },
  "VIE → BKK|EY|BUSINESS": {
   "price": 6407,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "MXP → BKK|EY|BUSINESS": {
   "price": 6471,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → BKK|EY|BUSINESS": {
   "price": 6590,
@@ -105,7 +105,7 @@
  },
  "VIE → BKK|QR|BUSINESS": {
   "price": 7401,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → SIN|TK|BUSINESS": {
   "price": 7534,
@@ -124,16 +124,16 @@
   "updated_at": "2026-07-24T00:15:51"
  },
  "CPH → BKK|AY|BUSINESS": {
-  "price": 7632,
-  "updated_at": "2026-07-24T14:18:47"
+  "price": 7631,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → BKK|EY|BUSINESS": {
   "price": 7736,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → BKK|EY|BUSINESS": {
   "price": 5019,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HKG|CX|BUSINESS": {
   "price": 5885,
@@ -177,7 +177,7 @@
  },
  "BUD → BKK|TK|BUSINESS": {
   "price": 8127,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HKG|QR|BUSINESS": {
   "price": 8326,
@@ -229,7 +229,7 @@
  },
  "BUD → BKK|EY|BUSINESS": {
   "price": 8833,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → BKK|KL|BUSINESS": {
   "price": 8909,
@@ -333,7 +333,7 @@
  },
  "ARN → BKK|AY|BUSINESS": {
   "price": 7160,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → BKK|AY|BUSINESS": {
   "price": 7384,
@@ -373,7 +373,7 @@
  },
  "POZ → BKK|LO|BUSINESS": {
   "price": 7316,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → ICN|AY|BUSINESS": {
   "price": 8639,
@@ -580,16 +580,16 @@
   "updated_at": "2026-07-24T11:59:37"
  },
  "CPH → SGN|TG|BUSINESS": {
-  "price": 7161,
-  "updated_at": "2026-07-24T14:18:47"
+  "price": 7152,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "VIE → SGN|EY|BUSINESS": {
   "price": 7295,
-  "updated_at": "2026-07-23T20:34:24"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → SGN|TG|BUSINESS": {
   "price": 7362,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "ARN → SGN|CX|BUSINESS": {
   "price": 7858,
@@ -609,7 +609,7 @@
  },
  "ARN → SGN|TG|BUSINESS": {
   "price": 7484,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → SGN|OS|BUSINESS": {
   "price": 8680,
@@ -629,7 +629,7 @@
  },
  "POZ → SGN|LO|BUSINESS": {
   "price": 8971,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → SGN|LO|BUSINESS": {
   "price": 8984,
@@ -641,15 +641,15 @@
  },
  "CPH → HND|TG|BUSINESS": {
   "price": 9122,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HND|NH|BUSINESS": {
   "price": 9258,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HND|QR|BUSINESS": {
   "price": 9310,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → NRT|EY|BUSINESS": {
   "price": 8869,
@@ -661,11 +661,11 @@
  },
  "OSL → SGN|TK|BUSINESS": {
   "price": 9820,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HND|NH|BUSINESS": {
   "price": 10005,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → NRT|TK|BUSINESS": {
   "price": 10583,
@@ -677,7 +677,7 @@
  },
  "POZ → SGN|CX|BUSINESS": {
   "price": 10997,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → SGN|CX|BUSINESS": {
   "price": 11010,
@@ -689,7 +689,7 @@
  },
  "ARN → HND|AF|BUSINESS": {
   "price": 11061,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → NRT|LH|BUSINESS": {
   "price": 11096,
@@ -697,7 +697,7 @@
  },
  "ARN → HND|KL|BUSINESS": {
   "price": 11179,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "VIE → HND|AF|BUSINESS": {
   "price": 11141,
@@ -709,7 +709,7 @@
  },
  "POZ → SGN|LH|BUSINESS": {
   "price": 9775,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "VIE → HND|KL|BUSINESS": {
   "price": 11260,
@@ -717,23 +717,23 @@
  },
  "OSL → HND|AF|BUSINESS": {
   "price": 11420,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → SGN|OS|BUSINESS": {
   "price": 11488,
-  "updated_at": "2026-07-23T22:19:35"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → HND|AF|BUSINESS": {
   "price": 11458,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HND|KL|BUSINESS": {
   "price": 11539,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → HND|KL|BUSINESS": {
   "price": 11577,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HND|JL|BUSINESS": {
   "price": 11669,
@@ -741,23 +741,23 @@
  },
  "WAW → HND|AF|BUSINESS": {
   "price": 11678,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → HND|KL|BUSINESS": {
   "price": 11752,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HND|KL|BUSINESS": {
   "price": 11765,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HND|KL|BUSINESS": {
   "price": 11797,
   "updated_at": "2026-07-24T15:52:09"
  },
  "CPH → HND|JL|BUSINESS": {
-  "price": 13459,
-  "updated_at": "2026-07-23T09:42:12"
+  "price": 13431,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HKG|QR|FIRST": {
   "price": 14237,
@@ -765,11 +765,11 @@
  },
  "POZ → HND|JL|BUSINESS": {
   "price": 20492,
-  "updated_at": "2026-07-23T12:06:44"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → HND|LH|BUSINESS": {
-  "price": 20910,
-  "updated_at": "2026-07-24T09:39:42"
+  "price": 20909,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → KUL|EK|FIRST": {
   "price": 22716,
@@ -829,7 +829,7 @@
  },
  "ARN → HAN|TG|BUSINESS": {
   "price": 7483,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HKG|EY|BUSINESS": {
   "price": 7541,
@@ -849,7 +849,7 @@
  },
  "ARN → BKK|EY|BUSINESS": {
   "price": 8090,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → SGN|CX|BUSINESS": {
   "price": 8554,
@@ -857,11 +857,11 @@
  },
  "WAW → HAN|AY|BUSINESS": {
   "price": 8891,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → SGN|AY|BUSINESS": {
   "price": 8891,
-  "updated_at": "2026-07-24T06:44:11"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → HKG|EY|BUSINESS": {
   "price": 9056,
@@ -889,7 +889,7 @@
  },
  "VIE → HAN|TK|BUSINESS": {
   "price": 9654,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → HAN|LH|BUSINESS": {
   "price": 8806,
@@ -905,7 +905,7 @@
  },
  "GDN → HAN|EY|BUSINESS": {
   "price": 9905,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HAN|TK|BUSINESS": {
   "price": 9948,
@@ -913,7 +913,7 @@
  },
  "WAW → HAN|LO|BUSINESS": {
   "price": 8889,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → HAN|LH|BUSINESS": {
   "price": 9794,
@@ -940,8 +940,8 @@
   "updated_at": "2026-07-24T06:44:11"
  },
  "VIE → HAN|EY|BUSINESS": {
-  "price": 11648,
-  "updated_at": "2026-07-24T14:18:47"
+  "price": 11619,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → SGN|LX|FIRST": {
   "price": 41417,
@@ -997,7 +997,7 @@
  },
  "WAW → HND|TK|BUSINESS": {
   "price": 10537,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → NRT|CI|BUSINESS": {
   "price": 11863,
@@ -1041,7 +1041,7 @@
  },
  "GDN → HND|AY|BUSINESS": {
   "price": 16594,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → NRT|QR|BUSINESS": {
   "price": 16817,
@@ -1105,7 +1105,7 @@
  },
  "ARN → BKK|QR|BUSINESS": {
   "price": 8585,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HKG|EK|BUSINESS": {
   "price": 8659,
@@ -1125,7 +1125,7 @@
  },
  "POZ → BKK|QR|BUSINESS": {
   "price": 9570,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → SIN|LH|BUSINESS": {
   "price": 9996,
@@ -1157,7 +1157,7 @@
  },
  "WAW → HAN|EY|BUSINESS": {
   "price": 8759,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → KUL|LH|BUSINESS": {
   "price": 9099,
@@ -1177,11 +1177,11 @@
  },
  "POZ → HAN|KL|BUSINESS": {
   "price": 9826,
-  "updated_at": "2026-07-24T11:59:37"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HAN|KL|BUSINESS": {
   "price": 9843,
-  "updated_at": "2026-07-24T11:59:37"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → HKG|KL|BUSINESS": {
   "price": 10202,
@@ -1201,7 +1201,7 @@
  },
  "WAW → SGN|EY|BUSINESS": {
   "price": 7866,
-  "updated_at": "2026-07-24T09:39:42"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "ARN → HKG|EY|BUSINESS": {
   "price": 8412,
@@ -1209,7 +1209,7 @@
  },
  "ARN → HAN|EY|BUSINESS": {
   "price": 8822,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → HAN|OS|BUSINESS": {
   "price": 9499,
@@ -1233,7 +1233,7 @@
  },
  "GDN → SGN|LH|BUSINESS": {
   "price": 10632,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → HAN|CX|BUSINESS": {
   "price": 11038,
@@ -1249,11 +1249,11 @@
  },
  "ARN → SGN|EK|BUSINESS": {
   "price": 11283,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → SGN|TG|BUSINESS": {
   "price": 12849,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "POZ → SGN|SQ|BUSINESS": {
   "price": 13749,
@@ -1273,11 +1273,11 @@
  },
  "MXP → BKK|turkmenistan|BUSINESS": {
   "price": 3500,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "GDN → BKK|AY|BUSINESS": {
   "price": 7677,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → BKK|EK|BUSINESS": {
   "price": 8865,
@@ -1292,8 +1292,8 @@
   "updated_at": "2026-07-24T09:39:42"
  },
  "CPH → SGN|TK|BUSINESS": {
-  "price": 9866,
-  "updated_at": "2026-07-23T22:19:35"
+  "price": 9862,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HAN|EY|BUSINESS": {
   "price": 10015,
@@ -1308,8 +1308,8 @@
   "updated_at": "2026-07-23T22:19:35"
  },
  "POZ → HAN|QR|BUSINESS": {
-  "price": 11355,
-  "updated_at": "2026-07-23T22:19:35"
+  "price": 11065,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "OSL → HND|british airways|BUSINESS": {
   "price": 11845,
@@ -1345,7 +1345,7 @@
  },
  "ARN → HND|NH|BUSINESS": {
   "price": 12857,
-  "updated_at": "2026-07-24T15:52:09"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "VIE → HND|british airways|BUSINESS": {
   "price": 13388,
@@ -1452,12 +1452,12 @@
   "updated_at": "2026-07-23T22:19:35"
  },
  "BUD → BKK|condor|BUSINESS": {
-  "price": 6926,
-  "updated_at": "2026-07-23T22:19:35"
+  "price": 6899,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "VIE → BKK|condor|BUSINESS": {
-  "price": 6972,
-  "updated_at": "2026-07-23T22:19:35"
+  "price": 6952,
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → BKK|LO|BUSINESS": {
   "price": 7772,
@@ -1549,7 +1549,7 @@
  },
  "GDN → SGN|QR|BUSINESS": {
   "price": 13626,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "BUD → KUL|EK|FIRST": {
   "price": 20481,
@@ -1633,7 +1633,7 @@
  },
  "VIE → HAN|QR|BUSINESS": {
   "price": 12163,
-  "updated_at": "2026-07-23T06:44:01"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "ARN → BKK|QR|FIRST": {
   "price": 13879,
@@ -1673,7 +1673,7 @@
  },
  "MXP → BKK|GF|BUSINESS": {
   "price": 6474,
-  "updated_at": "2026-07-24T14:18:47"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "WAW → SGN|QR|BUSINESS": {
   "price": 13406,
@@ -1805,7 +1805,7 @@
  },
  "POZ → BKK|EK|BUSINESS": {
   "price": 11895,
-  "updated_at": "2026-07-24T03:51:02"
+  "updated_at": "2026-07-24T17:57:03"
  },
  "CPH → HKG|QR|FIRST": {
   "price": 15381,
@@ -1910,5 +1910,17 @@
  "MXP → NRT|EK|FIRST": {
   "price": 24012,
   "updated_at": "2026-07-24T15:52:09"
+ },
+ "GDN → BKK|LO|BUSINESS": {
+  "price": 9062,
+  "updated_at": "2026-07-24T17:57:03"
+ },
+ "VIE → SGN|OS|BUSINESS": {
+  "price": 9564,
+  "updated_at": "2026-07-24T17:57:03"
+ },
+ "GDN → BKK|QR|FIRST": {
+  "price": 17311,
+  "updated_at": "2026-07-24T17:57:03"
  }
 }
