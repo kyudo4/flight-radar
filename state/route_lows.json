@@ -1705,7 +1705,7 @@
  },
  "CPH → KUL|EK|FIRST": {
   "price": 22033,
-  "updated_at": "2026-09-02T22:43:34"
+  "updated_at": "2026-09-06T17:08:40"
  },
  "ARN → ICN|LO|BUSINESS": {
   "price": 6742,
@@ -3350,5 +3350,9 @@
  "VIE → SIN|LH|BUSINESS": {
   "price": 23814,
   "updated_at": "2026-09-06T13:44:15"
+ },
+ "VIE → HKG|EK|FIRST": {
+  "price": 19802,
+  "updated_at": "2026-09-06T17:08:40"
  }
 }

@@ -72496,5 +72496,23 @@
   "cabin": "BUSINESS",
   "duration_h": 22.4,
   "when": "2026-09-06T13:44:15"
+ },
+ "7900d0b8923165712782c9e41c6b196c84a3b8a4": {
+  "price_pln": 19802,
+  "stars": 2,
+  "airline": "EK",
+  "route": "VIE → HKG",
+  "cabin": "FIRST",
+  "duration_h": 17.4,
+  "when": "2026-09-06T17:08:40"
+ },
+ "917c83da5a11137ffada80fa3836c11195711797": {
+  "price_pln": 29603,
+  "stars": 1,
+  "airline": "EK",
+  "route": "CPH → KUL",
+  "cabin": "FIRST",
+  "duration_h": 19.8,
+  "when": "2026-09-06T17:08:40"
  }
 }
