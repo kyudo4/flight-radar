@@ -73917,7 +73917,7 @@
   "route": "→ BKK/TYO",
   "cabin": "BUSINESS",
   "duration_h": null,
-  "when": "2026-09-09T00:21:41"
+  "when": "2026-09-09T06:04:24"
  },
  "46637c65179af7e333383337260c095430d7dbbb": {
   "price_pln": 3977,
@@ -73926,7 +73926,7 @@
   "route": "→ BKK",
   "cabin": "BUSINESS",
   "duration_h": null,
-  "when": "2026-09-09T00:21:41"
+  "when": "2026-09-09T06:04:24"
  },
  "64db1040d913e16f68630c4d1978f0f53d771e19": {
   "price_pln": 7500,
@@ -74350,5 +74350,23 @@
   "cabin": "BUSINESS",
   "duration_h": 9.4,
   "when": "2026-09-09T00:21:41"
+ },
+ "b8fe9640eb014ead7f03018ad13d8c9cf603e3b9": {
+  "price_pln": 11980,
+  "stars": 3,
+  "airline": "EY",
+  "route": "VIE → BKK",
+  "cabin": "FIRST",
+  "duration_h": 17.8,
+  "when": "2026-09-09T06:04:24"
+ },
+ "915b94626cc74b10cb973d18ffa7d2d623063119": {
+  "price_pln": 20427,
+  "stars": 2,
+  "airline": "EK",
+  "route": "BUD → SIN",
+  "cabin": "FIRST",
+  "duration_h": 16.2,
+  "when": "2026-09-09T06:04:24"
  }
 }
