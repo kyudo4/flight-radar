@@ -51427,13 +51427,13 @@
   "when": "2026-08-15T05:46:29"
  },
  "f7568d34a24da124ae815f65e0ce4cff205c8383": {
-  "price_pln": 22092,
+  "price_pln": 22117,
   "stars": 2,
   "airline": "EK",
   "route": "CPH → KUL",
   "cabin": "FIRST",
   "duration_h": 17.2,
-  "when": "2026-08-15T05:46:29"
+  "when": "2026-09-10T11:29:17"
  },
  "baf7113aa29de7a7dcb460b9d4af4e916fbb7759": {
   "price_pln": 9425,
@@ -74630,5 +74630,14 @@
   "cabin": "BUSINESS",
   "duration_h": 22.5,
   "when": "2026-09-09T22:38:04"
+ },
+ "cb706787c03d8445f6a89c50d7c04e5519f3a8b2": {
+  "price_pln": 24663,
+  "stars": 2,
+  "airline": "QR",
+  "route": "VIE → HKG",
+  "cabin": "FIRST",
+  "duration_h": 16.4,
+  "when": "2026-09-10T11:29:17"
  }
 }
