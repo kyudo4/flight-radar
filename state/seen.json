@@ -17434,13 +17434,13 @@
   "when": "2026-08-26T03:29:59"
  },
  "7252f1d1ba4201e32a45afb0211212ed7893c044": {
-  "price_pln": 5746,
-  "stars": 5,
+  "price_pln": 14238,
+  "stars": 1,
   "airline": "TK",
   "route": "ARN → HKG",
   "cabin": "BUSINESS",
   "duration_h": 16.7,
-  "when": "2026-09-06T19:17:30"
+  "when": "2026-09-10T16:31:02"
  },
  "6024c106784bdf89e8868ce95547c4981814baf4": {
   "price_pln": 5854,
@@ -17866,13 +17866,13 @@
   "when": "2026-08-24T14:09:51"
  },
  "cdc0ed5ecf26c731c308a21d6c8b365df1d90e12": {
-  "price_pln": 8359,
-  "stars": 2,
+  "price_pln": 20029,
+  "stars": 1,
   "airline": "LX",
   "route": "WAW → HKG",
   "cabin": "BUSINESS",
   "duration_h": 14.9,
-  "when": "2026-09-02T22:43:34"
+  "when": "2026-09-10T16:31:02"
  },
  "87bb5871b87bec4bd2b6954acefbdae639bbb57d": {
   "price_pln": 8355,
@@ -32995,13 +32995,13 @@
   "when": "2026-07-29T21:16:45"
  },
  "42099ca7d651106f6ccb96d8a4489b2957ed551c": {
-  "price_pln": 6942,
-  "stars": 3,
+  "price_pln": 20488,
+  "stars": 1,
   "airline": "TK",
   "route": "OSL → HKG",
   "cabin": "BUSINESS",
   "duration_h": 16.2,
-  "when": "2026-08-30T00:26:12"
+  "when": "2026-09-10T16:31:02"
  },
  "19a92045177ebd485e9232b937c6722f56ee11f3": {
   "price_pln": 7671,
@@ -74639,5 +74639,50 @@
   "cabin": "FIRST",
   "duration_h": 16.4,
   "when": "2026-09-10T11:29:17"
+ },
+ "0a9b90ae0a98f377e8097c00a5f62054a1e334f1": {
+  "price_pln": 13698,
+  "stars": 1,
+  "airline": "EK",
+  "route": "WAW → HKG",
+  "cabin": "BUSINESS",
+  "duration_h": 20.4,
+  "when": "2026-09-10T16:31:02"
+ },
+ "1befaf668b4c62cb4d51e697a74bc311b6377e68": {
+  "price_pln": 19882,
+  "stars": 1,
+  "airline": "TK",
+  "route": "CPH → HKG",
+  "cabin": "BUSINESS",
+  "duration_h": 16.0,
+  "when": "2026-09-10T16:31:02"
+ },
+ "91f6e2e01dae12041f4c061914bf4ea6c9db0fc6": {
+  "price_pln": 20114,
+  "stars": 1,
+  "airline": "TK",
+  "route": "WAW → HKG",
+  "cabin": "BUSINESS",
+  "duration_h": 15.2,
+  "when": "2026-09-10T16:31:02"
+ },
+ "5405db486ec09d959af2bb1d8f9ba240da43a522": {
+  "price_pln": 22397,
+  "stars": 1,
+  "airline": "LX",
+  "route": "CPH → HKG",
+  "cabin": "BUSINESS",
+  "duration_h": 15.9,
+  "when": "2026-09-10T16:31:02"
+ },
+ "f3abef80149ab5372cafc2d1995b722f04b0e1d9": {
+  "price_pln": 35373,
+  "stars": 1,
+  "airline": "LH",
+  "route": "OSL → HKG",
+  "cabin": "BUSINESS",
+  "duration_h": 19.0,
+  "when": "2026-09-10T16:31:02"
  }
 }
