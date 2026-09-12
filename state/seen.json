@@ -75396,5 +75396,23 @@
   "cabin": "BUSINESS",
   "duration_h": 21.5,
   "when": "2026-09-11T22:40:27"
+ },
+ "dec221965323cc7701c11cf8e9d72a4a345805f1": {
+  "price_pln": 19780,
+  "stars": 2,
+  "airline": "QR",
+  "route": "MXP → BKK",
+  "cabin": "FIRST",
+  "duration_h": 17.2,
+  "when": "2026-09-12T05:55:00"
+ },
+ "5f88a850dd49c347b7f24c2bf595982b230aac86": {
+  "price_pln": 28249,
+  "stars": 2,
+  "airline": "EK",
+  "route": "BUD → ICN",
+  "cabin": "FIRST",
+  "duration_h": 18.2,
+  "when": "2026-09-12T05:55:00"
  }
 }
