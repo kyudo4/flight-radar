@@ -2855,14 +2855,6 @@
   "duration_h": 18.0,
   "when": "2026-07-20T11:18:18"
  },
- "af3a43b56b36f7711cff84b8ff4729cb2876b2d1": {
-  "price_pln": 8105,
-  "stars": 2,
-  "airline": "TK",
-  "route": "ARN → HAN",
-  "duration_h": 16.1,
-  "when": "2026-07-15T19:41:13"
- },
  "61194c64779a335a2e30c3089fb2a6d2539bc9fc": {
   "price_pln": 8116,
   "stars": 1,
@@ -2870,14 +2862,6 @@
   "route": "ARN → BKK",
   "duration_h": 19.2,
   "when": "2026-07-20T11:18:18"
- },
- "efdce63b6ea722374d0590946da44a68660e84f4": {
-  "price_pln": 8278,
-  "stars": 1,
-  "airline": "TG",
-  "route": "WAW → HAN",
-  "duration_h": 18.3,
-  "when": "2026-07-15T19:41:13"
  },
  "c185eb3eeac627b2a9b91eb502ae9241756a2d77": {
   "price_pln": 8447,
@@ -2902,14 +2886,6 @@
   "route": "OSL → HAN",
   "duration_h": 20.2,
   "when": "2026-07-21T06:46:12"
- },
- "af7793ada2242d58364058e4bf4fb3a030069c79": {
-  "price_pln": 8616,
-  "stars": 2,
-  "airline": "LH",
-  "route": "BUD → BKK",
-  "duration_h": 13.8,
-  "when": "2026-07-15T19:41:13"
  },
  "e29c6d1e00314ea0e3944afde669654de580f802": {
   "price_pln": 8762,
@@ -2990,22 +2966,6 @@
   "route": "POZ → KUL",
   "duration_h": 19.8,
   "when": "2026-07-20T11:18:18"
- },
- "033a2cd671134a7ce56fb2a21b8a5bd72c8b4217": {
-  "price_pln": 11706,
-  "stars": 3,
-  "airline": "EY",
-  "route": "CPH → SIN",
-  "duration_h": 20.8,
-  "when": "2026-07-15T19:41:13"
- },
- "7c4a879bfb9bf5ffe0bb28eef016e58794a6fbf4": {
-  "price_pln": 22668,
-  "stars": 2,
-  "airline": "EK",
-  "route": "VIE → KUL",
-  "duration_h": 16.8,
-  "when": "2026-07-15T19:41:13"
  },
  "ebb6fd471f43bc744a80a8f07f97c1d5cb5a76cc": {
   "price_pln": 6278,
@@ -3134,14 +3094,6 @@
   "route": "WAW → KUL",
   "duration_h": 20.0,
   "when": "2026-07-20T13:23:27"
- },
- "09cc41084321ee6deb8509fb29893e825c7404d6": {
-  "price_pln": 8153,
-  "stars": 2,
-  "airline": "AY",
-  "route": "ARN → ICN",
-  "duration_h": 14.4,
-  "when": "2026-07-15T21:20:07"
  },
  "bf0082c7748e45abbc5b4b6683cb6d2914767a10": {
   "price_pln": 8157,
@@ -3278,22 +3230,6 @@
   "route": "POZ → KUL",
   "duration_h": 19.8,
   "when": "2026-07-20T13:23:27"
- },
- "f85f0169d79cedc07ebebb4f85d26484574ce26b": {
-  "price_pln": 17446,
-  "stars": 2,
-  "airline": "QR",
-  "route": "BUD → HKG",
-  "duration_h": 17.1,
-  "when": "2026-07-15T21:20:07"
- },
- "61b2855bf9f5eee83b47cdb5c082937144561968": {
-  "price_pln": 36522,
-  "stars": 1,
-  "airline": "LX",
-  "route": "MXP → HAN",
-  "duration_h": 23.8,
-  "when": "2026-07-15T21:20:07"
  },
  "3ce86f570fa2fbd04656aa4c3f18d21a8c845de8": {
   "price_pln": 6278,
