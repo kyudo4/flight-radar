@@ -585,11 +585,11 @@
  },
  "VIE → SGN|EY|BUSINESS": {
   "price": 7036,
-  "updated_at": "2026-09-08T09:48:53"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "OSL → SGN|TG|BUSINESS": {
   "price": 7075,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "ARN → SGN|CX|BUSINESS": {
   "price": 7858,
@@ -609,7 +609,7 @@
  },
  "ARN → SGN|TG|BUSINESS": {
   "price": 7139,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "OSL → SGN|OS|BUSINESS": {
   "price": 8615,
@@ -621,15 +621,15 @@
  },
  "WAW → SGN|OS|BUSINESS": {
   "price": 8885,
-  "updated_at": "2026-09-06T09:31:46"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "WAW → SGN|LO|BUSINESS": {
   "price": 8885,
-  "updated_at": "2026-09-08T04:47:37"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "POZ → SGN|LO|BUSINESS": {
   "price": 8967,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "GDN → SGN|LO|BUSINESS": {
   "price": 8984,
@@ -709,7 +709,7 @@
  },
  "POZ → SGN|LH|BUSINESS": {
   "price": 8801,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "VIE → HND|KL|BUSINESS": {
   "price": 11216,
@@ -721,7 +721,7 @@
  },
  "GDN → SGN|OS|BUSINESS": {
   "price": 11471,
-  "updated_at": "2026-09-03T22:40:24"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "CPH → HND|AF|BUSINESS": {
   "price": 11413,
@@ -853,7 +853,7 @@
  },
  "OSL → SGN|CX|BUSINESS": {
   "price": 8536,
-  "updated_at": "2026-09-08T04:47:37"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "WAW → HAN|AY|BUSINESS": {
   "price": 8891,
@@ -873,7 +873,7 @@
  },
  "CPH → SGN|CX|BUSINESS": {
   "price": 9301,
-  "updated_at": "2026-09-10T22:40:42"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "POZ → HAN|LO|BUSINESS": {
   "price": 8967,
@@ -901,7 +901,7 @@
  },
  "GDN → SGN|KL|BUSINESS": {
   "price": 9768,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "GDN → HAN|EY|BUSINESS": {
   "price": 9880,
@@ -1233,7 +1233,7 @@
  },
  "GDN → SGN|LH|BUSINESS": {
   "price": 9123,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "POZ → HAN|CX|BUSINESS": {
   "price": 8358,
@@ -1249,7 +1249,7 @@
  },
  "ARN → SGN|EK|BUSINESS": {
   "price": 11156,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "GDN → SGN|TG|BUSINESS": {
   "price": 12848,
@@ -1285,7 +1285,7 @@
  },
  "CPH → SGN|LH|BUSINESS": {
   "price": 9465,
-  "updated_at": "2026-09-08T14:38:46"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "VIE → SGN|TK|BUSINESS": {
   "price": 9407,
@@ -1301,7 +1301,7 @@
  },
  "ARN → SGN|LH|BUSINESS": {
   "price": 9713,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "VIE → HAN|AF|BUSINESS": {
   "price": 11006,
@@ -1333,7 +1333,7 @@
  },
  "POZ → SGN|KL|BUSINESS": {
   "price": 9762,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "ARN → HND|british airways|BUSINESS": {
   "price": 12166,
@@ -1685,7 +1685,7 @@
  },
  "WAW → NRT|EY|FIRST": {
   "price": 11833,
-  "updated_at": "2026-09-02T19:52:29"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "GDN → HND|EK|FIRST": {
   "price": 28168,
@@ -1873,7 +1873,7 @@
  },
  "OSL → SGN|LH|BUSINESS": {
   "price": 8674,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "GDN → HAN|TG|BUSINESS": {
   "price": 8086,
@@ -2093,7 +2093,7 @@
  },
  "VIE → SGN|AF|BUSINESS": {
   "price": 9888,
-  "updated_at": "2026-09-08T09:48:53"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "VIE → SGN|QR|BUSINESS": {
   "price": 8022,
@@ -2165,7 +2165,7 @@
  },
  "POZ → ICN|EK|FIRST": {
   "price": 23831,
-  "updated_at": "2026-09-02T19:52:29"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "WAW → HAN|QR|BUSINESS": {
   "price": 7917,
@@ -2193,7 +2193,7 @@
  },
  "GDN → SGN|EK|BUSINESS": {
   "price": 9829,
-  "updated_at": "2026-07-29T22:18:39"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "CPH → HAN|LX|FIRST": {
   "price": 25481,
@@ -2205,7 +2205,7 @@
  },
  "POZ → SGN|EK|BUSINESS": {
   "price": 9778,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "OSL → HKG|hainan, hong kong airlines|BUSINESS": {
   "price": 10828,
@@ -3013,7 +3013,7 @@
  },
  "WAW → SGN|EK|BUSINESS": {
   "price": 13610,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "OSL → HKG|EY|BUSINESS": {
   "price": 9736,
@@ -3073,11 +3073,11 @@
  },
  "VIE → SGN|KL|BUSINESS": {
   "price": 11549,
-  "updated_at": "2026-08-27T20:36:27"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "CPH → SGN|CI|BUSINESS": {
   "price": 11329,
-  "updated_at": "2026-09-13T06:18:08"
+  "updated_at": "2026-09-14T01:13:23"
  },
  "CPH → BKK|OS|BUSINESS": {
   "price": 7742,
