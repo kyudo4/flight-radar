@@ -2247,22 +2247,6 @@
   "duration_h": 10.6,
   "when": "2026-07-20T11:18:18"
  },
- "875afcc779fb3ccaf4bc6be9877b1fa51f0cdfa2": {
-  "price_pln": 5898,
-  "stars": 4,
-  "airline": "LX",
-  "route": "GDN → HKG",
-  "duration_h": 20.2,
-  "when": "2026-07-18T03:39:24"
- },
- "5db63ba227911fa7e11c28c1db49a98a6c806651": {
-  "price_pln": 5931,
-  "stars": 4,
-  "airline": "LX",
-  "route": "WAW → HKG",
-  "duration_h": 14.9,
-  "when": "2026-07-18T03:39:24"
- },
  "41cf385da8336c8975a4c38ec3b8d61f2c4a50fc": {
   "price_pln": 6083,
   "stars": 4,
@@ -2446,14 +2430,6 @@
   "route": "GDN → BKK",
   "duration_h": 19.3,
   "when": "2026-07-20T11:18:18"
- },
- "195320ac34a251da3f89d1912f0833a0cfbc0b5f": {
-  "price_pln": 8004,
-  "stars": 1,
-  "airline": "TG",
-  "route": "GDN → HAN",
-  "duration_h": 18.3,
-  "when": "2026-07-18T03:39:24"
  },
  "31d977e3fcfc03d72dc68d8e6ba2e3311f0cd7eb": {
   "price_pln": 8020,
@@ -5046,14 +5022,6 @@
   "route": "POZ → HAN",
   "duration_h": 18.4,
   "when": "2026-07-21T06:46:12"
- },
- "d5a0ddc95f4e9d8d1ce6aaa7aeeedcab053849a6": {
-  "price_pln": 14235,
-  "stars": 2,
-  "airline": "QR",
-  "route": "WAW → HKG",
-  "duration_h": 15.5,
-  "when": "2026-07-18T03:39:24"
  },
  "31e405411ad741e503e7387f30ae3535c66663c8": {
   "price_pln": 5044,
