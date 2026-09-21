@@ -98,15 +98,6 @@
   "duration_h": 21.5,
   "when": "2026-08-20T17:50:36"
  },
- "7ec359220964dd5bd8b99642b45a9cd300c10a3e": {
-  "price_pln": 7095,
-  "stars": 3,
-  "airline": "TK",
-  "route": "ARN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 17.6,
-  "when": "2026-07-23T03:52:36"
- },
  "414b4baf185bb69edffad946af595c1ba5880e18": {
   "price_pln": 7022,
   "stars": 3,
@@ -160,15 +151,6 @@
   "cabin": "BUSINESS",
   "duration_h": 14.8,
   "when": "2026-09-11T11:31:10"
- },
- "5d803b9e67b26521f608ab8e1e95b527f2ef6ae6": {
-  "price_pln": 7502,
-  "stars": 2,
-  "airline": "TK",
-  "route": "OSL → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 17.8,
-  "when": "2026-07-23T03:52:36"
  },
  "1f700fd5cac14c1b1166e71a9fe4a618afbb5e58": {
   "price_pln": 8105,
@@ -547,15 +529,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.0,
   "when": "2026-08-02T15:32:39"
- },
- "a9ce2178013b2de408f966e623c4cbb2cbdab7dc": {
-  "price_pln": 10636,
-  "stars": 1,
-  "airline": "TK",
-  "route": "BUD → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 13.9,
-  "when": "2026-07-23T03:52:36"
  },
  "25b5827e80cd78dcdcb05ab573f463333afd883a": {
   "price_pln": 10371,
@@ -10664,15 +10637,6 @@
   "duration_h": 18.7,
   "when": "2026-09-02T05:55:14"
  },
- "47061ed6b1a05f75d405916af6305293ee39b0e5": {
-  "price_pln": 5580,
-  "stars": 3,
-  "airline": "EY",
-  "route": "CPH → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 21.4,
-  "when": "2026-07-23T03:52:36"
- },
  "52485f2ebffc355641554e5e73ed01e53015e5fb": {
   "price_pln": 6224,
   "stars": 3,
@@ -10871,15 +10835,6 @@
   "duration_h": 18.2,
   "when": "2026-08-26T08:05:25"
  },
- "ea805a314065cf3bfe49904daafb69783d769a0f": {
-  "price_pln": 10041,
-  "stars": 1,
-  "airline": "LH",
-  "route": "POZ → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 21.5,
-  "when": "2026-07-23T03:52:36"
- },
  "fb3cc8106894e13294381af5495d04cdc12c1aa6": {
   "price_pln": 10536,
   "stars": 1,
@@ -10942,24 +10897,6 @@
   "cabin": "BUSINESS",
   "duration_h": 19.2,
   "when": "2026-09-10T22:40:42"
- },
- "0974c0d474d051cda456c6672d3b2dc82317ccc7": {
-  "price_pln": 35544,
-  "stars": 1,
-  "airline": "NH",
-  "route": "WAW → HND",
-  "cabin": "FIRST",
-  "duration_h": 21.8,
-  "when": "2026-07-23T03:52:36"
- },
- "b71ed0a474dbfb07b8580eb07b196069e0381ce3": {
-  "price_pln": 36538,
-  "stars": 1,
-  "airline": "EK",
-  "route": "POZ → NRT",
-  "cabin": "FIRST",
-  "duration_h": 22.6,
-  "when": "2026-07-23T03:52:36"
  },
  "61d934fab1cd75b33e9a2b6eed2aa5b07879181c": {
   "price_pln": 5787,
