@@ -11753,15 +11753,6 @@
   "duration_h": 20.3,
   "when": "2026-08-10T13:50:25"
  },
- "87a57d4a32311066bd881a0df45d710cfdc583fb": {
-  "price_pln": 8198,
-  "stars": 1,
-  "airline": "OS",
-  "route": "VIE → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 20.8,
-  "when": "2026-07-24T11:59:37"
- },
  "8fbf31e8a66b3d51e291db17e375a1a47b3f4670": {
   "price_pln": 8172,
   "stars": 1,
@@ -12445,15 +12436,6 @@
   "cabin": "BUSINESS",
   "duration_h": 18.9,
   "when": "2026-08-25T17:00:51"
- },
- "0008948ea76d499c7212145f25d0500581be7baf": {
-  "price_pln": 7394,
-  "stars": 2,
-  "airline": "LO",
-  "route": "POZ → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 16.8,
-  "when": "2026-07-24T14:18:47"
  },
  "6e752d39458d9232823262cb2f394ba8474276c2": {
   "price_pln": 7433,
@@ -13733,24 +13715,6 @@
   "duration_h": 21.4,
   "when": "2026-08-21T14:58:20"
  },
- "6aea1b6cf51aebdfadd7c108e48c3126d2bcdc57": {
-  "price_pln": 10321,
-  "stars": 1,
-  "airline": "KL",
-  "route": "GDN → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 23.8,
-  "when": "2026-07-24T14:18:47"
- },
- "bc2334f7e23c0db9a97f83304c750fb18649df11": {
-  "price_pln": 10330,
-  "stars": 1,
-  "airline": "EY",
-  "route": "VIE → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 18.6,
-  "when": "2026-07-24T14:18:47"
- },
  "4fd3a256ef0fd2e1c118708c3cff62b27f13b247": {
   "price_pln": 10482,
   "stars": 1,
@@ -13777,15 +13741,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.8,
   "when": "2026-09-03T01:11:39"
- },
- "07a8d52bcabf9ef3f6373074b95ef6cea839aacf": {
-  "price_pln": 11332,
-  "stars": 1,
-  "airline": "LO",
-  "route": "WAW → SGN",
-  "cabin": "BUSINESS",
-  "duration_h": 22.9,
-  "when": "2026-07-24T14:18:47"
  },
  "c806bd7b984c265a382c0ac88baccb67cba4670f": {
   "price_pln": 15961,
@@ -13822,24 +13777,6 @@
   "cabin": "BUSINESS",
   "duration_h": 18.0,
   "when": "2026-09-06T04:48:32"
- },
- "7d0f2224498e57e685be530ca99008f2a755647c": {
-  "price_pln": 21880,
-  "stars": 2,
-  "airline": "EK",
-  "route": "BUD → HND",
-  "cabin": "FIRST",
-  "duration_h": 23.2,
-  "when": "2026-07-24T14:18:47"
- },
- "9be9397d88a7b2bd4a2b3ed54807edfd7b337b99": {
-  "price_pln": 28148,
-  "stars": 1,
-  "airline": "EK",
-  "route": "VIE → SGN",
-  "cabin": "FIRST",
-  "duration_h": 22.5,
-  "when": "2026-07-24T14:18:47"
  },
  "0dafcc94d8a9baab8f48cbcdb036c57a9f82ef7f": {
   "price_pln": 4561,
