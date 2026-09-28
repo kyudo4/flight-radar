@@ -7082,15 +7082,6 @@
   "duration_h": 15.4,
   "when": "2026-09-05T21:21:00"
  },
- "3125aea7395fa2e65376a88cba7f4cc38255c21e": {
-  "price_pln": 7382,
-  "stars": 2,
-  "airline": "EY",
-  "route": "CPH → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 18.9,
-  "when": "2026-07-29T23:29:10"
- },
  "729e3e7f6f0ebd1a055187e1ad317f61627fc539": {
   "price_pln": 10297,
   "stars": 1,
@@ -10979,15 +10970,6 @@
   "duration_h": 16.1,
   "when": "2026-08-26T05:54:30"
  },
- "bd30b96d0670759d182f9df24787ca957172cc29": {
-  "price_pln": 12494,
-  "stars": 1,
-  "airline": "QR",
-  "route": "VIE → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 20.0,
-  "when": "2026-07-29T23:29:10"
- },
  "1528e1882c4d977c04bfdb96f9cf8ab3c72106ac": {
   "price_pln": 9699,
   "stars": 1,
@@ -14660,15 +14642,6 @@
   "duration_h": 19.7,
   "when": "2026-08-03T08:45:31"
  },
- "b6503fd5a59a334e545998f1c6fcfdf405127121": {
-  "price_pln": 6878,
-  "stars": 3,
-  "airline": "",
-  "route": "MXP → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.8,
-  "when": "2026-07-29T23:29:10"
- },
  "3ad121c8754a799ad07214208849bf4138e8d1a4": {
   "price_pln": 9170,
   "stars": 1,
@@ -15712,15 +15685,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.0,
   "when": "2026-09-01T10:16:22"
- },
- "575dd4b72202034fe738fa4276c18c355e57b7a9": {
-  "price_pln": 14366,
-  "stars": 1,
-  "airline": "QR",
-  "route": "GDN → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 19.2,
-  "when": "2026-07-29T23:29:10"
  },
  "0a72464f19cf8bbe12030d8dfbabb57af1adde52": {
   "price_pln": 35619,
@@ -18071,15 +18035,6 @@
   "duration_h": 18.8,
   "when": "2026-08-19T04:56:50"
  },
- "7aab273f99c500c4568ba961110bead5ebb840c9": {
-  "price_pln": 12055,
-  "stars": 1,
-  "airline": "NH",
-  "route": "GDN → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 23.2,
-  "when": "2026-07-29T23:29:10"
- },
  "9b17459792230e1c43909454cde4d606f3be3f31": {
   "price_pln": 12136,
   "stars": 1,
@@ -18151,15 +18106,6 @@
   "cabin": "BUSINESS",
   "duration_h": 16.1,
   "when": "2026-09-13T01:07:12"
- },
- "52bc7c66a2d4d98bd60f7b25ab8187f3c1749aee": {
-  "price_pln": 47737,
-  "stars": 1,
-  "airline": "CX",
-  "route": "CPH → ICN",
-  "cabin": "FIRST",
-  "duration_h": 19.5,
-  "when": "2026-07-29T23:29:10"
  },
  "32942e24e4633a06aa5e1ebf90081d4cd76ce777": {
   "price_pln": 7032,
@@ -60834,6 +60780,6 @@
   "route": "→ BKK",
   "cabin": "FIRST",
   "duration_h": null,
-  "when": "2026-09-27T22:18:39"
+  "when": "2026-09-28T00:56:17"
  }
 }
