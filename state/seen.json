@@ -12905,24 +12905,6 @@
   "duration_h": 17.4,
   "when": "2026-08-25T15:10:35"
  },
- "16bc0c4a2d49d4bcc8575ca97383042294c71e59": {
-  "price_pln": 8376,
-  "stars": 1,
-  "airline": "LO",
-  "route": "ARN → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 22.0,
-  "when": "2026-08-04T15:41:10"
- },
- "5728369aaca254e99d8e8e74034403796c91ccbc": {
-  "price_pln": 8678,
-  "stars": 1,
-  "airline": "NH",
-  "route": "ARN → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 20.2,
-  "when": "2026-08-04T15:41:10"
- },
  "e24e15ad08dbd1d473b9756e246bfe375e1fa7ac": {
   "price_pln": 9928,
   "stars": 1,
@@ -12986,15 +12968,6 @@
   "duration_h": 19.2,
   "when": "2026-08-31T20:11:54"
  },
- "19b17b430528f3cc746618dc25fc60a528d9e077": {
-  "price_pln": 9545,
-  "stars": 1,
-  "airline": "LO",
-  "route": "WAW → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 17.4,
-  "when": "2026-08-04T15:41:10"
- },
  "1fd2997758f168afa95adad3d151548c540d8777": {
   "price_pln": 9529,
   "stars": 1,
@@ -13012,15 +12985,6 @@
   "cabin": "BUSINESS",
   "duration_h": 20.9,
   "when": "2026-08-31T20:11:54"
- },
- "7295764329d76feaf15b4356e85d4a4970cd9201": {
-  "price_pln": 9848,
-  "stars": 1,
-  "airline": "NH",
-  "route": "WAW → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 15.6,
-  "when": "2026-08-04T15:41:10"
  },
  "08ec00f3b77ad435bd6aec7e3f48cc2fe9e1cbc2": {
   "price_pln": 12707,
@@ -13868,15 +13832,6 @@
   "duration_h": 18.8,
   "when": "2026-08-21T10:52:50"
  },
- "e3540da87d277e923d9fe5f38a9b29522c369ff0": {
-  "price_pln": 6830,
-  "stars": 3,
-  "airline": "LO",
-  "route": "ARN → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 15.7,
-  "when": "2026-08-04T15:41:10"
- },
  "51c26469bc2db87b2d4bca42477c47fca5a09705": {
   "price_pln": 7754,
   "stars": 2,
@@ -13895,15 +13850,6 @@
   "duration_h": 14.7,
   "when": "2026-08-28T18:49:44"
  },
- "33a64fddbeb376249b348959b14578b5da2e0dcd": {
-  "price_pln": 8062,
-  "stars": 2,
-  "airline": "LO",
-  "route": "GDN → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 14.9,
-  "when": "2026-08-04T15:41:10"
- },
  "0f340f53c041fc5b235d3b71286ea9b76065c4c8": {
   "price_pln": 8686,
   "stars": 2,
@@ -13921,15 +13867,6 @@
   "cabin": "BUSINESS",
   "duration_h": 18.0,
   "when": "2026-09-03T05:55:04"
- },
- "372cc5584dc9031953edc38369ab8278b22c7dd7": {
-  "price_pln": 8491,
-  "stars": 2,
-  "airline": "LO",
-  "route": "OSL → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 16.1,
-  "when": "2026-08-04T15:41:10"
  },
  "757695865c8f7e3f5166a85182181abcc7f4278f": {
   "price_pln": 8760,
@@ -14038,15 +13975,6 @@
   "cabin": "BUSINESS",
   "duration_h": 20.9,
   "when": "2026-08-25T15:10:35"
- },
- "b2605375bf4baf16e792830ce6d60c344333b6ea": {
-  "price_pln": 8049,
-  "stars": 2,
-  "airline": "LO",
-  "route": "POZ → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 15.6,
-  "when": "2026-08-04T15:41:10"
  },
  "c5c7694053f5289f6ef7a75d0ce28fbc62f4f5f5": {
   "price_pln": 12717,
@@ -19925,15 +19853,6 @@
   "duration_h": 23.6,
   "when": "2026-08-23T22:43:01"
  },
- "9035e083d5ea508810e918fe6dc515d644e11c1f": {
-  "price_pln": 4805,
-  "stars": 4,
-  "airline": "QR",
-  "route": "ARN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 17.4,
-  "when": "2026-08-04T15:41:10"
- },
  "a0d01bfb7fd1498e840b341c365213f8357e82b1": {
   "price_pln": 9199,
   "stars": 1,
@@ -19960,15 +19879,6 @@
   "cabin": "BUSINESS",
   "duration_h": 15.7,
   "when": "2026-09-06T21:28:47"
- },
- "883a3f9475b0670e2d7403635c606adf92abe334": {
-  "price_pln": 7964,
-  "stars": 1,
-  "airline": "LH",
-  "route": "ARN → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 20.9,
-  "when": "2026-08-04T15:41:10"
  },
  "d6b0e96a8a7677bcc50c2063226e6f85d020137c": {
   "price_pln": 7104,
@@ -20014,15 +19924,6 @@
   "cabin": "BUSINESS",
   "duration_h": 13.8,
   "when": "2026-08-31T20:11:54"
- },
- "61f22b3ff1ed26876393f5b50e67236c169c0a93": {
-  "price_pln": 14109,
-  "stars": 2,
-  "airline": "QR",
-  "route": "WAW → BKK",
-  "cabin": "FIRST",
-  "duration_h": 14.2,
-  "when": "2026-08-04T15:41:10"
  },
  "cd5e5979919dae60e44337b97f3c0fd1dfe22d84": {
   "price_pln": 14782,
