@@ -188,15 +188,6 @@
   "duration_h": 16.6,
   "when": "2026-09-09T22:38:04"
  },
- "ba0dbbffd912432d9980baa9f96cfa74e2237b64": {
-  "price_pln": 12447,
-  "stars": 1,
-  "airline": "LO",
-  "route": "POZ → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 18.8,
-  "when": "2026-08-25T23:43:32"
- },
  "ca887ab5033f491cc87a832f0102b1b12dd63936": {
   "price_pln": 12456,
   "stars": 1,
@@ -511,15 +502,6 @@
   "cabin": "BUSINESS",
   "duration_h": 9.2,
   "when": "2026-09-02T16:41:30"
- },
- "42a6c984f281d50436e6ed5c8c61ac7220aaaf5f": {
-  "price_pln": 6448,
-  "stars": 3,
-  "airline": "EY",
-  "route": "VIE → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 13.8,
-  "when": "2026-08-26T02:03:06"
  },
  "0cc4fea70ff3d0561804536cd184888a2e8e91ef": {
   "price_pln": 6469,
@@ -2843,15 +2825,6 @@
   "duration_h": 17.8,
   "when": "2026-08-26T18:07:37"
  },
- "101933e551dcc9e6d58b99da477a824c243edfbb": {
-  "price_pln": 14376,
-  "stars": 1,
-  "airline": "TG",
-  "route": "CPH → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 18.0,
-  "when": "2026-08-25T23:43:32"
- },
  "bfc1c91c8b8b346abe89a264b5709f2d3adabf3d": {
   "price_pln": 13144,
   "stars": 1,
@@ -3383,15 +3356,6 @@
   "duration_h": 22.7,
   "when": "2026-09-07T20:39:18"
  },
- "3a749e0206dfd73c943f0eb1ac61ee6ede1da388": {
-  "price_pln": 4962,
-  "stars": 4,
-  "airline": "EY",
-  "route": "CPH → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.6,
-  "when": "2026-08-26T03:29:59"
- },
  "7252f1d1ba4201e32a45afb0211212ed7893c044": {
   "price_pln": 14238,
   "stars": 1,
@@ -3446,15 +3410,6 @@
   "duration_h": 9.2,
   "when": "2026-09-07T23:35:15"
  },
- "e0cc60e7000596dacf3aed7a0751c603f515ecb1": {
-  "price_pln": 6223,
-  "stars": 3,
-  "airline": "EY",
-  "route": "CPH → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 15.2,
-  "when": "2026-08-26T03:29:59"
- },
  "852fe0a532efd3227348e22a7c105eaf195e1b7e": {
   "price_pln": 6189,
   "stars": 4,
@@ -3491,15 +3446,6 @@
   "duration_h": 22.2,
   "when": "2026-09-07T23:35:15"
  },
- "71f32a103b5e1253c0d720944526693abaf2c07d": {
-  "price_pln": 6815,
-  "stars": 3,
-  "airline": "TG",
-  "route": "ARN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 17.1,
-  "when": "2026-08-26T03:29:59"
- },
  "d4190b082f351416aa0837a8149daaadcdf47b2c": {
   "price_pln": 6939,
   "stars": 3,
@@ -3526,15 +3472,6 @@
   "cabin": "BUSINESS",
   "duration_h": 15.1,
   "when": "2026-08-31T14:02:25"
- },
- "b4f949d531bb0e6f89e221af77fb3e33b23748f4": {
-  "price_pln": 7116,
-  "stars": 3,
-  "airline": "TG",
-  "route": "CPH → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 13.5,
-  "when": "2026-08-26T03:29:59"
  },
  "e00284bc4296bb64fe7cdc824c81621b12f603f6": {
   "price_pln": 8093,
@@ -3626,15 +3563,6 @@
   "duration_h": 19.8,
   "when": "2026-09-06T19:17:30"
  },
- "b4b099b37899b81d71a5abf19807e1330b5d3365": {
-  "price_pln": 7899,
-  "stars": 1,
-  "airline": "EY",
-  "route": "GDN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 19.5,
-  "when": "2026-08-26T03:29:59"
- },
  "86d12b5087eb7ed6f3c58dd2bf9d213295bac9f3": {
   "price_pln": 8858,
   "stars": 1,
@@ -3707,15 +3635,6 @@
   "duration_h": 19.6,
   "when": "2026-09-06T19:17:30"
  },
- "34dcc07c74652c160b7d94b807669241ea550f55": {
-  "price_pln": 8436,
-  "stars": 1,
-  "airline": "TK",
-  "route": "BUD → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 19.8,
-  "when": "2026-08-26T03:29:59"
- },
  "218d52b1583753d75379b4e253c4d46a25cc948b": {
   "price_pln": 8672,
   "stars": 1,
@@ -3778,24 +3697,6 @@
   "cabin": "BUSINESS",
   "duration_h": 16.0,
   "when": "2026-09-02T22:43:34"
- },
- "4b7236546074bc12173b7aa95581c86900db6396": {
-  "price_pln": 10194,
-  "stars": 1,
-  "airline": "LH",
-  "route": "POZ → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 21.3,
-  "when": "2026-08-26T03:29:59"
- },
- "744adf8882ac551a0e7f43ed9fc0f4b26ad3ff14": {
-  "price_pln": 10038,
-  "stars": 1,
-  "airline": "WY",
-  "route": "POZ → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 23.2,
-  "when": "2026-08-26T03:29:59"
  },
  "5403fb8f59da41fd3b09a2614abc4c22ba238ba6": {
   "price_pln": 12214,
@@ -4796,15 +4697,6 @@
   "duration_h": 16.0,
   "when": "2026-09-01T05:19:03"
  },
- "f4c9cf30e955e7219f92bbef0519525e00fafaea": {
-  "price_pln": 17948,
-  "stars": 1,
-  "airline": "LO",
-  "route": "GDN → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 17.0,
-  "when": "2026-08-25T23:43:32"
- },
  "85a1e45adcedbf9fce8828b7689bb9ea65d12323": {
   "price_pln": 16290,
   "stars": 1,
@@ -4957,15 +4849,6 @@
   "cabin": "BUSINESS",
   "duration_h": 21.8,
   "when": "2026-08-26T20:09:43"
- },
- "282ea34e84b8ee0e4e028c61496d4fc341b0e1ca": {
-  "price_pln": 10444,
-  "stars": 1,
-  "airline": "EY",
-  "route": "OSL → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 21.8,
-  "when": "2026-08-26T02:03:06"
  },
  "4685bb9781fcb5deb7abf7b06c30e8eaa914ab08": {
   "price_pln": 10571,
@@ -5912,15 +5795,6 @@
   "duration_h": 9.4,
   "when": "2026-08-30T00:26:12"
  },
- "f467fdf847082700556e515505ed40f2c287e0c7": {
-  "price_pln": 11563,
-  "stars": 1,
-  "airline": "EY",
-  "route": "GDN → SIN",
-  "cabin": "BUSINESS",
-  "duration_h": 21.7,
-  "when": "2026-08-26T02:03:06"
- },
  "4d57d1555f70cf394086418f0c3f52f6788bf18f": {
   "price_pln": 10607,
   "stars": 1,
@@ -6658,15 +6532,6 @@
   "cabin": "BUSINESS",
   "duration_h": 15.4,
   "when": "2026-09-05T01:04:23"
- },
- "2be8d5b244691e9fb598533b55144cb03a132050": {
-  "price_pln": 9711,
-  "stars": 1,
-  "airline": "EY",
-  "route": "ARN → HAN",
-  "cabin": "BUSINESS",
-  "duration_h": 19.2,
-  "when": "2026-08-26T03:29:59"
  },
  "2dccc01661c9cb790462eafc371ff07aa7eed45e": {
   "price_pln": 9226,
@@ -7802,15 +7667,6 @@
   "duration_h": 22.6,
   "when": "2026-09-07T04:51:50"
  },
- "aeb6fe98ce6a70b9d4e606fc08b46581efa7530d": {
-  "price_pln": 10675,
-  "stars": 1,
-  "airline": "KL",
-  "route": "POZ → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.2,
-  "when": "2026-08-26T03:29:59"
- },
  "7962efa123c8308168fddde008da961fecc26c02": {
   "price_pln": 10466,
   "stars": 1,
@@ -7955,15 +7811,6 @@
   "duration_h": 17.2,
   "when": "2026-09-01T21:52:30"
  },
- "a182fdf9b7e15c0b07f9847687bdbf9431596f7e": {
-  "price_pln": 7815,
-  "stars": 1,
-  "airline": "EY",
-  "route": "POZ → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 20.2,
-  "when": "2026-08-26T02:03:06"
- },
  "ce444bd3505b57c9889373157648aa2ba410dbbd": {
   "price_pln": 9607,
   "stars": 1,
@@ -7981,15 +7828,6 @@
   "cabin": "BUSINESS",
   "duration_h": 18.7,
   "when": "2026-09-05T23:58:50"
- },
- "76c01d5b403c6d8c69861ae0330b89e98c98ae72": {
-  "price_pln": 13151,
-  "stars": 1,
-  "airline": "AY",
-  "route": "GDN → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 16.1,
-  "when": "2026-08-26T02:03:06"
  },
  "955e41d93d1a764d06fd8b6e66062413309e2d51": {
   "price_pln": 9372,
@@ -8242,24 +8080,6 @@
   "cabin": "BUSINESS",
   "duration_h": 19.8,
   "when": "2026-09-03T16:32:31"
- },
- "3f2f2aa75314026fd125a0e64b444f1ce4d4498b": {
-  "price_pln": 6681,
-  "stars": 3,
-  "airline": "TG",
-  "route": "MXP → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 10.8,
-  "when": "2026-08-26T03:29:59"
- },
- "9c5276094c3158aa6cef3eb0f91739f4021cb3a9": {
-  "price_pln": 8913,
-  "stars": 1,
-  "airline": "LH",
-  "route": "POZ → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 20.8,
-  "when": "2026-08-26T03:29:59"
  },
  "16c99cbf93af0ae7242e9116b70bf6e4100f038f": {
   "price_pln": 8866,
@@ -9044,15 +8864,6 @@
   "duration_h": 17.4,
   "when": "2026-09-08T04:47:37"
  },
- "4cd0d03538b96e0da0fad79b4c4678babe13602a": {
-  "price_pln": 16635,
-  "stars": 1,
-  "airline": "AY",
-  "route": "WAW → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 17.8,
-  "when": "2026-08-25T23:43:32"
- },
  "3a786e10ef393d75959a30074596c0a271e26729": {
   "price_pln": 20903,
   "stars": 1,
@@ -9079,15 +8890,6 @@
   "cabin": "BUSINESS",
   "duration_h": 19.8,
   "when": "2026-09-02T05:55:14"
- },
- "ce6ad2b547489cde2048c2d0d8d2f99fc3057c46": {
-  "price_pln": 9488,
-  "stars": 1,
-  "airline": "EY",
-  "route": "WAW → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 16.1,
-  "when": "2026-08-26T02:03:06"
  },
  "7e4cf0a45323cc06ebb44ee62e4a51120689e8a5": {
   "price_pln": 6820,
@@ -9116,15 +8918,6 @@
   "duration_h": 22.3,
   "when": "2026-09-05T23:58:50"
  },
- "0ba7dbc4bac60badf0dc2410a6528df144407ea6": {
-  "price_pln": 8765,
-  "stars": 1,
-  "airline": "TG",
-  "route": "CPH → SIN",
-  "cabin": "BUSINESS",
-  "duration_h": 18.2,
-  "when": "2026-08-26T02:03:06"
- },
  "9cf2a9580ec7b0314de4793b889a11164bdf8d16": {
   "price_pln": 8746,
   "stars": 2,
@@ -9142,15 +8935,6 @@
   "cabin": "BUSINESS",
   "duration_h": 21.4,
   "when": "2026-08-30T00:26:12"
- },
- "826d4177e3be14ef90c198a6ca9cfd98c6a53162": {
-  "price_pln": 11370,
-  "stars": 1,
-  "airline": "NH",
-  "route": "WAW → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 24.0,
-  "when": "2026-08-26T02:03:06"
  },
  "b7d7d157d6e4e97946bee2bc34c45d3b95eed99d": {
   "price_pln": 11625,
@@ -9413,15 +9197,6 @@
   "duration_h": 20.0,
   "when": "2026-09-08T04:47:37"
  },
- "5d83ec37b55edeeefbd1c6855087c5e53d9fff65": {
-  "price_pln": 17935,
-  "stars": 1,
-  "airline": "LO",
-  "route": "POZ → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 17.1,
-  "when": "2026-08-25T23:43:32"
- },
  "8a2c22d5ec50fea293ae2fb09816020f36e29777": {
   "price_pln": 14273,
   "stars": 1,
@@ -9655,24 +9430,6 @@
   "cabin": "BUSINESS",
   "duration_h": 18.0,
   "when": "2026-09-02T16:41:30"
- },
- "2e5c89c854a5ea8cbb8e9b17312b4279f0170cc9": {
-  "price_pln": 11502,
-  "stars": 1,
-  "airline": "NH",
-  "route": "WAW → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 22.6,
-  "when": "2026-08-26T02:03:06"
- },
- "47b18a6c54730e3805db360d62cc1ea644e72122": {
-  "price_pln": 10202,
-  "stars": 1,
-  "airline": "CI",
-  "route": "VIE → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 22.6,
-  "when": "2026-08-26T02:03:06"
  },
  "4aab3dcb85fb7849aa9fc44a911ccecc0765a708": {
   "price_pln": 11376,
@@ -10357,15 +10114,6 @@
   "cabin": "BUSINESS",
   "duration_h": 23.2,
   "when": "2026-09-08T04:47:37"
- },
- "346fd6e22c132f2a0a7e826b6d3bd19798b39269": {
-  "price_pln": 14033,
-  "stars": 1,
-  "airline": "NH",
-  "route": "CPH → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 15.2,
-  "when": "2026-08-25T23:43:32"
  },
  "34e0a2477c75ea976f32a405f9f2bd290d727c3e": {
   "price_pln": 9477,
@@ -11159,24 +10907,6 @@
   "duration_h": 22.2,
   "when": "2026-09-08T04:47:37"
  },
- "6153560116130ea9955fa1adc8b4c7fccfe6e010": {
-  "price_pln": 16708,
-  "stars": 1,
-  "airline": "JL",
-  "route": "WAW → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 17.9,
-  "when": "2026-08-25T23:43:32"
- },
- "d898710dbaf28cc8ac23fd16d29d31f3188668a8": {
-  "price_pln": 21200,
-  "stars": 1,
-  "airline": "NH",
-  "route": "POZ → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 17.0,
-  "when": "2026-08-25T23:43:32"
- },
  "303cddc3bc594098b547846e3c1c1e24e769fee4": {
   "price_pln": 10674,
   "stars": 1,
@@ -11411,15 +11141,6 @@
   "duration_h": 21.7,
   "when": "2026-09-07T23:35:15"
  },
- "755648fdae9c4421dad1a4d7cfb211fd315dbb44": {
-  "price_pln": 13069,
-  "stars": 1,
-  "airline": "JL",
-  "route": "ARN → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 16.3,
-  "when": "2026-08-25T23:43:32"
- },
  "6cf7c0638db96b09d91152071ebb8cac0b578260": {
   "price_pln": 13834,
   "stars": 2,
@@ -11482,15 +11203,6 @@
   "cabin": "BUSINESS",
   "duration_h": 9.3,
   "when": "2026-09-12T17:16:29"
- },
- "a0d0532edb3057611108ae6ed3c0e993a6041e66": {
-  "price_pln": 6450,
-  "stars": 3,
-  "airline": "EY",
-  "route": "VIE → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 16.0,
-  "when": "2026-08-26T02:03:06"
  },
  "668098088b6a5b608a9758fff046f43ba69fef6c": {
   "price_pln": 8328,
@@ -11896,24 +11608,6 @@
   "cabin": "BUSINESS",
   "duration_h": 23.7,
   "when": "2026-09-04T11:27:28"
- },
- "e3ae022a4723c72f6a93da1916b426fde33c8ef3": {
-  "price_pln": 10212,
-  "stars": 1,
-  "airline": "EY",
-  "route": "OSL → HAN",
-  "cabin": "BUSINESS",
-  "duration_h": 16.7,
-  "when": "2026-08-26T03:29:59"
- },
- "262e2fd5bb38375dd1c967ff7521d26a6893a2be": {
-  "price_pln": 10238,
-  "stars": 1,
-  "airline": "LH",
-  "route": "WAW → KUL",
-  "cabin": "BUSINESS",
-  "duration_h": 22.3,
-  "when": "2026-08-26T03:29:59"
  },
  "2ae0f98fc714757f9d97b141bd774777b6fdc879": {
   "price_pln": 8184,
@@ -12392,15 +12086,6 @@
   "duration_h": 17.1,
   "when": "2026-09-05T05:51:30"
  },
- "8df6982a59ee390a03767f026af2fbe8920aa70d": {
-  "price_pln": 13295,
-  "stars": 1,
-  "airline": "EY",
-  "route": "CPH → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 19.5,
-  "when": "2026-08-26T02:03:06"
- },
  "e857f8ea975cba239b9d6e81198af1feee4c18b1": {
   "price_pln": 6184,
   "stars": 4,
@@ -12499,15 +12184,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.0,
   "when": "2026-09-07T00:01:04"
- },
- "be7d9a49d5291a6c60e622780ef62a46ff9e5d5b": {
-  "price_pln": 6964,
-  "stars": 3,
-  "airline": "LX",
-  "route": "OSL → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.8,
-  "when": "2026-08-25T23:43:32"
  },
  "de279154e0c31d18fa261432216315bd5128358b": {
   "price_pln": 7959,
@@ -12896,15 +12572,6 @@
   "duration_h": 22.2,
   "when": "2026-09-04T22:25:31"
  },
- "3eba1303413222f146098af068924fd1d4585243": {
-  "price_pln": 8036,
-  "stars": 1,
-  "airline": "CX",
-  "route": "ARN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 22.5,
-  "when": "2026-08-26T03:29:59"
- },
  "3ede6d9e82697b39e61a71570ede2f47b43cd19c": {
   "price_pln": 9918,
   "stars": 1,
@@ -13048,15 +12715,6 @@
   "cabin": "BUSINESS",
   "duration_h": 21.0,
   "when": "2026-09-05T05:51:30"
- },
- "52efab518f2051d93ce77236b853e82b9b7646fd": {
-  "price_pln": 12135,
-  "stars": 1,
-  "airline": "NH",
-  "route": "CPH → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 22.8,
-  "when": "2026-08-26T02:03:06"
  },
  "d3ea5ab88ba1ca5d36918989f2a0e2c2fe851164": {
   "price_pln": 22904,
@@ -13274,15 +12932,6 @@
   "duration_h": 19.3,
   "when": "2026-09-08T18:47:11"
  },
- "8d8a7271c52d94744c62f3c9b99554d5197bff70": {
-  "price_pln": 9458,
-  "stars": 1,
-  "airline": "QR",
-  "route": "VIE → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 20.0,
-  "when": "2026-08-26T02:03:06"
- },
  "9dd2c3c6e1209209377d04188f4b46af802a46ef": {
   "price_pln": 13405,
   "stars": 1,
@@ -13309,15 +12958,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.1,
   "when": "2026-08-26T13:22:36"
- },
- "26b0b12b068900cd38f6312fcb523af2b53e55ea": {
-  "price_pln": 9999,
-  "stars": 1,
-  "airline": "TG",
-  "route": "CPH → HAN",
-  "cabin": "BUSINESS",
-  "duration_h": 18.8,
-  "when": "2026-08-26T03:29:59"
  },
  "363302a2a2ad7f87ebc7961acb83a6bb589f97a7": {
   "price_pln": 8093,
@@ -13895,15 +13535,6 @@
   "duration_h": 18.3,
   "when": "2026-08-31T14:02:25"
  },
- "960e48439d2f45464afd5c30d3c2765ec2a73514": {
-  "price_pln": 9221,
-  "stars": 1,
-  "airline": "TG",
-  "route": "OSL → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 20.3,
-  "when": "2026-08-26T03:29:59"
- },
  "118f5cefb350952c7d3f5c049f71d0a24a0e1828": {
   "price_pln": 10368,
   "stars": 1,
@@ -14083,15 +13714,6 @@
   "cabin": "FIRST",
   "duration_h": 18.6,
   "when": "2026-09-08T18:47:11"
- },
- "5a6c2c91414f99fc501b0b558bce4b08db9ce8c3": {
-  "price_pln": 14380,
-  "stars": 1,
-  "airline": "EK",
-  "route": "CPH → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 19.3,
-  "when": "2026-08-25T23:43:32"
  },
  "7eb699c1877604e5ed11af5a0e4dd2e2ddbccfa0": {
   "price_pln": 8981,
@@ -15533,15 +15155,6 @@
   "duration_h": 22.9,
   "when": "2026-09-03T01:11:39"
  },
- "1f9c81ea2cd5704580f611a9d9ded4e9fdb72aa8": {
-  "price_pln": 8849,
-  "stars": 1,
-  "airline": "EY",
-  "route": "BUD → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 17.4,
-  "when": "2026-08-25T23:43:32"
- },
  "46a7468640b12aa8e57f6df3e5765546ee179f1e": {
   "price_pln": 11836,
   "stars": 1,
@@ -15613,15 +15226,6 @@
   "cabin": "BUSINESS",
   "duration_h": 19.5,
   "when": "2026-09-04T19:41:44"
- },
- "3353a285007af2af49df8e86fe0f85f1ff443de1": {
-  "price_pln": 10675,
-  "stars": 1,
-  "airline": "KL",
-  "route": "POZ → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.2,
-  "when": "2026-08-26T02:03:06"
  },
  "e9cd776aa35b2afe28b00664f79e8eebd2ddbbc4": {
   "price_pln": 11179,
@@ -16010,15 +15614,6 @@
   "duration_h": 20.2,
   "when": "2026-09-08T04:47:37"
  },
- "14a7d0018fdd4a2ba3fea3f7b93531148c3adef8": {
-  "price_pln": 8622,
-  "stars": 2,
-  "airline": "LH",
-  "route": "POZ → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 18.8,
-  "when": "2026-08-25T23:43:32"
- },
  "4f349890d5deb1b06b9ee1e8136e078eb4db14f5": {
   "price_pln": 11308,
   "stars": 1,
@@ -16370,15 +15965,6 @@
   "duration_h": 15.4,
   "when": "2026-09-02T19:52:29"
  },
- "2094586e8f7063848f45cf9d066fb9b61c80f028": {
-  "price_pln": 8131,
-  "stars": 2,
-  "airline": "TK",
-  "route": "OSL → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 18.7,
-  "when": "2026-08-26T02:03:06"
- },
  "44b1976a8bf8f0cf3cf5f9d95610ad4b4ae33764": {
   "price_pln": 10655,
   "stars": 1,
@@ -16721,15 +16307,6 @@
   "duration_h": 15.0,
   "when": "2026-09-02T05:55:14"
  },
- "76a6a0f9a3bc517d76de8cccf7bc2d2ca380b3c0": {
-  "price_pln": 10686,
-  "stars": 1,
-  "airline": "KL",
-  "route": "GDN → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 16.6,
-  "when": "2026-08-26T02:03:06"
- },
  "7ae5c0a5c4ffdb9f1fde0dca8c67a85b1602818b": {
   "price_pln": 11351,
   "stars": 1,
@@ -16892,15 +16469,6 @@
   "duration_h": 17.6,
   "when": "2026-09-08T09:48:53"
  },
- "ea8adb51d2f624f3276d3dbced5ec9400db4c373": {
-  "price_pln": 12689,
-  "stars": 1,
-  "airline": "NH",
-  "route": "OSL → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 21.2,
-  "when": "2026-08-25T23:43:32"
- },
  "69dcc27e10d2609dee18ccd9cd39e50396fd32af": {
   "price_pln": 15020,
   "stars": 1,
@@ -16918,15 +16486,6 @@
   "cabin": "BUSINESS",
   "duration_h": 19.2,
   "when": "2026-08-29T02:17:44"
- },
- "fa8af6163a1a4b00ef167707fbd3a5636eecf261": {
-  "price_pln": 17074,
-  "stars": 1,
-  "airline": "LH",
-  "route": "POZ → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 19.2,
-  "when": "2026-08-25T23:43:32"
  },
  "28e947e7d174f7aad57a5ab2703aa1a4e15fd516": {
   "price_pln": 9359,
@@ -17017,15 +16576,6 @@
   "cabin": "BUSINESS",
   "duration_h": 16.0,
   "when": "2026-09-09T22:38:04"
- },
- "73353985c43326d77fab73cf664a18c91fde3219": {
-  "price_pln": 10573,
-  "stars": 1,
-  "airline": "QR",
-  "route": "VIE → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 17.1,
-  "when": "2026-08-26T03:29:59"
  },
  "d95dca0e7e0f3ca0de122ee237c221d60cbba116": {
   "price_pln": 10673,
@@ -17269,15 +16819,6 @@
   "cabin": "BUSINESS",
   "duration_h": 16.1,
   "when": "2026-09-04T06:00:36"
- },
- "6e3b67d07962b660527b7ff1850563fca7393657": {
-  "price_pln": 7756,
-  "stars": 1,
-  "airline": "LH",
-  "route": "OSL → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 20.5,
-  "when": "2026-08-26T03:29:59"
  },
  "085f7bc4d0635534b387cca2d2afa0112850b23f": {
   "price_pln": 9569,
@@ -17666,15 +17207,6 @@
   "duration_h": 20.0,
   "when": "2026-08-30T17:40:53"
  },
- "5d1765afb80f89262308c4924484fe7032a6ca86": {
-  "price_pln": 7960,
-  "stars": 2,
-  "airline": "CX",
-  "route": "CPH → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 16.5,
-  "when": "2026-08-26T03:29:59"
- },
  "f799dce8cda0e1e3482a74efe41d768eeb7673b3": {
   "price_pln": 10209,
   "stars": 1,
@@ -17765,15 +17297,6 @@
   "duration_h": 23.3,
   "when": "2026-08-30T12:59:24"
  },
- "e8196a82598ab0cd47bcb0d547b26ce7c1d6ab39": {
-  "price_pln": 14577,
-  "stars": 1,
-  "airline": "KL",
-  "route": "WAW → HND",
-  "cabin": "BUSINESS",
-  "duration_h": 19.5,
-  "when": "2026-08-25T23:43:32"
- },
  "1e4dcc26cde731156a3bd2fbe1700840da25abea": {
   "price_pln": 6939,
   "stars": 3,
@@ -17845,24 +17368,6 @@
   "cabin": "BUSINESS",
   "duration_h": 16.2,
   "when": "2026-09-01T05:19:03"
- },
- "d9ff4ec5f7f8875b485538b2327d0bc72a086ec6": {
-  "price_pln": 7490,
-  "stars": 3,
-  "airline": "EY",
-  "route": "WAW → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 15.2,
-  "when": "2026-08-26T03:29:59"
- },
- "da28b9f2f694015c2d1a6ce9885035f03a1eadcb": {
-  "price_pln": 8174,
-  "stars": 2,
-  "airline": "LX",
-  "route": "ARN → HKG",
-  "cabin": "BUSINESS",
-  "duration_h": 19.0,
-  "when": "2026-08-26T03:29:59"
  },
  "ca0985585fd41d52ce6b9ad77c21aff7284816c5": {
   "price_pln": 10160,
@@ -17945,24 +17450,6 @@
   "duration_h": 17.8,
   "when": "2026-08-27T20:36:27"
  },
- "67bf30d668f784e00c52be91e47161c8b9c05573": {
-  "price_pln": 7322,
-  "stars": 2,
-  "airline": "EY",
-  "route": "CPH → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 20.2,
-  "when": "2026-08-25T23:43:32"
- },
- "4f53368fb93f145d0c3212051399e597462b17fe": {
-  "price_pln": 9115,
-  "stars": 1,
-  "airline": "EY",
-  "route": "BUD → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 19.8,
-  "when": "2026-08-25T23:43:32"
- },
  "59a71ed0946c3ee1d526e468c059e89e0d32fbbc": {
   "price_pln": 9308,
   "stars": 1,
@@ -18016,15 +17503,6 @@
   "cabin": "BUSINESS",
   "duration_h": 17.5,
   "when": "2026-08-26T10:55:24"
- },
- "41c0cde7cba1cb8c1993d6415461e96aef49fdc1": {
-  "price_pln": 6054,
-  "stars": 4,
-  "airline": "EY",
-  "route": "MXP → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 14.1,
-  "when": "2026-08-26T02:03:06"
  },
  "22c99dba129992820432bfd8fb7588e19290cf12": {
   "price_pln": 10061,
@@ -18250,15 +17728,6 @@
   "cabin": "BUSINESS",
   "duration_h": 20.5,
   "when": "2026-08-26T05:54:30"
- },
- "5856475496efc1d24ad7485b9bf930f37c800ddf": {
-  "price_pln": 8000,
-  "stars": 2,
-  "airline": "TK",
-  "route": "VIE → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 16.6,
-  "when": "2026-08-26T03:29:59"
  },
  "2142bfb50e864481b0a270504c59a3301603f210": {
   "price_pln": 11250,
@@ -18521,24 +17990,6 @@
   "duration_h": 20.0,
   "when": "2026-08-26T13:22:36"
  },
- "c0cf39b4e7158d9e5a6d78a5ab473a7fd2a32add": {
-  "price_pln": 13819,
-  "stars": 2,
-  "airline": "QR",
-  "route": "ARN → BKK",
-  "cabin": "FIRST",
-  "duration_h": 15.7,
-  "when": "2026-08-25T23:43:32"
- },
- "95236ce4c8d03a622cc381d398aab6aedc9a4fb1": {
-  "price_pln": 13859,
-  "stars": 1,
-  "airline": "OS",
-  "route": "CPH → NRT",
-  "cabin": "BUSINESS",
-  "duration_h": 18.8,
-  "when": "2026-08-25T23:43:32"
- },
  "dc94c3ee85bf019049c0ecfb5d4b576ff6a72346": {
   "price_pln": 14279,
   "stars": 1,
@@ -18548,24 +17999,6 @@
   "duration_h": 14.4,
   "when": "2026-09-05T21:21:00"
  },
- "85ff44b3dd2caffe6eb994cfa348922f8b4836eb": {
-  "price_pln": 19927,
-  "stars": 2,
-  "airline": "EK",
-  "route": "OSL → ICN",
-  "cabin": "FIRST",
-  "duration_h": 19.4,
-  "when": "2026-08-25T23:43:32"
- },
- "a3a595423b35da6193091dfd9c88407d8b894063": {
-  "price_pln": 7038,
-  "stars": 2,
-  "airline": "LH",
-  "route": "OSL → BKK",
-  "cabin": "BUSINESS",
-  "duration_h": 22.1,
-  "when": "2026-08-26T02:03:06"
- },
  "1c1b4d38716441eea5c57b2e6382e5882b9abced": {
   "price_pln": 8004,
   "stars": 2,
@@ -18574,15 +18007,6 @@
   "cabin": "BUSINESS",
   "duration_h": 15.7,
   "when": "2026-09-02T16:41:30"
- },
- "af14429d284fa8cc21acdd6a5e0e354419e0f6f5": {
-  "price_pln": 11975,
-  "stars": 1,
-  "airline": "AF",
-  "route": "OSL → ICN",
-  "cabin": "BUSINESS",
-  "duration_h": 20.1,
-  "when": "2026-08-26T02:03:06"
  },
  "739658bfcac8c59cb2a2ecd35b445ac956b0b369": {
   "price_pln": 12573,
@@ -18610,42 +18034,6 @@
   "cabin": "BUSINESS",
   "duration_h": 22.0,
   "when": "2026-09-05T23:58:50"
- },
- "275fddcb0c3b4a3fb2c47ca4d90c96631097827a": {
-  "price_pln": 22427,
-  "stars": 1,
-  "airline": "EK",
-  "route": "VIE → KUL",
-  "cabin": "FIRST",
-  "duration_h": 22.4,
-  "when": "2026-08-26T02:03:06"
- },
- "899b6914f87d48275e0b6534f0e44b77554e570b": {
-  "price_pln": 22620,
-  "stars": 2,
-  "airline": "EK",
-  "route": "BUD → HKG",
-  "cabin": "FIRST",
-  "duration_h": 17.6,
-  "when": "2026-08-26T02:03:06"
- },
- "f99085007a7fae66857dc614f0dcf8cfdfbc761c": {
-  "price_pln": 20400,
-  "stars": 1,
-  "airline": "EK",
-  "route": "BUD → HKG",
-  "cabin": "FIRST",
-  "duration_h": 21.2,
-  "when": "2026-08-26T03:29:59"
- },
- "53da211658b938130ec15580fff8744cd311f0c1": {
-  "price_pln": 48416,
-  "stars": 1,
-  "airline": "LX",
-  "route": "MXP → HAN",
-  "cabin": "FIRST",
-  "duration_h": 23.8,
-  "when": "2026-08-26T03:29:59"
  },
  "435936f980a5c658bfb2fe35171f028003084265": {
   "price_pln": 12523,
